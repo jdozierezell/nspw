@@ -1,19 +1,44 @@
-import React from 'react'
-import { ChakraProvider, Heading } from '@chakra-ui/react'
+import React, { useState } from 'react'
+import { ChakraProvider, Button } from '@chakra-ui/react'
+import { HslColorPicker } from 'react-colorful'
+import { css } from '@emotion/react'
 
 import { NSPWTheme } from '../theme/NSPWTheme'
+import SVG from '../components/svg'
 
 const Home = () => {
+	const [svgBaseColor, setSvgBaseColor] = useState({ h: 252, s: 43, l: 31 })
+	const colorPickerCSS = css`
+		&.react-colorful {
+			height: auto;
+		}
+		.react-colorful__saturation {
+			display: none;
+		}
+		.react-colorful__hue {
+			background: linear-gradient(
+				90deg,
+				hsl(0, 43%, 31%) 0,
+				hsl(60, 43%, 31%) 17%,
+				hsl(120, 43%, 31%) 33%,
+				hsl(180, 43%, 31%) 50%,
+				hsl(240, 43%, 31%) 67%,
+				hsl(300, 43%, 31%) 83%,
+				hsl(0, 43%, 31%)
+			);
+		}
+	`
+	const setColor = ({ h }) => {
+		setSvgBaseColor({ ...svgBaseColor, h })
+	}
 	return (
 		<ChakraProvider theme={NSPWTheme}>
-			{/* <SuicidePreventionBeginsWithAllOfUs
-				color={{
-					cloud: '#F0F7FA',
-					textAccent: '#6C6094',
-					textMain: '#3C2E72',
-					stars: '#FEFE5E',
-				}}
-			/> */}
+			<HslColorPicker
+				color={svgBaseColor}
+				css={colorPickerCSS}
+				onChange={setColor}
+			/>
+			<SVG svgBaseColor={svgBaseColor} />
 		</ChakraProvider>
 	)
 }
