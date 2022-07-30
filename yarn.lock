@@ -8160,7 +8160,14 @@ lord-icon-element@^3.4.2:
   resolved "https://registry.yarnpkg.com/lord-icon-element/-/lord-icon-element-3.4.2.tgz#91175d0759b3249ea21f0fff3c81d26a4322e50b"
   integrity sha512-xVBPZ7uLzjrenuPAv7V7EiKfVyEMphAP5wakKYBInq3K+9wk1EzO0Hq5R6NlcxIWvy/CALg0sL9kq3//3F6eEQ==
 
-lottie-web@^5.9.6:
+lottie-react@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/lottie-react/-/lottie-react-2.3.1.tgz#697060417bab027edb57ed45bda9d62e920d4040"
+  integrity sha512-8cxd6XZZtECT6LoAhCftRdYrEpHxiouvB5EPiYA+TtCG5LHNYAdMS9IVIHcxKtWnpo7x16QfCLj1XLXZpaN81A==
+  dependencies:
+    lottie-web "^5.9.4"
+
+lottie-web@^5.9.4, lottie-web@^5.9.6:
   version "5.9.6"
   resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.9.6.tgz#62ae68563355d3e04aa75d53dec3dd4bea0e57c9"
   integrity sha512-JFs7KsHwflugH5qIXBpB4905yC1Sub2MZWtl/elvO/QC6qj1ApqbUZJyjzJseJUtVpgiDaXQLjBlIJGS7UUUXA==
