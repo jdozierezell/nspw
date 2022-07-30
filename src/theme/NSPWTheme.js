@@ -1,6 +1,19 @@
 import { extendTheme } from '@chakra-ui/react'
 // import { customAlertVariant } from "./Alert/customAlert"
 
+const brand = {
+	border: '#2D8540',
+	focusColor: '#4BDF6B',
+}
+
+const breakpoints = {
+	sm: '30em',
+	md: '48em',
+	lg: '62em',
+	xl: '80em',
+	'2xl': '96em',
+}
+
 const colors = {
 	blue: {
 		50: '#dcf8ff',
@@ -38,51 +51,75 @@ const colors = {
 		800: '#1b2d36',
 		900: '#060f13',
 	},
+	white: '#ffffff',
+}
+
+const fonts = {
+	body: 'Quasimoda',
+	heading: 'Hoss Round',
+}
+
+const fontSizes = {
+	xs: '0.75rem',
+	sm: '0.875rem',
+	md: '1rem',
+	lg: '1.125rem',
+	xl: '1.25rem',
+	'2xl': '1.5rem',
+	'3xl': '1.875rem',
+	'4xl': '2.25rem',
+	'5xl': '3rem',
+	'6xl': '3.75rem',
+	'7xl': '4.5rem',
+	'8xl': '6rem',
+	'9xl': '8rem',
+}
+
+const styles = {
+	global: props => {
+		return {
+			body: {
+				bg: 'blue.400',
+			},
+			_selection: {
+				bg: 'purple.400',
+				color: 'white',
+			},
+		}
+	},
 }
 
 export const NSPWTheme = extendTheme({
-	styles: {
-		global: props => {
-			return {
-				body: {
-					bg: 'blue.400',
-				},
-				_selection: {
-					bg: 'purple.400',
-					color: 'white',
-				},
-			}
-		},
-	},
-	brand: {
-		border: '#2D8540',
-		focusColor: '#4BDF6B',
-	},
-	fonts: {
-		body: 'Quasimoda',
-		heading: 'Hoss Round',
-	},
-	//   components: {
-	//     // This is a custom variant for Toast
-	//     // It has to be here because Toast is rendered in a portal
-	//     Alert: {
-	//       variants: {
-	//         subtle: customAlertVariant,
-	//         "left-accent": customAlertVariant,
-	//         "top-accent": customAlertVariant,
-	//         solid: customAlertVariant,
-	//         custom: {
-	//           container: {
-	//             border: "1px solid",
-	//             borderColor: "orange.500",
-	//             bg: "orange.800",
-	//             color: "orange.200",
-	//           },
-	//           icon: {
-	//             color: "orange.200",
-	//           },
-	//         },
-	//       },
-	//     },
-	//   },
+	brand,
+	breakpoints,
+	colors,
+	fonts,
+	fontSizes,
+	styles,
 })
+
+// export const NSPWTheme = extendTheme({
+//   components: {
+//     // This is a custom variant for Toast
+//     // It has to be here because Toast is rendered in a portal
+//     Alert: {
+//       variants: {
+//         subtle: customAlertVariant,
+//         "left-accent": customAlertVariant,
+//         "top-accent": customAlertVariant,
+//         solid: customAlertVariant,
+//         custom: {
+//           container: {
+//             border: "1px solid",
+//             borderColor: "orange.500",
+//             bg: "orange.800",
+//             color: "orange.200",
+//           },
+//           icon: {
+//             color: "orange.200",
+//           },
+//         },
+//       },
+//     },
+//   },
+// })

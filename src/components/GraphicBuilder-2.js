@@ -15,7 +15,7 @@ import SuicidePreventionBeginsWithAllOfUs from '../../static/svgs/suicidePrevent
 // textMain: 'hsl(252, 43%, 31%)',
 // stars: 'hsl(60, 99%, 68%)',
 
-const SVG = ({ svgBaseColor }) => {
+const GraphicBuilder = ({ svgBaseColor }) => {
 	const hue = svgBaseColor.h
 	const saturation = svgBaseColor.s
 	const lightness = svgBaseColor.l
@@ -49,4 +49,4 @@ const SVG = ({ svgBaseColor }) => {
 	return <SuicidePreventionBeginsWithAllOfUs css={svgCSS} />
 }
 
-export default SVG
+export default GraphicBuilder

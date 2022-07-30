@@ -4,7 +4,7 @@ import { HslColorPicker } from 'react-colorful'
 import { css } from '@emotion/react'
 
 import { NSPWTheme } from '../theme/NSPWTheme'
-import SVG from '../components/svg'
+import GraphicBuilder from '../components/GraphicBuilder-2'
 
 const Home = () => {
 	const [svgBaseColor, setSvgBaseColor] = useState({ h: 252, s: 43, l: 31 })
@@ -38,7 +38,7 @@ const Home = () => {
 				css={colorPickerCSS}
 				onChange={setColor}
 			/>
-			<SVG svgBaseColor={svgBaseColor} />
+			<GraphicBuilder svgBaseColor={svgBaseColor} />
 		</ChakraProvider>
 	)
 }
