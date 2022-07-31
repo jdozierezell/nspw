@@ -7,11 +7,12 @@ const brand = {
 }
 
 const breakpoints = {
-	sm: '30em',
-	md: '48em',
-	lg: '62em',
-	xl: '80em',
-	'2xl': '96em',
+	sm: '30rem',
+	md: '48rem',
+	menuToggle: '65em',
+	lg: '80rem',
+	xl: '90rem',
+	'2xl': '96rem',
 }
 
 const colors = {
@@ -89,6 +90,12 @@ const styles = {
 	},
 }
 
+const textStyles = {
+	paragraph: {
+		m: '5em',
+	},
+}
+
 export const NSPWTheme = extendTheme({
 	brand,
 	breakpoints,
@@ -96,6 +103,7 @@ export const NSPWTheme = extendTheme({
 	fonts,
 	fontSizes,
 	styles,
+	textStyles,
 })
 
 // export const NSPWTheme = extendTheme({

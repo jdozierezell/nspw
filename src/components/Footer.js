@@ -14,10 +14,10 @@ const Footer = () => {
 			bg="purple.700"
 			templateColumns={{
 				sm: '1fr',
-				md: 'minmax(auto, 12em) 1fr minmax(auto, 24em)',
+				md: 'minmax(auto, 12em) 1fr minmax(auto, 20em)',
 			}}
 			gap="4em"
-			p="4em"
+			p="4em 2em"
 			color="white"
 		>
 			<GridItem alignSelf="end">

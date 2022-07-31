@@ -2,15 +2,15 @@ import React, { useEffect, useRef, useState } from 'react'
 import Lottie from 'lottie-react'
 import { Box, Button } from '@chakra-ui/react'
 
-import svg from '../../static/icons/320-menu-7-morph-lineal-edited.json'
+import svg from '../../../static/icons/320-menu-7-morph-lineal-edited.json'
 
-const MobileMenuButton = () => {
+const MobileMenuButton = ({ toggle, setToggle }) => {
 	const lottieRef = useRef()
 	const [menuOpen, setMenuOpen] = useState(false)
 
 	const mobileButtonAnim = e => {
 		const el = e.current
-		if (menuOpen) {
+		if (toggle) {
 			el.setDirection(-1)
 			el.play()
 		} else {
@@ -18,7 +18,7 @@ const MobileMenuButton = () => {
 			el.play()
 		}
 
-		setMenuOpen(!menuOpen)
+		setToggle(!toggle)
 	}
 
 	// useEffect(e => {
