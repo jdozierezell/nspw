@@ -31,7 +31,7 @@ const Home = () => {
 			<RealStories />
 			{/* EventList waiting */}
 			<EventList />
-			{/* SocialMedia in process */}
+			{/* SocialMedia complete */}
 			<SocialMedia />
 			{/* Footer complete */}
 			<Footer />
