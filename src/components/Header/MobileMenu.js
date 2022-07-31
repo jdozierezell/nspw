@@ -6,13 +6,13 @@ import MobileMenuButton from './MobileMenuButton'
 
 const MobileMenu = ({ toggle, setToggle }) => {
 	const menuButtonCSS = css`
-		position: absolute;
+		position: relative;
 		left: 50%;
 		transform: translate(-50%, 0);
 	`
 
 	return (
-		<Box w="20" m="1em auto" css={menuButtonCSS}>
+		<Box w="20" css={menuButtonCSS}>
 			<MobileMenuButton toggle={toggle} setToggle={setToggle} />
 		</Box>
 	)

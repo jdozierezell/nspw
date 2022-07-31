@@ -22,10 +22,21 @@ const Header = () => {
 	}, [mobileMenuActive])
 
 	return (
-		<Flex justifyItems="center" alignItems="center" direction="row" m="2em">
-			<Box w="20em">
-				<Logo />
-			</Box>
+		<Flex
+			justifyItems="center"
+			alignItems="center"
+			direction="row"
+			m="1.4em 4em 0.6em"
+			css={css`
+				position: relative;
+				z-index: 1;
+			`}
+		>
+			{isLargerThan1104 && (
+				<Box minW="10em" maxW="12em">
+					<Logo />
+				</Box>
+			)}
 			{isLargerThan1104 ? (
 				<DeskMenu />
 			) : (
