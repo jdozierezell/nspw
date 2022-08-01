@@ -7,7 +7,7 @@ import Logo from '../../static/svgs/logo.svg'
 const Footer = () => {
 	return (
 		<Grid
-			bg="purple.700"
+			bg="purple.c700"
 			templateColumns={{
 				sm: '1fr',
 				md: 'minmax(auto, 12rem) 1fr minmax(auto, 20rem)',

@@ -19,7 +19,7 @@ const SocialMedia = () => {
 			{loadExternalScript(
 				'https://cdn.curator.io/published/5312a30d-4231-4175-b265-8b0360333cd8.js'
 			)}
-			<Heading textAlign="center" m="1rem 0" color="purple.700">
+			<Heading textAlign="center" m="1rem 0" color="purple.c700">
 				#OutOfTheDarkness
 			</Heading>
 			<div id="curator-feed-default-feed-layout">

@@ -6,7 +6,7 @@ const Anthem = () => {
 		<Container
 			fontSize="1.4em"
 			maxW="100vw"
-			bg="purple.700"
+			bg="purple.c700"
 			color="white"
 			p={{ sm: '2rem', md: '0 4rem 4rem' }}
 		>

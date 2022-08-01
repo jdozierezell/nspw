@@ -2,6 +2,8 @@ import React from 'react'
 import { css } from '@emotion/react'
 import { Container, Flex } from '@chakra-ui/react'
 
+import { NSPWTheme } from '../../theme/NSPWTheme'
+
 import Facebook from '../../../static/svgs/facebook.svg'
 import Instagram from '../../../static/svgs/instagram.svg'
 import TikTok from '../../../static/svgs/tikTok.svg'
@@ -13,7 +15,7 @@ import TheMighty from '../../../static/svgs/theMighty.svg'
 const socialAccountCSS = css`
 	svg {
 		height: 3.75rem;
-		fill: #3c2e72;
+		fill: ${NSPWTheme.colors.purple.c700};
 	}
 `
 const flexCSS = css`
