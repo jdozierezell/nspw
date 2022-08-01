@@ -21,12 +21,6 @@ const MobileMenuButton = ({ toggle, setToggle }) => {
 		setToggle(!toggle)
 	}
 
-	// useEffect(e => {
-	// 	console.log(e)
-	// 	const el = lottieRef.current
-	// 	el.setDirection(-1)
-	// })
-
 	return (
 		<Box as="button">
 			<Lottie

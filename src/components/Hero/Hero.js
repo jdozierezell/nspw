@@ -26,7 +26,9 @@ const Hero = () => {
 		);
 		height: calc(100vh - 5em);
 		min-height: 700px;
+		margin-top: 120px;
 		@media (min-width: 1104px) {
+			margin-top: 0;
 			height: 100vh;
 		}
 		.cloud {
