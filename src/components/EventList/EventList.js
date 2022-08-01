@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
-import { Container } from '@chakra-ui/react'
+import EventSwiper from './EventSwiper'
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -56,14 +56,7 @@ const EventList = () => {
 			)
 			.catch(error => console.log('error', error))
 	}, [])
-	console.log(addEvent)
-	return (
-		<Container>
-			{addEvent.results.map((event, index) => {
-				return <p key={index}>{event.title}</p>
-			})}
-		</Container>
-	)
+	return <EventSwiper events={addEvent} />
 }
 
 export default EventList

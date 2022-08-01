@@ -9,7 +9,7 @@ import Anthem from '../components/Anthem'
 import WalkSearch from '../components/WalkSearch'
 import GraphicBuilder from '../components/GraphicBuilder'
 import RealStories from '../components/RealStories'
-import EventList from '../components/EventList'
+import EventList from '../components/EventList/EventList'
 import SocialMedia from '../components/SocialMedia/SocialMedia'
 import Footer from '../components/Footer'
 
