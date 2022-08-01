@@ -13,30 +13,7 @@ const menuCSS = css`
 	}
 `
 
-const Menu = () => {
-	const menuItems = [
-		{
-			label: 'Community Walks',
-			anchor: '#community-walks',
-		},
-		{
-			label: 'Graphic Builder',
-			anchor: '#graphic-builder',
-		},
-		{
-			label: 'Real Stories',
-			anchor: '#real-stories',
-		},
-		{
-			label: 'Event Calendar',
-			anchor: '#event-calendar',
-		},
-		{
-			label: 'Social Media',
-			anchor: '#social-media',
-		},
-	]
-
+const Menu = ({ menuItems }) => {
 	return (
 		<Container maxW="100vw" css={menuCSS}>
 			<Flex

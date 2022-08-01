@@ -6,31 +6,49 @@ import MobileMenu from './MobileMenu'
 import DeskMenu from './DeskMenu'
 
 import Logo from '../../../static/svgs/logo.svg'
-import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/suicidePreventionBeginsWithAllOfUs.svg'
 
 const Header = () => {
 	const [isLargerThan1104] = useMediaQuery('(min-width: 1104px)')
 
 	const [mobileMenuActive, setMobileMenuActive] = useState(false)
+	const menuItems = [
+		{
+			label: 'Community Walks',
+			anchor: '#community-walks',
+		},
+		{
+			label: 'Graphic Builder',
+			anchor: '#graphic-builder',
+		},
+		{
+			label: 'Real Stories',
+			anchor: '#real-stories',
+		},
+		{
+			label: 'Event Calendar',
+			anchor: '#event-calendar',
+		},
+		{
+			label: 'Social Media',
+			anchor: '#social-media',
+		},
+	]
 
-	useEffect(() => {
-		if (mobileMenuActive) {
-			console.log('active')
-		} else {
-			console.log('not active')
+	const headerCSS = css`
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		@media (min-width: 1104px) {
+			margin: 1.4em 4em 0.6em;
 		}
-	}, [mobileMenuActive])
+	`
 
 	return (
 		<Flex
 			justifyItems="center"
 			alignItems="center"
 			direction="row"
-			m="1.4em 4em 0.6em"
-			css={css`
-				position: relative;
-				z-index: 1;
-			`}
+			css={headerCSS}
 		>
 			{isLargerThan1104 && (
 				<Box minW="10em" maxW="12em">
@@ -38,11 +56,12 @@ const Header = () => {
 				</Box>
 			)}
 			{isLargerThan1104 ? (
-				<DeskMenu />
+				<DeskMenu menuItems={menuItems} />
 			) : (
 				<MobileMenu
 					toggle={mobileMenuActive}
 					setToggle={setMobileMenuActive}
+					menuItems={menuItems}
 				/>
 			)}
 		</Flex>
