@@ -4,24 +4,20 @@ import { css } from '@emotion/react'
 
 import Logo from '../../static/svgs/logo.svg'
 
-const footerCSS = css`
-	background
-`
-
 const Footer = () => {
 	return (
 		<Grid
 			bg="purple.700"
 			templateColumns={{
 				sm: '1fr',
-				md: 'minmax(auto, 12em) 1fr minmax(auto, 20em)',
+				md: 'minmax(auto, 12rem) 1fr minmax(auto, 20rem)',
 			}}
 			gap="4em"
-			p="4em 2em"
+			p="4rem 2rem"
 			color="white"
 		>
 			<GridItem alignSelf="end">
-				<Box maxW="12em" m="auto">
+				<Box maxW="12rem" m="auto">
 					<Logo />
 				</Box>
 			</GridItem>
@@ -29,7 +25,7 @@ const Footer = () => {
 				textAlign={{ sm: 'center', md: 'left' }}
 				colStart={{ sm: 1, md: 3 }}
 			>
-				<VStack spacing="1em">
+				<VStack spacing="1rem">
 					<Text w="100%">
 						Are you in a crisis?
 						<br />

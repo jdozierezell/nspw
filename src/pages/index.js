@@ -27,7 +27,7 @@ const Home = () => {
 			<WalkSearch />
 			{/* GraphicBuilder waiting */}
 			<GraphicBuilder />
-			{/* RealStories waiting */}
+			{/* RealStories complete */}
 			<RealStories />
 			{/* EventList waiting */}
 			<EventList />

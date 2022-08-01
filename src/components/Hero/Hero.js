@@ -22,7 +22,7 @@ const Hero = () => {
 		background: linear-gradient(
 			180deg,
 			rgba(42, 170, 245, 1) 0%,
-			rgba(60, 46, 114, 1) 100%
+			rgba(47, 37, 92, 1) 100%
 		);
 		height: calc(100vh - 5em);
 		min-height: 700px;

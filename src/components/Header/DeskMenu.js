@@ -45,8 +45,8 @@ const Menu = () => {
 				gap={{ md: '2em', xl: '4em' }}
 				wrap="nowrap"
 			>
-				{menuItems.map(item => (
-					<Button fontSize={{ md: '1em', lg: '1.2em' }}>
+				{menuItems.map((item, index) => (
+					<Button key={index} fontSize={{ md: '1em', lg: '1.2em' }}>
 						<a href={item.anchor}>{item.label}</a>
 					</Button>
 				))}

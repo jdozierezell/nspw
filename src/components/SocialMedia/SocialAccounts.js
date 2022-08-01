@@ -12,15 +12,15 @@ import TheMighty from '../../../static/svgs/theMighty.svg'
 
 const socialAccountCSS = css`
 	svg {
-		height: 3.75em;
+		height: 3.75rem;
 		fill: #3c2e72;
 	}
 `
 const flexCSS = css`
-	gap: 2em;
+	gap: 2rem;
 	flex-wrap: wrap;
 	@media (min-width: 768px) {
-		gap: 3em;
+		gap: 3rem;
 		flex-wrap: nowrap;
 	}
 `
@@ -28,7 +28,12 @@ const flexCSS = css`
 const SocialAccounts = () => {
 	return (
 		<Container css={socialAccountCSS} maxW="auto" m="2em auto">
-			<Flex css={flexCSS} justify="center">
+			<Flex
+				css={flexCSS}
+				justify="center"
+				gap={{ sm: '2rem', md: '3rem' }}
+				wrap={{ sm: 'wrap', md: 'nowrap' }}
+			>
 				<a
 					href="https://www.facebook.com/AFSPnational/"
 					target="_blank"

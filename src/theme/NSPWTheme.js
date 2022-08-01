@@ -1,5 +1,4 @@
 import { extendTheme } from '@chakra-ui/react'
-// import { customAlertVariant } from "./Alert/customAlert"
 
 const brand = {
 	border: '#2D8540',
@@ -105,29 +104,3 @@ export const NSPWTheme = extendTheme({
 	styles,
 	textStyles,
 })
-
-// export const NSPWTheme = extendTheme({
-//   components: {
-//     // This is a custom variant for Toast
-//     // It has to be here because Toast is rendered in a portal
-//     Alert: {
-//       variants: {
-//         subtle: customAlertVariant,
-//         "left-accent": customAlertVariant,
-//         "top-accent": customAlertVariant,
-//         solid: customAlertVariant,
-//         custom: {
-//           container: {
-//             border: "1px solid",
-//             borderColor: "orange.500",
-//             bg: "orange.800",
-//             color: "orange.200",
-//           },
-//           icon: {
-//             color: "orange.200",
-//           },
-//         },
-//       },
-//     },
-//   },
-// })

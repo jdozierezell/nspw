@@ -1,24 +1,22 @@
 import React from 'react'
-import { css } from '@emotion/react'
 import { Container, VStack } from '@chakra-ui/react'
-
-const anthemCSS = css`
-	padding: 1em;
-	color: #ffffff;
-	background-color: #3c2e72;
-	@media (min-width: 768px) {
-		padding: 0 4em 4em;
-	}
-	p {
-		font-size: 1em;
-		margin: 1.4em 0;
-	}
-`
 
 const Anthem = () => {
 	return (
-		<Container fontSize="1.4em" maxW="100vw" css={anthemCSS}>
-			<VStack gap="1em" align="flex-start" maxW={'48em'} m="0 auto">
+		<Container
+			fontSize="1.4em"
+			maxW="100vw"
+			bg="purple.700"
+			color="white"
+			p={{ sm: '2rem', md: '0 4rem 4rem' }}
+		>
+			<VStack
+				gap="1.4em"
+				align="flex-start"
+				maxW={'48em'}
+				m="0 auto"
+				fontSize="1rem"
+			>
 				<p>
 					Just imagine if we could walk together toward a world
 					without suicide. Since 2002, the American Foundation for

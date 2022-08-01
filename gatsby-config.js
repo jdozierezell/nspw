@@ -5,6 +5,7 @@ module.exports = {
 		`gatsby-plugin-emotion`,
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
+		`gatsby-transformer-sharp`,
 		{
 			resolve: `gatsby-plugin-web-font-loader`,
 			options: {
