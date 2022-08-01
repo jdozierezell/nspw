@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react'
+import { css } from '@emotion/react'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
+import { Container, Heading } from '@chakra-ui/react'
+
 import EventSwiper from './EventSwiper'
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
+
+const containerCSS = css`
+	padding: 0 2rem;
+	@media (min-width: 768px) {
+		padding: 0 4rem;
+	}
+`
 
 const EventList = () => {
 	const [addEvent, setAddEvent] = useState({
@@ -56,7 +66,12 @@ const EventList = () => {
 			)
 			.catch(error => console.log('error', error))
 	}, [])
-	return <EventSwiper events={addEvent} />
+	return (
+		<Container css={containerCSS} maxW={'100vw'}>
+			<Heading m="2em 0 1em">Event Calendar</Heading>
+			<EventSwiper events={addEvent} />
+		</Container>
+	)
 }
 
 export default EventList

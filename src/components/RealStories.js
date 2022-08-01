@@ -12,9 +12,9 @@ import {
 } from '@chakra-ui/react'
 
 const containerCSS = css`
-	padding: 2rem;
+	padding: 0 2rem;
 	@media (min-width: 768px) {
-		padding: 0 4rem 4rem;
+		padding: 0 4rem;
 	}
 `
 const linkBoxCSS = css`
@@ -54,7 +54,7 @@ const linkOverlayCSS = css`
 const RealStories = () => {
 	return (
 		<Container css={containerCSS} maxW="100vw">
-			<Heading as="h2" m="2em 0 1em">
+			<Heading as="h2" m="1em 0">
 				Real Stories
 			</Heading>
 			<SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={10}>

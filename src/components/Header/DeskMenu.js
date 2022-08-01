@@ -38,7 +38,7 @@ const Menu = () => {
 	]
 
 	return (
-		<Container maxW="1080px" css={menuCSS}>
+		<Container maxW="100vw" css={menuCSS}>
 			<Flex
 				direction="row"
 				justifyContent="end"

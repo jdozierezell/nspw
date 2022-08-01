@@ -24,12 +24,12 @@ const Home = () => {
 			{/* Anthem complete */}
 			<Anthem />
 			{/* WalkSearch waiting */}
-			<WalkSearch />
+			{/* <WalkSearch /> */}
 			{/* GraphicBuilder waiting */}
-			<GraphicBuilder />
+			{/* <GraphicBuilder /> */}
 			{/* RealStories complete */}
 			<RealStories />
-			{/* EventList waiting */}
+			{/* EventList complete */}
 			<EventList />
 			{/* SocialMedia complete */}
 			<SocialMedia />
