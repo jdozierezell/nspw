@@ -22,15 +22,13 @@ const MobileMenuButton = ({ toggle, setToggle }) => {
 	}
 
 	return (
-		<Box as="button">
-			<Lottie
-				autoplay={false}
-				loop={false}
-				lottieRef={lottieRef}
-				animationData={svg}
-				onClick={() => mobileButtonAnim(lottieRef)}
-			></Lottie>
-		</Box>
+		<Lottie
+			autoplay={false}
+			loop={false}
+			lottieRef={lottieRef}
+			animationData={svg}
+			onClick={() => mobileButtonAnim(lottieRef)}
+		></Lottie>
 	)
 }
 

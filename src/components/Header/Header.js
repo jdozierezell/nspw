@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Flex, useMediaQuery } from '@chakra-ui/react'
 import { css } from '@emotion/react'
 
@@ -44,27 +44,27 @@ const Header = () => {
 	`
 
 	return (
-		<Flex
-			justifyItems="center"
-			alignItems="center"
-			direction="row"
-			css={headerCSS}
-		>
-			{isLargerThan1104 && (
-				<Box minW="10em" maxW="12em">
-					<Logo />
-				</Box>
-			)}
-			{isLargerThan1104 ? (
-				<DeskMenu menuItems={menuItems} />
-			) : (
-				<MobileMenu
-					toggle={mobileMenuActive}
-					setToggle={setMobileMenuActive}
-					menuItems={menuItems}
-				/>
-			)}
-		</Flex>
+		// <Flex
+		// 	justifyItems="center"
+		// 	alignItems="center"
+		// 	direction="row"
+		// 	css={headerCSS}
+		// >
+		// 	{isLargerThan1104 && (
+		// 		<Box minW="10em" maxW="12em">
+		// 			<Logo />
+		// 		</Box>
+		// 	)}
+		// 	{isLargerThan1104 ? (
+		// 		<DeskMenu menuItems={menuItems} />
+		// 	) : (
+		<MobileMenu
+			toggle={mobileMenuActive}
+			setToggle={setMobileMenuActive}
+			menuItems={menuItems}
+		/>
+		// 	)}
+		// </Flex>
 	)
 }
 

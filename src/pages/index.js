@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 
 import { NSPWTheme } from '../theme/NSPWTheme'
@@ -14,7 +14,6 @@ import SocialMedia from '../components/SocialMedia/SocialMedia'
 import Footer from '../components/Footer'
 
 const Home = () => {
-	const [svgBaseColor, setSvgBaseColor] = useState({ h: 252, s: 43, l: 31 })
 	return (
 		<ChakraProvider resetCSS theme={NSPWTheme}>
 			{/* Header in process */}
