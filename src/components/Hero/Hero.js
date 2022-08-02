@@ -6,7 +6,7 @@ import Cloud from '../../../static/svgs/cloud.svg'
 import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/suicidePreventionBeginsWithAllOfUs.svg'
 import SuicidePreventionBeginsWithAllOfUsNoBg from '../../../static/svgs/suicidePreventionBeginsWithAllOfUs_no-bg.svg'
 
-const Hero = () => {
+const Hero = ({ innerHeight }) => {
 	const [isLargerThan1104] = useMediaQuery('(min-width: 1104px)')
 
 	const heroHSL = {
@@ -24,9 +24,9 @@ const Hero = () => {
 			rgba(42, 170, 245, 1) 0%,
 			rgba(47, 37, 92, 1) 100%
 		);
-		height: calc(100vh - 5em);
+		height: calc(${innerHeight}px - 5rem);
 		min-height: 700px;
-		margin-top: 120px;
+
 		@media (min-width: 1104px) {
 			margin-top: 0;
 			height: 100vh;

@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Box, Button, Container, Flex, Text } from '@chakra-ui/react'
 import { css } from '@emotion/react'
 
+import Logo from '../../../static/svgs/logo.svg'
+
 const menuCSS = css`
 	button {
 		background: transparent;
@@ -22,6 +24,9 @@ const Menu = ({ menuItems }) => {
 				gap={{ md: '2em', xl: '4em' }}
 				wrap="nowrap"
 			>
+				<Box minW="10em" maxW="12em">
+					<Logo />
+				</Box>
 				{menuItems.map((item, index) => (
 					<Button key={index} fontSize={{ md: '1em', lg: '1.2em' }}>
 						<a href={item.anchor}>{item.label}</a>

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
+import { Helmet } from 'react-helmet'
 
 import { NSPWTheme } from '../theme/NSPWTheme'
 
@@ -14,27 +15,48 @@ import SocialMedia from '../components/SocialMedia/SocialMedia'
 import Footer from '../components/Footer'
 
 const Home = () => {
+	const [innerHeight, setInnerHeight] = useState(0)
+
+	const setHeight = () => {
+		setInnerHeight(window.innerHeight)
+	}
+
+	useEffect(() => {
+		setInnerHeight(window.innerHeight)
+		window.addEventListener('resize', setHeight)
+		return () => window.removeEventListener('resize', setHeight)
+	}, [innerHeight])
+
 	return (
-		<ChakraProvider resetCSS theme={NSPWTheme}>
-			{/* Header in process */}
-			<Header />
-			{/* Hero complete */}
-			<Hero />
-			{/* Anthem complete */}
-			<Anthem />
-			{/* WalkSearch waiting */}
-			{/* <WalkSearch /> */}
-			{/* GraphicBuilder waiting */}
-			{/* <GraphicBuilder /> */}
-			{/* RealStories complete */}
-			<RealStories />
-			{/* EventList complete */}
-			<EventList />
-			{/* SocialMedia complete */}
-			<SocialMedia />
-			{/* Footer complete */}
-			<Footer />
-		</ChakraProvider>
+		<>
+			<Helmet>
+				<title>National Suicide Prevention Week</title>
+				<link
+					rel="stylesheet"
+					href="https://use.typekit.net/ogc8vre.css"
+				></link>
+			</Helmet>
+			<ChakraProvider resetCSS theme={NSPWTheme}>
+				{/* Header in process */}
+				<Header innerHeight={innerHeight} />
+				{/* Hero complete */}
+				<Hero innerHeight={innerHeight} />
+				{/* Anthem complete */}
+				<Anthem />
+				{/* WalkSearch waiting */}
+				{/* <WalkSearch /> */}
+				{/* GraphicBuilder waiting */}
+				{/* <GraphicBuilder /> */}
+				{/* RealStories complete */}
+				<RealStories />
+				{/* EventList complete */}
+				<EventList />
+				{/* SocialMedia complete */}
+				<SocialMedia />
+				{/* Footer complete */}
+				<Footer />
+			</ChakraProvider>
+		</>
 	)
 }
 

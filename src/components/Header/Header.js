@@ -5,12 +5,9 @@ import { css } from '@emotion/react'
 import MobileMenu from './MobileMenu'
 import DeskMenu from './DeskMenu'
 
-import Logo from '../../../static/svgs/logo.svg'
-
-const Header = () => {
+const Header = ({ innerHeight }) => {
 	const [isLargerThan1104] = useMediaQuery('(min-width: 1104px)')
 
-	const [mobileMenuActive, setMobileMenuActive] = useState(false)
 	const menuItems = [
 		{
 			label: 'Community Walks',
@@ -44,27 +41,13 @@ const Header = () => {
 	`
 
 	return (
-		// <Flex
-		// 	justifyItems="center"
-		// 	alignItems="center"
-		// 	direction="row"
-		// 	css={headerCSS}
-		// >
-		// 	{isLargerThan1104 && (
-		// 		<Box minW="10em" maxW="12em">
-		// 			<Logo />
-		// 		</Box>
-		// 	)}
-		// 	{isLargerThan1104 ? (
-		// 		<DeskMenu menuItems={menuItems} />
-		// 	) : (
-		<MobileMenu
-			toggle={mobileMenuActive}
-			setToggle={setMobileMenuActive}
-			menuItems={menuItems}
-		/>
-		// 	)}
-		// </Flex>
+		<>
+			{isLargerThan1104 ? (
+				<DeskMenu menuItems={menuItems} />
+			) : (
+				<MobileMenu innerHeight={innerHeight} menuItems={menuItems} />
+			)}
+		</>
 	)
 }
 

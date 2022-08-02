@@ -6,14 +6,7 @@ module.exports = {
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
-		{
-			resolve: `gatsby-plugin-web-font-loader`,
-			options: {
-				typekit: {
-					id: process.env.TYPEKIT_ID,
-				},
-			},
-		},
+		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-plugin-react-svg`,
 			options: {
