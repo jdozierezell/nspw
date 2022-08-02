@@ -1,7 +1,7 @@
 import React from 'react'
 
 const GraphicBuilder = () => {
-	return <div>GraphicBuilder</div>
+	return <div id="graphic">GraphicBuilder</div>
 }
 
 export default GraphicBuilder

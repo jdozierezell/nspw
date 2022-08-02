@@ -15,7 +15,7 @@ const Header = ({ innerHeight }) => {
 		},
 		{
 			label: 'Graphic Builder',
-			anchor: '#graphic-builder',
+			anchor: '#graphic',
 		},
 		{
 			label: 'Real Stories',
@@ -26,19 +26,10 @@ const Header = ({ innerHeight }) => {
 			anchor: '#event-calendar',
 		},
 		{
-			label: 'Social Media',
-			anchor: '#social-media',
+			label: 'Follow Us',
+			anchor: '#follow-us',
 		},
 	]
-
-	const headerCSS = css`
-		position: relative;
-		z-index: 1;
-		margin: 0;
-		@media (min-width: 1104px) {
-			margin: 1.4em 4em 0.6em;
-		}
-	`
 
 	return (
 		<>

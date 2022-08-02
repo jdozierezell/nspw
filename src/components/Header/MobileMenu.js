@@ -18,10 +18,13 @@ import { NSPWTheme } from '../../theme/NSPWTheme'
 const MobileMenu = ({ innerHeight, menuItems }) => {
 	const { isOpen, onToggle } = useDisclosure()
 
-	const menuClosedCSS = css`
+	const mobileMenuCSS = css`
 		width: 100vw;
 		background-color: ${NSPWTheme.colors.blue.c400};
 		height: calc(${innerHeight}px - 5rem);
+		font-family: hoss-round, sans-serif;
+		font-weight: 600;
+		font-style: normal;
 	`
 
 	return (
@@ -31,19 +34,14 @@ const MobileMenu = ({ innerHeight, menuItems }) => {
 			</Box>
 			<Collapse in={isOpen}>
 				<VStack
-					css={menuClosedCSS}
+					css={mobileMenuCSS}
 					justifyContent="space-around"
 					p="4rem 0 1rem"
 				>
 					{menuItems.map((item, index) => {
 						return (
 							<React.Fragment key={index}>
-								<Link
-									fontSize="1.6rem"
-									fontFamily="Hoss Round"
-									fontWeight="600"
-									href={item.anchor}
-								>
+								<Link fontSize="1.6rem" href={item.anchor}>
 									{item.label}
 								</Link>
 								<Spacer />

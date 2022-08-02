@@ -32,6 +32,9 @@ const imgCSS = css`
 const authorCSS = css`
 	color: #ffffff;
 	font-size: 1rem;
+	font-family: quasimoda, sans-serif;
+	font-weight: 500;
+	font-style: normal;
 	background-color: rgba(20, 20, 20, 0.7);
 	padding: 0.3rem 0.6rem;
 	position: absolute;
@@ -44,8 +47,10 @@ const authorCSS = css`
 	}
 `
 const linkOverlayCSS = css`
+	font-family: hoss-round, sans-serif;
+	font-weight: 500;
+	font-style: normal;
 	font-size: 1.2rem;
-	font-family: 'Hoss Round', Arial, sans-serif;
 	@media (min-width: 768px) {
 		font-size: 1.4rem;
 	}
@@ -53,7 +58,7 @@ const linkOverlayCSS = css`
 
 const RealStories = () => {
 	return (
-		<Container css={containerCSS} maxW="100vw">
+		<Container id="real-stories" css={containerCSS} maxW="100vw">
 			<Heading as="h2" m="1em 0">
 				Real Stories
 			</Heading>

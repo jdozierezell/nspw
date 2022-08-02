@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Divider } from '@chakra-ui/react'
 import { Helmet } from 'react-helmet'
 
 import { NSPWTheme } from '../theme/NSPWTheme'

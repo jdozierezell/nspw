@@ -17,9 +17,27 @@ const swiperCSS = css`
 		padding-bottom: 2rem;
 	}
 `
+const dateCSS = css`
+	font-family: quasimoda, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+`
+const titleCSS = css`
+	font-family: hoss-round, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 2rem;
+	margin: 2rem 3rem;
+	@media (min-width: 768) {
+		font-size: 3rem;
+	}
+`
 const linkCSS = css`
 	position: absolute;
 	bottom: 2rem;
+	font-family: quasimoda, sans-serif;
+	font-weight: 500;
+	font-style: normal;
 `
 
 console.log(NSPWTheme)
@@ -30,8 +48,6 @@ const EventSwiper = ({ events }) => {
 		<Container maxW="100vw" p={0}>
 			{results.length > 0 && (
 				<Swiper
-					onSlideChange={() => console.log('slide change')}
-					onSwiper={swiper => console.log(swiper)}
 					pagination={{
 						clickable: true,
 					}}
@@ -43,7 +59,7 @@ const EventSwiper = ({ events }) => {
 							slidesPerView: 1,
 							spaceBetween: 20,
 						},
-						768: {
+						1080: {
 							slidesPerView: 3,
 							spaceBetween: 30,
 						},
@@ -51,8 +67,10 @@ const EventSwiper = ({ events }) => {
 				>
 					{results.map((event, index) => (
 						<SwiperSlide key={index}>
-							<Text m="2rem 3rem">{event.date}</Text>
-							<Heading m="2rem 3rem">{event.title}</Heading>
+							<Text css={dateCSS} m="2rem 3rem">
+								{event.date}
+							</Text>
+							<h3 css={titleCSS}>{event.title}</h3>
 							<Link
 								css={linkCSS}
 								href={`https://www.addevent.com/event/${event.eventCode}`}

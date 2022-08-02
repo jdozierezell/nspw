@@ -55,7 +55,8 @@ const Hero = ({ innerHeight }) => {
 	const messageSvgCSS = css`
 		position: relative;
 		width: 80vw;
-		left: 10vw;
+		max-width: 25rem;
+		margin: 0 auto;
 	`
 	const messageSvgNoBgCSS = css`
 		position: absolute;
@@ -66,9 +67,10 @@ const Hero = ({ innerHeight }) => {
 	const nspwDatesCSS = css`
 		color: #ffffff;
 		position: relative;
-		font-weight: 800;
+		font-family: hoss-round, sans-serif;
+		font-weight: 600;
+		font-style: normal;
 		line-height: 1.4em;
-		font-family: 'Hoss Round', Arial, sans-serif;
 		font-size: 2em;
 		width: 66vw;
 		right: -17vw;
@@ -80,7 +82,7 @@ const Hero = ({ innerHeight }) => {
 			font-size: 3vw;
 			letter-spacing: 0.08em;
 			width: 33vw;
-			top: 28%;
+			top: 30%;
 			right: calc(4vw + 4em);
 			text-align: left;
 			padding-top: 0;
@@ -108,7 +110,7 @@ const Hero = ({ innerHeight }) => {
 				</>
 			)}
 			<h2 css={nspwDatesCSS}>
-				September 4 – 10 is National Suicide Prevention Week
+				September 4–10 is National Suicide Prevention Week
 			</h2>
 		</div>
 	)

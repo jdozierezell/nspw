@@ -12,6 +12,9 @@ dayjs.extend(timezone)
 
 const containerCSS = css`
 	padding: 0 2rem;
+	font-family: hoss-round, sans-serif;
+	font-weight: 600;
+	font-style: normal;
 	@media (min-width: 768px) {
 		padding: 0 4rem;
 	}
@@ -67,7 +70,7 @@ const EventList = () => {
 			.catch(error => console.log('error', error))
 	}, [])
 	return (
-		<Container css={containerCSS} maxW={'100vw'}>
+		<Container id="event-calendar" css={containerCSS} maxW={'100vw'}>
 			<Heading m="2em 0 1em">Event Calendar</Heading>
 			<EventSwiper events={addEvent} />
 		</Container>

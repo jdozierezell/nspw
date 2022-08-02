@@ -1,16 +1,13 @@
 import React, { useEffect } from 'react'
 import { css } from '@emotion/react'
-import { Container, Heading } from '@chakra-ui/react'
+import { Container, Divider, Heading } from '@chakra-ui/react'
 
 import SocialAccounts from './SocialAccounts'
 
 import loadExternalScript from '../../utils/loadExternalScript'
 
 const socialMediaCSS = css`
-	padding: 0 2rem;
-	@media (min-width: 768px) {
-		padding: 4rem 0rem 0rem;
-	}
+	padding: 0;
 	#curator-feed-default-feed-layout {
 		padding: 0;
 	}
@@ -19,7 +16,13 @@ const socialMediaCSS = css`
 const SocialMedia = () => {
 	return (
 		<Container css={socialMediaCSS} maxW="100vw" p="0">
-			<SocialAccounts />
+			<Divider
+				m="4rem 0"
+				borderColor="purple.c700"
+				borderWidth={'.1rem'}
+				id="follow-us"
+			/>
+			<SocialAccounts p="0 2rem" />
 			{loadExternalScript(
 				'https://cdn.curator.io/published/5312a30d-4231-4175-b265-8b0360333cd8.js'
 			)}
