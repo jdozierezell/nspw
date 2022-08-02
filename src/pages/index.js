@@ -8,7 +8,7 @@ import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
 import Anthem from '../components/Anthem'
 import WalkSearch from '../components/WalkSearch'
-import GraphicBuilder from '../components/GraphicBuilder'
+import Shareables from '../components/Shareables'
 import RealStories from '../components/RealStories'
 import EventList from '../components/EventList/EventList'
 import SocialMedia from '../components/SocialMedia/SocialMedia'
@@ -37,7 +37,7 @@ const Home = () => {
 				></link>
 			</Helmet>
 			<ChakraProvider resetCSS theme={NSPWTheme}>
-				{/* Header in process */}
+				{/* Header complete */}
 				<Header innerHeight={innerHeight} />
 				{/* Hero complete */}
 				<Hero innerHeight={innerHeight} />
@@ -45,8 +45,8 @@ const Home = () => {
 				<Anthem />
 				{/* WalkSearch waiting */}
 				{/* <WalkSearch /> */}
-				{/* GraphicBuilder waiting */}
-				{/* <GraphicBuilder /> */}
+				{/* Shareables in progress */}
+				<Shareables />
 				{/* RealStories complete */}
 				<RealStories />
 				{/* EventList complete */}
