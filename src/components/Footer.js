@@ -44,7 +44,8 @@ const Footer = () => {
 						Are you in a crisis?
 						<br />
 						<Link href="tel:988">
-							<Highlight
+							{/* <Highlight
+								key="1"
 								query="Call 988"
 								styles={{
 									px: '2',
@@ -57,10 +58,11 @@ const Footer = () => {
 								w="100%"
 							>
 								Call 988 or
-							</Highlight>
+							</Highlight> */}
 						</Link>{' '}
 						<Link href="sms:741741&body=TALK">
-							<Highlight
+							{/* <Highlight
+								key={2}
 								query="text TALK to 741741"
 								styles={{
 									px: '2',
@@ -73,7 +75,7 @@ const Footer = () => {
 								w="100%"
 							>
 								text TALK to 741741
-							</Highlight>
+							</Highlight> */}
 						</Link>
 						.
 					</Text>

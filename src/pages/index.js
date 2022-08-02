@@ -7,7 +7,7 @@ import { NSPWTheme } from '../theme/NSPWTheme'
 import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
 import Anthem from '../components/Anthem'
-import WalkSearch from '../components/WalkSearch'
+import WalkSearch from '../components/WalkSearch/WalkSearch'
 import Shareables from '../components/Shareables'
 import RealStories from '../components/RealStories'
 import EventList from '../components/EventList/EventList'
@@ -44,7 +44,7 @@ const Home = () => {
 				{/* Anthem complete */}
 				<Anthem />
 				{/* WalkSearch waiting */}
-				{/* <WalkSearch /> */}
+				<WalkSearch />
 				{/* Shareables in progress */}
 				<Shareables />
 				{/* RealStories complete */}
