@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 
 const containerCSS = css`
-	padding: 0 2rem;
+	padding: 1rem 2rem;
 	@media (min-width: 768px) {
 		padding: 2rem 4rem;
 	}

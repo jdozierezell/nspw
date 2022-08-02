@@ -20,8 +20,8 @@ const Shareables = () => {
 				Sharables
 			</Heading>
 			<Text m="0 0 2em" fontSize="1.2rem">
-				Download and share the graphics below to spread awareness and
-				support for National Suicide Prevention Week.
+				Click to download and share the graphics below to spread
+				awareness and support for National Suicide Prevention Week.
 			</Text>
 			<SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={10}>
 				<a

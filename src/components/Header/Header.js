@@ -14,7 +14,7 @@ const Header = ({ innerHeight }) => {
 			anchor: '#community-walks',
 		},
 		{
-			label: 'Graphic Builder',
+			label: 'Shareables',
 			anchor: '#graphic',
 		},
 		{

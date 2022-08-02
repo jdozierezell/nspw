@@ -13,6 +13,10 @@ import {
 import Logo from '../../static/svgs/logo.svg'
 
 const crisisCSS = css`
+	text-align: center;
+	@media (min-width: 768px) {
+		text-align: right;
+	}
 	a:hover {
 		text-decoration: none;
 	}
@@ -44,7 +48,7 @@ const Footer = () => {
 						Are you in a crisis?
 						<br />
 						<Link href="tel:988">
-							{/* <Highlight
+							<Highlight
 								key="1"
 								query="Call 988"
 								styles={{
@@ -58,10 +62,10 @@ const Footer = () => {
 								w="100%"
 							>
 								Call 988 or
-							</Highlight> */}
+							</Highlight>
 						</Link>{' '}
 						<Link href="sms:741741&body=TALK">
-							{/* <Highlight
+							<Highlight
 								key={2}
 								query="text TALK to 741741"
 								styles={{
@@ -75,11 +79,11 @@ const Footer = () => {
 								w="100%"
 							>
 								text TALK to 741741
-							</Highlight> */}
+							</Highlight>
 						</Link>
 						.
 					</Text>
-					<Text w="100%">
+					<Text w="100%" css={crisisCSS}>
 						© 2022
 						<br />
 						American Foundation for Suicide Prevention

@@ -11,12 +11,12 @@ dayjs.extend(utc)
 dayjs.extend(timezone)
 
 const containerCSS = css`
-	padding: 0 2rem;
 	font-family: hoss-round, sans-serif;
 	font-weight: 600;
 	font-style: normal;
+	padding: 0rem 2rem 1rem;
 	@media (min-width: 768px) {
-		padding: 0 4rem;
+		padding: 2rem 4rem;
 	}
 `
 
@@ -28,7 +28,7 @@ const EventList = () => {
 
 	useEffect(() => {
 		fetch(
-			'https://www.addevent.com/api/v1/oe/events/list/?token=api1597763535vAb4iZ7xahkIFj5zRDWY95036&calendar_id=1597763535284712&upcoming=08/01/2022'
+			'https://www.addevent.com/api/v1/oe/events/list/?token=api1597763535vAb4iZ7xahkIFj5zRDWY95036&calendar_id=1659478767486686&upcoming=08/01/2022'
 		)
 			.then(response => response.json())
 			.then(result => {

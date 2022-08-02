@@ -28,6 +28,10 @@ const searchClient = algoliasearch(
 const hitsCSS = css`
 	ul {
 		list-style: none;
+		@media (min-width: 768px) {
+			margin-left: 2rem;
+			margin-right: 2rem;
+		}
 	}
 `
 const hitTitleCSS = css`
@@ -44,18 +48,45 @@ const hitDetailsCSS = css`
 	font-size: 1.2rem;
 `
 const walkerCSS = css`
-	width: 10rem;
+	width: 30vw;
 	display: inline-block;
 	margin-right: -3.5rem;
+	@media (min-width: 768px) {
+		width: 13vw;
+		min-width: 9rem;
+	}
 `
 const wheelsCSS = css`
-	width: 10rem;
+	width: 30vw;
 	display: inline-block;
 	margin-right: -2rem;
+	@media (min-width: 768px) {
+		width: 13vw;
+		min-width: 9rem;
+	}
 `
 const dogWalkerCSS = css`
-	width: 10rem;
+	width: 30vw;
 	display: inline-block;
+	@media (min-width: 768px) {
+		width: 13vw;
+		min-width: 9rem;
+	}
+`
+const walkGridCSS = css`
+	padding: 0 2rem;
+	@media (min-width: 768px) {
+		padding: 0 4rem;
+	}
+	&:first-of-type {
+		padding-top: 4rem;
+	@media (min-width: 768px) {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+	&:last-of-type {
+		padding-bottom: 4rem;
+	}
 `
 
 const Hit = ({ hit }) => {
@@ -78,25 +109,28 @@ const Hit = ({ hit }) => {
 }
 const WalkSearch = () => {
 	const [hasQuery, setHasQuery] = useState(false)
-	console.log(hasQuery)
 	return (
 		<InstantSearch
 			searchClient={searchClient}
 			indexName="donor-drive-walks"
 		>
-			<Grid templateColumns={{ sm: '1fr', md: '2fr' }} p="2rem 0">
+			<Grid
+				templateColumns={{ sm: '1fr', md: '2fr' }}
+				p={{ sm: '2rem 0' }}
+				id="community-walks"
+			>
 				<GridItem
+					css={walkGridCSS}
 					colStart={1}
-					colSpan={1}
-					p={{ sm: '2rem', md: '2rem 4rem' }}
+					colSpan={{ sm: 1, md: 2 }}
 				>
 					<Heading as="h2">Find a Community Walk</Heading>
 				</GridItem>
 				<GridItem
+					css={walkGridCSS}
 					colStart={1}
 					colSpan={1}
-					w={{ sm: '100vw', md: '40vw' }}
-					p={{ sm: '2rem', md: '0 2rem' }}
+					w={{ sm: '100vw', md: '50vw' }}
 				>
 					<Box>
 						<Lottie
@@ -120,10 +154,10 @@ const WalkSearch = () => {
 					</Box>
 				</GridItem>
 				<GridItem
+					css={walkGridCSS}
 					colStart={{ sm: 1, md: 2 }}
 					colSpan={1}
-					w={{ sm: '100vw', md: '60vw' }}
-					p={{ sm: '2rem', md: '0 4rem' }}
+					w={{ sm: '100vw', md: '50vw' }}
 				>
 					<Text
 						fontFamily="quasimoda, sans-serif"
@@ -135,7 +169,8 @@ const WalkSearch = () => {
 						Step into a growing movement of people who walk for a
 						loved one lost, people who walk in support of someone
 						struggling, people who walk for themselves and people
-						who walk to connect with others who understand.
+						who walk to connect with others who understand. Select
+						your state from the list below to find a walk near you.
 					</Text>
 					<WalkStateMenu
 						attribute="state"
@@ -147,7 +182,7 @@ const WalkSearch = () => {
 					<GridItem
 						colStart={1}
 						colSpan={{ sm: 1, md: 2 }}
-						p={{ sm: '2rem', md: '2rem 4rem' }}
+						p="2rem"
 						bg="blue.100"
 					>
 						<Hits css={hitsCSS} hitComponent={Hit} />
