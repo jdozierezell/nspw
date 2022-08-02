@@ -4,9 +4,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Container, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react'
 
 const containerCSS = css`
-	padding: 0 2rem;
+	padding: 1rem 2rem;
 	@media (min-width: 768px) {
-		padding: 0 4rem;
+		padding: 2rem 4rem;
 	}
 `
 const shareableCSS = css`
@@ -44,10 +44,6 @@ const Shareables = () => {
 						alt="Semana nacional de la prevencion del suicidio"
 					/>
 				</a>
-				<a
-					href="https://nspw.afsp.org/images/NationalSuicidePreventionWeek_Purple-01.png"
-					download="NationalSuicidePreventionWeek"
-				></a>
 				<StaticImage
 					css={shareableCSS}
 					src="https://nspw.s3.amazonaws.com/images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png"

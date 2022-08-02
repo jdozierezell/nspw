@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { css } from '@emotion/react'
 import algoliasearch from 'algoliasearch/lite'
 import { Hits, InstantSearch } from 'react-instantsearch-dom'
-import { Box, Container, Heading, Stack, Text } from '@chakra-ui/react'
+import {
+	Box,
+	Heading,
+	Grid,
+	GridItem,
+	LinkBox,
+	LinkOverlay,
+	Text,
+} from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import Lottie from 'lottie-react'
 
-import CustomMenuSelect from './WalkStateMenu'
-
-import { NSPWTheme } from '../../theme/NSPWTheme'
+import WalkStateMenu from './WalkStateMenu'
 
 import walker from '../../../static/icons/646-walking-walkcycle-person-lineal-edited.json'
 import dogWalker from '../../../static/icons/647-walking-with-dog-lineal-edited.json'
@@ -18,104 +25,136 @@ const searchClient = algoliasearch(
 	'dc6a5a451c85739a43419955d7a505c1'
 )
 
+const hitsCSS = css`
+	ul {
+		list-style: none;
+	}
+`
 const hitTitleCSS = css`
 	font-family: hoss-round, sans-serif;
 	font-weight: 600;
 	font-style: normal;
+	font-size: 1.4rem;
 `
 const hitDetailsCSS = css`
 	font-family: quasimoda, sans-serif;
 	font-weight: 500;
 	font-style: normal;
-`
-const stackCSS = css`
-	margin: 2rem;
-	@media (min-width: 768) {
-		margin: 4rem;
-	}
-`
-const textCSS = css`
-	font-family: quasimoda, sans-serif;
-	font-weight: 500;
-	font-style: normal;
-	color: ${NSPWTheme.colors.purple.c700};
+	margin: 0 0 1.5rem;
 	font-size: 1.2rem;
-	margin: 0 0 2rem;
 `
 const walkerCSS = css`
-	width: 7rem;
+	width: 10rem;
 	display: inline-block;
 	margin-right: -3.5rem;
 `
 const wheelsCSS = css`
-	width: 7rem;
+	width: 10rem;
 	display: inline-block;
 	margin-right: -2rem;
 `
 const dogWalkerCSS = css`
-	width: 7rem;
+	width: 10rem;
 	display: inline-block;
 `
 
 const Hit = ({ hit }) => {
 	return (
-		<article>
-			<p css={hitTitleCSS}>
-				<a href={hit.url} target="_blank" rel="noopener noreferrer">
-					{hit.title}
-				</a>
-			</p>
+		<LinkBox>
+			<LinkOverlay
+				css={hitTitleCSS}
+				href={hit.url}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{hit.title}{' '}
+				<ExternalLinkIcon ml="0.5rem" verticalAlign="text-top" />
+			</LinkOverlay>
 			<p css={hitDetailsCSS}>
 				{hit.date} • {hit.venue}, {hit.city}, {hit.state}
 			</p>
-		</article>
+		</LinkBox>
 	)
 }
-
 const WalkSearch = () => {
+	const [hasQuery, setHasQuery] = useState(false)
+	console.log(hasQuery)
 	return (
-		<Container id="community-walks" maxW="100vw">
-			<Stack css={stackCSS}>
-				<Heading as="h2" m="1em 0 0.25em">
-					Find a Community Walk
-				</Heading>
-				<Text css={textCSS}>
-					Step into a growing movement of people who walk for a loved
-					one lost, people who walk in support of someone struggling,
-					people who walk for themselves and people who walk to
-					connect with others who understand.
-				</Text>
-				<Box>
-					<Lottie
-						css={walkerCSS}
-						autoplay={true}
-						loop={true}
-						animationData={walker}
-					></Lottie>
-					<Lottie
-						css={wheelsCSS}
-						autoplay={true}
-						loop={true}
-						animationData={wheels}
-					></Lottie>
-					<Lottie
-						css={dogWalkerCSS}
-						autoplay={true}
-						loop={true}
-						animationData={dogWalker}
-					></Lottie>
-				</Box>
-			</Stack>
-			<InstantSearch
-				searchClient={searchClient}
-				indexName="donor-drive-walks"
-			>
-				<CustomMenuSelect attribute="state" limit={60} />
-
-				{/* <WalkStateMenu attribute="state" /> */}
-				<Hits hitComponent={Hit} />
-			</InstantSearch>
-		</Container>
+		<InstantSearch
+			searchClient={searchClient}
+			indexName="donor-drive-walks"
+		>
+			<Grid templateColumns={{ sm: '1fr', md: '2fr' }} p="2rem 0">
+				<GridItem
+					colStart={1}
+					colSpan={1}
+					p={{ sm: '2rem', md: '2rem 4rem' }}
+				>
+					<Heading as="h2">Find a Community Walk</Heading>
+				</GridItem>
+				<GridItem
+					colStart={1}
+					colSpan={1}
+					w={{ sm: '100vw', md: '40vw' }}
+					p={{ sm: '2rem', md: '0 2rem' }}
+				>
+					<Box>
+						<Lottie
+							css={walkerCSS}
+							autoplay={true}
+							loop={true}
+							animationData={walker}
+						></Lottie>
+						<Lottie
+							css={wheelsCSS}
+							autoplay={true}
+							loop={true}
+							animationData={wheels}
+						></Lottie>
+						<Lottie
+							css={dogWalkerCSS}
+							autoplay={true}
+							loop={true}
+							animationData={dogWalker}
+						></Lottie>
+					</Box>
+				</GridItem>
+				<GridItem
+					colStart={{ sm: 1, md: 2 }}
+					colSpan={1}
+					w={{ sm: '100vw', md: '60vw' }}
+					p={{ sm: '2rem', md: '0 4rem' }}
+				>
+					<Text
+						fontFamily="quasimoda, sans-serif"
+						fontWeight="500"
+						color="purple.c700"
+						fontSize="1.2rem"
+						m="0 0 2rem"
+					>
+						Step into a growing movement of people who walk for a
+						loved one lost, people who walk in support of someone
+						struggling, people who walk for themselves and people
+						who walk to connect with others who understand.
+					</Text>
+					<WalkStateMenu
+						attribute="state"
+						limit={60}
+						setHasQuery={setHasQuery}
+					/>
+				</GridItem>
+				{hasQuery && (
+					<GridItem
+						colStart={1}
+						colSpan={{ sm: 1, md: 2 }}
+						p={{ sm: '2rem', md: '2rem 4rem' }}
+						bg="blue.100"
+					>
+						<Hits css={hitsCSS} hitComponent={Hit} />
+					</GridItem>
+				)}
+			</Grid>
+		</InstantSearch>
 	)
 }
 

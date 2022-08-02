@@ -1,17 +1,26 @@
 import React from 'react'
 import { connectMenu } from 'react-instantsearch-dom'
+import { Select, Text } from '@chakra-ui/react'
 
 import states from '../../utils/states.json'
 
-const MenuSelect = ({ items, currentRefinement, refine }) => {
-	console.log(currentRefinement)
+const StateMenu = ({ items, currentRefinement, refine, setHasQuery }) => {
 	let currentRefinementLabel
 	return (
-		<select
+		<Select
+			variant="flushed"
 			value={currentRefinement || ''}
-			onChange={event => refine(event.currentTarget.value)}
+			onChange={event => {
+				setHasQuery(true)
+				refine(event.currentTarget.value)
+			}}
+			fontFamily="quasimoda, sans-serif"
+			fontWeight="500"
+			color="purple.c700"
+			fontSize="1.2rem"
+			m="0 0 2rem"
 		>
-			<option value="">See all options</option>
+			<option value="">Select your state</option>
 			{items.map(item => {
 				states.forEach(state => {
 					if (item.isRefined && state.code === currentRefinement) {
@@ -29,40 +38,10 @@ const MenuSelect = ({ items, currentRefinement, refine }) => {
 					</option>
 				)
 			})}
-		</select>
+		</Select>
 	)
 }
 
-const CustomMenuSelect = connectMenu(MenuSelect)
+const WalkStateMenu = connectMenu(StateMenu)
 
-export default CustomMenuSelect
-
-// import React from 'react'
-// import { useMenu } from 'react-instantsearch-hooks-web'
-// import { Select } from '@chakra-ui/react'
-
-// import states from '../../utils/states.json'
-
-// const CustomMenu = props => {
-// 	const { items } = useMenu(props)
-
-// 	const menu = items.map(item => {
-// 		states.forEach(state => {
-// 			if (state.code === item.value) {
-// 				item.state = item.value
-// 				item.label = state.name
-// 			}
-// 		})
-// 		return item
-// 	})
-
-// 	return (
-// 		<Select placeholder="Select option">
-// 			{items.map(item => (
-// 				<option value={item.state}>{item.label}</option>
-// 			))}
-// 		</Select>
-// 	)
-// }
-
-// export default CustomMenu
+export default WalkStateMenu

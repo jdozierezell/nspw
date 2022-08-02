@@ -14,7 +14,7 @@ import {
 const containerCSS = css`
 	padding: 0 2rem;
 	@media (min-width: 768px) {
-		padding: 0 4rem;
+		padding: 2rem 4rem;
 	}
 `
 const linkBoxCSS = css`
