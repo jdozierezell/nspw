@@ -71,7 +71,7 @@ const EventList = () => {
 	}, [])
 	return (
 		<Container id="event-calendar" css={containerCSS} maxW={'100vw'}>
-			<Heading m="2em 0 1em">Event Calendar</Heading>
+			<Heading m="2em 0 1em">Events Calendar</Heading>
 			<EventSwiper events={addEvent} />
 		</Container>
 	)

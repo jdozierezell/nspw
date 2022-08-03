@@ -11,6 +11,7 @@ import WalkSearch from '../components/WalkSearch/WalkSearch'
 import Shareables from '../components/Shareables'
 import RealStories from '../components/RealStories'
 import EventList from '../components/EventList/EventList'
+import AboutNSPW from '../components/AboutNSPW'
 import SocialMedia from '../components/SocialMedia/SocialMedia'
 import Footer from '../components/Footer'
 
@@ -51,6 +52,8 @@ const Home = () => {
 				<RealStories />
 				{/* EventList complete */}
 				<EventList />
+				{/* AboutNSPW complete */}
+				<AboutNSPW />
 				{/* SocialMedia complete */}
 				<SocialMedia />
 				{/* Footer complete */}

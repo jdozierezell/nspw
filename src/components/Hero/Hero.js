@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { useMediaQuery } from '@chakra-ui/react'
+import { useMediaQuery, Flex } from '@chakra-ui/react'
 
 import Cloud from '../../../static/svgs/cloud.svg'
 import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/suicidePreventionBeginsWithAllOfUs.svg'
@@ -55,8 +55,12 @@ const Hero = ({ innerHeight }) => {
 	const messageSvgCSS = css`
 		position: relative;
 		width: 80vw;
-		max-width: 25rem;
 		margin: 0 auto;
+		@media (min-width: 768px) {
+			width: 40vw;
+			margin: 4rem;
+			vertical-align: center;
+		}
 	`
 	const messageSvgNoBgCSS = css`
 		position: absolute;
@@ -76,9 +80,8 @@ const Hero = ({ innerHeight }) => {
 		right: -17vw;
 		padding: 1em 0 2em;
 		text-align: center;
-		@media (min-width: 1104px) {
+		@media (min-width: 768px) {
 			position: absolute;
-			color: ${heroHSL.textMain};
 			font-size: 3vw;
 			letter-spacing: 0.08em;
 			width: 33vw;
@@ -90,29 +93,18 @@ const Hero = ({ innerHeight }) => {
 	`
 
 	return (
-		<div css={heroCSS}>
+		<Flex css={heroCSS}>
 			{isLargerThan1104 ? (
-				<>
-					<Cloud
-						css={css`
-							${cloudSvgCSS};
-						`}
-					/>
-					<SuicidePreventionBeginsWithAllOfUsNoBg
-						css={css`
-							${messageSvgNoBgCSS};
-						`}
-					/>
-				</>
+				<SuicidePreventionBeginsWithAllOfUs css={messageSvgCSS} />
 			) : (
 				<>
 					<SuicidePreventionBeginsWithAllOfUs css={messageSvgCSS} />
 				</>
 			)}
 			<h2 css={nspwDatesCSS}>
-				September 4–10 is National Suicide Prevention Week
+				National Suicide Prevention Week is September 4 &ndash; 10
 			</h2>
-		</div>
+		</Flex>
 	)
 }
 

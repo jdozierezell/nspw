@@ -22,8 +22,12 @@ const Header = ({ innerHeight }) => {
 			anchor: '#real-stories',
 		},
 		{
-			label: 'Event Calendar',
+			label: 'Events Calendar',
 			anchor: '#event-calendar',
+		},
+		{
+			label: 'About NSPW',
+			anchor: '#about-nspw',
 		},
 		{
 			label: 'Follow Us',
