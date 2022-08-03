@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FourOhFour = () => {
-	return <div>FourOhFour</div>
+	return <div>Four Oh Four</div>
 }
 
 export default FourOhFour
