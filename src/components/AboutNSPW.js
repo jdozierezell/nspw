@@ -9,15 +9,9 @@ const AboutNSPW = () => {
 		font-style: normal;
 		color: #ffffff;
 		font-size: 1.2rem;
-		padding: 1rem 2rem 2rem;
+		padding: 2rem 2rem;
 		@media (min-width: 768px) {
-			padding: 0 4rem 4rem;
-		}
-		h3 {
-			font-family: hoss-round, sans-serif;
-			font-weight: 600;
-			font-style: normal;
-			font-size: 2em;
+			padding: 4rem 4rem;
 		}
 	`
 

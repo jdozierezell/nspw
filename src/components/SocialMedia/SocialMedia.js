@@ -17,7 +17,7 @@ const SocialMedia = () => {
 	return (
 		<Container css={socialMediaCSS} maxW="100vw" p="0">
 			<Divider
-				m="4rem 0"
+				m="0 0 4rem"
 				borderColor="purple.c700"
 				borderWidth={'.1rem'}
 				id="follow-us"
