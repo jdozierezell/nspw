@@ -40,10 +40,8 @@ const linkCSS = css`
 	font-style: normal;
 `
 
-console.log(NSPWTheme)
 const EventSwiper = ({ events }) => {
 	const { title, results } = events
-	console.log(results)
 	return (
 		<Container maxW="100vw" p={0}>
 			{results.length > 0 && (

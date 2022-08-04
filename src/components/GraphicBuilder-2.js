@@ -20,17 +20,6 @@ const GraphicBuilder = ({ svgBaseColor }) => {
 	const saturation = svgBaseColor.s
 	const lightness = svgBaseColor.l
 
-	console.log(
-		`cloud: hsl(${hue - 54}, ${saturation + 19}%, ${lightness + 79}%)`
-	)
-	console.log(
-		`textAccent: hsl(${hue + 2}, ${saturation - 22}%, ${lightness + 17}%)`
-	)
-	console.log(`textMain: hsl(${hue}, ${saturation}%, ${lightness}%)`)
-	console.log(
-		`stars: hsl(${hue - 192}, ${saturation + 56}%, ${lightness + 37}%)`
-	)
-
 	const svgCSS = css`
 		.cloud {
 			fill: hsl(${hue - 54}, ${saturation + 19}%, ${lightness + 79}%);
