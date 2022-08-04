@@ -46,6 +46,7 @@ const walkGridCSS = css`
 	padding: 0 2rem;
 	@media (min-width: 768px) {
 		padding: 0 4rem;
+		margin-top: 3rem;
 	}
 	&:first-of-type {
 		padding-top: 4rem;
