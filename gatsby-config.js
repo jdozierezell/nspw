@@ -1,6 +1,13 @@
 require('dotenv').config()
 
 module.exports = {
+	siteMetadata: {
+		title: `National Suicide Prevention Week || AFSP`,
+		description: `National Suicide Prevention Week is an opportunity to create awareness of this leading cause of death.`,
+		author: `@jdozierezell`,
+		image: `static/images/SuicidePreventionBeginsWithAllOfUs_TEXT.png`,
+		siteUrl: `https://nspw.afsp.org`,
+	},
 	plugins: [
 		`gatsby-plugin-emotion`,
 		`gatsby-plugin-image`,
@@ -27,6 +34,12 @@ module.exports = {
 			options: {
 				name: `icons`,
 				path: `${__dirname}/static/images/`,
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-manifest',
+			options: {
+				icon: 'static/images/afsp-icon-512x512.png',
 			},
 		},
 	],

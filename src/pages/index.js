@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { ChakraProvider, Divider } from '@chakra-ui/react'
-import { Helmet } from 'react-helmet'
+import { ChakraProvider } from '@chakra-ui/react'
 
 import { NSPWTheme } from '../theme/NSPWTheme'
-
+import SEO from '../components/SEO'
 import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
 import Anthem from '../components/Anthem'
@@ -30,13 +29,6 @@ const Home = () => {
 
 	return (
 		<>
-			<Helmet>
-				<title>National Suicide Prevention Week</title>
-				<link
-					rel="stylesheet"
-					href="https://use.typekit.net/ogc8vre.css"
-				></link>
-			</Helmet>
 			<ChakraProvider resetCSS theme={NSPWTheme}>
 				{/* Header complete */}
 				<Header innerHeight={innerHeight} />
@@ -64,3 +56,7 @@ const Home = () => {
 }
 
 export default Home
+
+export const Head = () => {
+	return <SEO />
+}

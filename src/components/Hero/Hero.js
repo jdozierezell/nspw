@@ -1,13 +1,11 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { useMediaQuery, Flex } from '@chakra-ui/react'
+import { useMediaQuery, Box, Container, Flex, Heading } from '@chakra-ui/react'
 
-import Cloud from '../../../static/svgs/cloud.svg'
 import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/suicidePreventionBeginsWithAllOfUs.svg'
-import SuicidePreventionBeginsWithAllOfUsNoBg from '../../../static/svgs/suicidePreventionBeginsWithAllOfUs_no-bg.svg'
 
 const Hero = ({ innerHeight }) => {
-	const [isLargerThan1104] = useMediaQuery('(min-width: 1104px)')
+	const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
 
 	const heroHSL = {
 		cloud: 'hsl(198, 50%, 96%)', // cloud: '#f0f7fa'
@@ -15,22 +13,7 @@ const Hero = ({ innerHeight }) => {
 		textMain: 'hsl(252, 43%, 31%)', // textMain: '#3c2e72'
 		stars: 'hsl(60, 99%, 68%)', // stars: '#fefe5e'
 	}
-
-	const heroCSS = css`
-		position: relative;
-		background: rgb(42, 170, 245);
-		background: linear-gradient(
-			180deg,
-			rgba(42, 170, 245, 1) 0%,
-			rgba(47, 37, 92, 1) 100%
-		);
-		height: calc(${innerHeight}px - 5rem);
-		min-height: 700px;
-
-		@media (min-width: 1104px) {
-			margin-top: 0;
-			height: 100vh;
-		}
+	const svgCSS = css`
 		.cloud {
 			fill: ${heroHSL.cloud};
 		}
@@ -44,67 +27,41 @@ const Hero = ({ innerHeight }) => {
 			fill: ${heroHSL.stars};
 		}
 	`
-	const cloudSvgCSS = css`
-		position: absolute;
-		top: 2em;
-		left: 1em;
-		height: calc(100vh - 16em);
-		min-height: 700px;
-		width: calc(100vw - 2em);
-	`
-	const messageSvgCSS = css`
-		position: relative;
-		width: 80vw;
-		margin: 0 auto;
-		@media (min-width: 768px) {
-			width: 40vw;
-			margin: 4rem;
-			vertical-align: center;
-		}
-	`
-	const messageSvgNoBgCSS = css`
-		position: absolute;
-		width: 28vw;
-		top: 18%;
-		left: calc(8vw + 4em);
-	`
-	const nspwDatesCSS = css`
-		color: #ffffff;
-		position: relative;
-		font-family: hoss-round, sans-serif;
-		font-weight: 600;
-		font-style: normal;
-		line-height: 1.4em;
-		font-size: 2em;
-		width: 66vw;
-		right: -17vw;
-		padding: 1em 0 2em;
-		text-align: center;
-		@media (min-width: 768px) {
-			position: absolute;
-			font-size: 3vw;
-			letter-spacing: 0.08em;
-			width: 33vw;
-			top: 30%;
-			right: calc(4vw + 4em);
-			text-align: left;
-			padding-top: 0;
-		}
-	`
-
 	return (
-		<Flex css={heroCSS}>
-			{isLargerThan1104 ? (
-				<SuicidePreventionBeginsWithAllOfUs css={messageSvgCSS} />
-			) : (
-				<>
-					<SuicidePreventionBeginsWithAllOfUs css={messageSvgCSS} />
-				</>
-			)}
-			<h2 css={nspwDatesCSS}>
-				National Suicide Prevention Week is September 4 &ndash; 10
-			</h2>
-		</Flex>
+		<Container maxW="100vw" bg="purple.c700" m={0} p={0}>
+			<Flex
+				direction="row"
+				justifyContent="space-around"
+				alignItems="center"
+				bg="linear-gradient(
+					180deg,
+					rgba(42, 170, 245, 1) 0%,
+					rgba(47, 37, 92, 1) 100%
+				)"
+				h={`calc(${innerHeight}px - 5rem)`}
+				minH="700px"
+				wrap={['wrap', 'nowrap']}
+				p={['0 0 4rem 0', '1rem 4rem']}
+			>
+				<Box w={['80vw', '40vw']} css={svgCSS}>
+					<SuicidePreventionBeginsWithAllOfUs />
+				</Box>
+				<Heading
+					color="white"
+					fontFamily="hoss-round, sans-serif"
+					fontWeight="600"
+					lineHeight="1.4em"
+					fontSize={['10vw', '5vw']}
+					letterSpacing="-1px"
+					w="66vw"
+					p="1em 0 2em"
+					textAlign="center"
+				>
+					National Suicide Prevention Week {isLargerThan768 && <br />}
+					is September {!isLargerThan768 && <br />}4&ndash;10
+				</Heading>
+			</Flex>
+		</Container>
 	)
 }
 

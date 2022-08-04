@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { Container, VStack } from '@chakra-ui/react'
+import { Container, Heading, VStack } from '@chakra-ui/react'
 
 const AboutNSPW = () => {
 	const aboutCSS = css`
@@ -16,8 +16,11 @@ const AboutNSPW = () => {
 	`
 
 	return (
-		<Container css={aboutCSS} maxW="100vw" bg="purple.c700">
+		<Container id="about-nspw" css={aboutCSS} maxW="100vw" bg="purple.c700">
 			<VStack gap="1.4em" align="flex-start" maxW={'48em'} m="0 auto">
+				<Heading as="h2" m="2rem 0 1rem">
+					About National Suicide Prevention Week
+				</Heading>
 				<p>
 					The American Foundation for Suicide Prevention (AFSP)
 					recognizes the month of September as National Suicide

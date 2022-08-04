@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { css } from '@emotion/react'
 import algoliasearch from 'algoliasearch/lite'
+import { Script } from 'gatsby'
 import { Hits, InstantSearch } from 'react-instantsearch-dom'
 import {
-	Box,
 	Heading,
 	Grid,
 	GridItem,
@@ -12,13 +12,8 @@ import {
 	Text,
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import Lottie from 'lottie-react'
 
 import WalkStateMenu from './WalkStateMenu'
-
-import walker from '../../../static/icons/646-walking-walkcycle-person-lineal-edited.json'
-import dogWalker from '../../../static/icons/647-walking-with-dog-lineal-edited.json'
-import wheels from '../../../static/icons/651-disabled-person-lineal-edited.json'
 
 const searchClient = algoliasearch(
 	'BONWJFMMRS',
@@ -46,32 +41,6 @@ const hitDetailsCSS = css`
 	font-style: normal;
 	margin: 0 0 1.5rem;
 	font-size: 1.2rem;
-`
-const walkerCSS = css`
-	width: 30vw;
-	display: inline-block;
-	margin-right: -3.5rem;
-	@media (min-width: 768px) {
-		width: 13vw;
-		min-width: 9rem;
-	}
-`
-const wheelsCSS = css`
-	width: 30vw;
-	display: inline-block;
-	margin-right: -2rem;
-	@media (min-width: 768px) {
-		width: 13vw;
-		min-width: 9rem;
-	}
-`
-const dogWalkerCSS = css`
-	width: 30vw;
-	display: inline-block;
-	@media (min-width: 768px) {
-		width: 13vw;
-		min-width: 9rem;
-	}
 `
 const walkGridCSS = css`
 	padding: 0 2rem;
@@ -131,27 +100,30 @@ const WalkSearch = () => {
 					colStart={1}
 					colSpan={1}
 					w={{ sm: '100vw', md: '50vw' }}
+					m={['2rem 0', '0']}
 				>
-					<Box>
-						<Lottie
-							css={walkerCSS}
-							autoplay={true}
-							loop={true}
-							animationData={walker}
-						></Lottie>
-						<Lottie
-							css={wheelsCSS}
-							autoplay={true}
-							loop={true}
-							animationData={wheels}
-						></Lottie>
-						<Lottie
-							css={dogWalkerCSS}
-							autoplay={true}
-							loop={true}
-							animationData={dogWalker}
-						></Lottie>
-					</Box>
+					<div
+						style={{
+							padding: '56.25% 0 0 0',
+							position: 'relative',
+						}}
+					>
+						<iframe
+							src="https://player.vimeo.com/video/689388266?h=e74ad80cec&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+							frameBorder="0"
+							allow="autoplay; fullscreen; picture-in-picture"
+							allowFullScreen
+							style={{
+								position: 'absolute',
+								top: 0,
+								left: 0,
+								width: '100%',
+								height: '100%',
+							}}
+							title="AFSP COMM WALK 22 - 30 Sec FINAL - END VO 16x9"
+						></iframe>
+					</div>
+					<Script src="https://player.vimeo.com/api/player.js" />
 				</GridItem>
 				<GridItem
 					css={walkGridCSS}

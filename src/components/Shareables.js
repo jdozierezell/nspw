@@ -30,7 +30,7 @@ const Shareables = () => {
 				>
 					<StaticImage
 						css={shareableCSS}
-						src="https://nspw.s3.amazonaws.com/images/NationalSuicidePreventionWeek_Purple-01.png"
+						src="https://nspw.afsp.org/images/NationalSuicidePreventionWeek_Purple-01.png"
 						alt="National Suicide Prevention Week"
 					/>
 				</a>
@@ -40,13 +40,13 @@ const Shareables = () => {
 				>
 					<StaticImage
 						css={shareableCSS}
-						src="https://nspw.s3.amazonaws.com/images/SemanaNacionalDeLaPrevencionDelSuicidio_Purple-01.png"
+						src="https://nspw.afsp.org/images/SemanaNacionalDeLaPrevencionDelSuicidio_Purple-01.png"
 						alt="Semana nacional de la prevencion del suicidio"
 					/>
 				</a>
 				<StaticImage
 					css={shareableCSS}
-					src="https://nspw.s3.amazonaws.com/images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png"
+					src="https://nspw.afsp.org/images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png"
 					alt="Suicide Prevention Begins With All Of Us"
 				/>
 				<a
@@ -55,7 +55,7 @@ const Shareables = () => {
 				>
 					<StaticImage
 						css={shareableCSS}
-						src="https://nspw.s3.amazonaws.com/images/TogetherLetsWalk_Walkers_with_Text-01.png"
+						src="https://nspw.afsp.org/images/TogetherLetsWalk_Walkers_with_Text-01.png"
 						alt="Together Let's Walk"
 					/>
 				</a>
