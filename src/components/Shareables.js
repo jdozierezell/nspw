@@ -16,7 +16,7 @@ const shareableCSS = css`
 const Shareables = () => {
 	return (
 		<Container id="graphic" maxW="100vw" css={containerCSS}>
-			<Heading as="h2" m="1em 0 0.25em">
+			<Heading as="h2" m="1rem 0">
 				Sharables
 			</Heading>
 			<Text m="0 0 2em" fontSize="1.2rem">
@@ -26,7 +26,7 @@ const Shareables = () => {
 			<SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={10}>
 				<a
 					href="https://nspw.afsp.org/images/NationalSuicidePreventionWeek_Purple-01.png"
-					download="NationalSuicidePreventionWeek"
+					download="NationalSuicidePreventionWeek.png"
 				>
 					<StaticImage
 						css={shareableCSS}
@@ -36,7 +36,7 @@ const Shareables = () => {
 				</a>
 				<a
 					href="https://nspw.afsp.org/images/NationalSuicidePreventionWeek_Purple-01.png"
-					download="NationalSuicidePreventionWeek"
+					download="NationalSuicidePreventionWeek.png"
 				>
 					<StaticImage
 						css={shareableCSS}
@@ -44,14 +44,19 @@ const Shareables = () => {
 						alt="Semana nacional de la prevencion del suicidio"
 					/>
 				</a>
-				<StaticImage
-					css={shareableCSS}
-					src="https://nspw.afsp.org/images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png"
-					alt="Suicide Prevention Begins With All Of Us"
-				/>
+				<a
+					href="https://nspw.afsp.org/images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png"
+					download="SuicidePreventionBeginsWithAllOfUs.png"
+				>
+					<StaticImage
+						css={shareableCSS}
+						src="https://nspw.afsp.org/images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png"
+						alt="Suicide Prevention Begins With All Of Us"
+					/>
+				</a>
 				<a
 					href="https://nspw.afsp.org/images/NationalSuicidePreventionWeek_Purple-01.png"
-					download="NationalSuicidePreventionWeek"
+					download="NationalSuicidePreventionWeek.png"
 				>
 					<StaticImage
 						css={shareableCSS}

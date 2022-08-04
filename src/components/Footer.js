@@ -52,7 +52,7 @@ const Footer = () => {
 							<Link href="tel:988">
 								<Highlight
 									key="1"
-									query="Call 988"
+									query="Call or text 988"
 									styles={{
 										px: '2',
 										py: '1',
@@ -63,7 +63,7 @@ const Footer = () => {
 									}}
 									w="100%"
 								>
-									Call 988 or
+									Call or text 988 or
 								</Highlight>
 							</Link>{' '}
 							<Link href="sms:741741&body=TALK">

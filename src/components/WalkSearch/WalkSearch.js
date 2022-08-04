@@ -43,19 +43,17 @@ const hitDetailsCSS = css`
 	font-size: 1.2rem;
 `
 const walkGridCSS = css`
-	padding: 0 2rem;
+	padding: 1rem 2rem;
 	@media (min-width: 768px) {
 		padding: 0 4rem;
-		margin-top: 3rem;
-	}
-	&:first-of-type {
-		padding-top: 4rem;
-	@media (min-width: 768px) {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
 	}
 	&:last-of-type {
-		padding-bottom: 4rem;
+		padding: 2rem;
+		margin-top: 2rem;
+		@media (min-width: 768px) {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
 	}
 `
 
@@ -86,22 +84,22 @@ const WalkSearch = () => {
 		>
 			<Grid
 				templateColumns={{ sm: '1fr', md: '2fr' }}
-				p={{ sm: '2rem 0' }}
+				p="2rem 0"
 				id="community-walks"
 			>
 				<GridItem
 					css={walkGridCSS}
 					colStart={1}
 					colSpan={{ sm: 1, md: 2 }}
+					m="2rem 0 0"
 				>
 					<Heading as="h2">Find a Community Walk</Heading>
 				</GridItem>
 				<GridItem
-					css={walkGridCSS}
 					colStart={1}
 					colSpan={1}
-					w={{ sm: '100vw', md: '50vw' }}
-					m={['2rem 0', '0']}
+					w={{ sm: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}
+					m={['1rem 2rem', '2rem 4rem']}
 				>
 					<div
 						style={{
@@ -127,10 +125,10 @@ const WalkSearch = () => {
 					<Script src="https://player.vimeo.com/api/player.js" />
 				</GridItem>
 				<GridItem
-					css={walkGridCSS}
 					colStart={{ sm: 1, md: 2 }}
 					colSpan={1}
-					w={{ sm: '100vw', md: '50vw' }}
+					w={{ sm: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}
+					m={['1rem 2rem', '1rem 4rem 1rem 2rem']}
 				>
 					<Text
 						fontFamily="quasimoda, sans-serif"
@@ -155,8 +153,9 @@ const WalkSearch = () => {
 					<GridItem
 						colStart={1}
 						colSpan={{ sm: 1, md: 2 }}
-						p="2rem"
 						bg="blue.100"
+						m={['2rem 0', '2rem 0 0']}
+						p={['3rem 2rem 2rem', '4rem 2rem 3rem']}
 					>
 						<Hits css={hitsCSS} hitComponent={Hit} />
 					</GridItem>

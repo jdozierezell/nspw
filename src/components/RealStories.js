@@ -59,7 +59,7 @@ const linkOverlayCSS = css`
 const RealStories = () => {
 	return (
 		<Container id="real-stories" css={containerCSS} maxW="100vw">
-			<Heading as="h2" m="1em 0">
+			<Heading as="h2" m="2rem 0">
 				Real Stories
 			</Heading>
 			<SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={10}>

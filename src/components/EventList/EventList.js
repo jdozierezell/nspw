@@ -14,9 +14,9 @@ const containerCSS = css`
 	font-family: hoss-round, sans-serif;
 	font-weight: 600;
 	font-style: normal;
-	padding: 0rem 2rem 4rem;
+	padding: 1rem 2rem 4rem;
 	@media (min-width: 768px) {
-		padding: 2rem 4rem;
+		padding: 2rem 4rem 4rem;
 	}
 `
 
@@ -71,7 +71,7 @@ const EventList = () => {
 	}, [])
 	return (
 		<Container id="event-calendar" css={containerCSS} maxW={'100vw'}>
-			<Heading m="2em 0 1em">Events Calendar</Heading>
+			<Heading m="2rem 0rem">Events Calendar</Heading>
 			<EventSwiper events={addEvent} />
 		</Container>
 	)

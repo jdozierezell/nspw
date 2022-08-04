@@ -29,7 +29,7 @@ const flexCSS = css`
 
 const SocialAccounts = () => {
 	return (
-		<Container css={socialAccountCSS} maxW="auto" m="2em auto">
+		<Container css={socialAccountCSS} maxW="auto" m="1rem auto 2rem">
 			<Flex
 				css={flexCSS}
 				justify="center"

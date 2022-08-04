@@ -54,7 +54,7 @@ const Hero = ({ innerHeight }) => {
 					fontSize={['10vw', '5vw']}
 					letterSpacing="-1px"
 					w="66vw"
-					p="1em 0 2em"
+					m="2rem 1rem"
 					textAlign="center"
 				>
 					National Suicide Prevention Week {isLargerThan768 && <br />}

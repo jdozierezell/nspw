@@ -18,7 +18,6 @@ const StateMenu = ({ items, currentRefinement, refine, setHasQuery }) => {
 			fontWeight="500"
 			color="purple.c700"
 			fontSize="1.2rem"
-			m="0 0 2rem"
 		>
 			<option value="">Select your state</option>
 			{items.map(item => {

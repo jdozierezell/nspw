@@ -17,8 +17,8 @@ const AboutNSPW = () => {
 
 	return (
 		<Container id="about-nspw" css={aboutCSS} maxW="100vw" bg="purple.c700">
-			<VStack gap="1.4em" align="flex-start" maxW={'48em'} m="0 auto">
-				<Heading as="h2" m="2rem 0 1rem">
+			<VStack gap="1.4em" align="flex-start" maxW={'48em'} m="3rem auto">
+				<Heading as="h2" m="0 0 1rem">
 					About National Suicide Prevention Week
 				</Heading>
 				<p>

@@ -23,7 +23,12 @@ const Anthem = () => {
 
 	return (
 		<Container css={anthemCSS} maxW="100vw" bg="purple.c700">
-			<VStack gap="1.4em" align="flex-start" maxW={'48em'} m="0 auto">
+			<VStack
+				gap="1.4em"
+				align="flex-start"
+				maxW={'48em'}
+				m="0 auto 3rem"
+			>
 				<p>
 					Just imagine if we could walk together toward a world
 					without suicide. Since 2002, the American Foundation for
