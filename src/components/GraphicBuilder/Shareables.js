@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Container, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 
 const containerCSS = css`
 	padding: 1rem 2rem;

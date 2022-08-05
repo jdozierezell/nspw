@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { ChakraProvider, Button } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import { HslColorPicker } from 'react-colorful'
 import { css } from '@emotion/react'
 
 import { NSPWTheme } from '../theme/NSPWTheme'
-import GraphicBuilder from '../components/GraphicBuilder-2'
+import GraphicBuilder from '../components/GraphicBuilder/GraphicBuilder-2'
 
 const Home = () => {
 	const [svgBaseColor, setSvgBaseColor] = useState({ h: 252, s: 43, l: 31 })

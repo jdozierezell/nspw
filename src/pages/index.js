@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 
 import { NSPWTheme } from '../theme/NSPWTheme'
-import SEO from '../components/SEO'
+import SEO from '../components/SEO/SEO'
 import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
-import Anthem from '../components/Anthem'
+import Anthem from '../components/Anthem/Anthem'
 import WalkSearch from '../components/WalkSearch/WalkSearch'
-import Shareables from '../components/Shareables'
-import RealStories from '../components/RealStories'
+import Shareables from '../components/GraphicBuilder/Shareables'
+import CTAs from '../components/CTAs/CTAs'
+import RealStories from '../components/RealStories/RealStories'
 import EventList from '../components/EventList/EventList'
-import AboutNSPW from '../components/AboutNSPW'
+import AboutNSPW from '../components/AboutNSPW/AboutNSPW'
 import SocialMedia from '../components/SocialMedia/SocialMedia'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
 	const [innerHeight, setInnerHeight] = useState(0)
@@ -36,10 +37,12 @@ const Home = () => {
 				<Hero innerHeight={innerHeight} />
 				{/* Anthem complete */}
 				<Anthem />
-				{/* WalkSearch waiting */}
+				{/* WalkSearch complete */}
 				<WalkSearch />
 				{/* Shareables in progress */}
 				<Shareables />
+				{/* CTAs in progress */}
+				<CTAs />
 				{/* RealStories complete */}
 				<RealStories />
 				{/* EventList complete */}
