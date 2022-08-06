@@ -6,7 +6,7 @@ import { css } from '@emotion/react'
 import { theme } from '../theme/theme'
 import GraphicBuilder from '../components/CustomGraphic/GraphicBuilder-2'
 
-export const Home = () => {
+const Home = () => {
 	const [svgBaseColor, setSvgBaseColor] = useState({ h: 252, s: 43, l: 31 })
 	const colorPickerCSS = css`
 		&.react-colorful {
@@ -42,3 +42,5 @@ export const Home = () => {
 		</ChakraProvider>
 	)
 }
+
+export default Home
