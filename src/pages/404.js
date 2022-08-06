@@ -10,7 +10,7 @@ import {
 
 import { theme } from '../theme/theme'
 
-export const FourOhFour = () => {
+const FourOhFour = () => {
 	return (
 		<ChakraProvider resetCSS theme={theme}>
 			<Container bg="blue.c400">
@@ -41,3 +41,5 @@ export const FourOhFour = () => {
 		</ChakraProvider>
 	)
 }
+
+export default FourOhFour
