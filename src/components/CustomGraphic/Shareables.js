@@ -3,19 +3,13 @@ import { css } from '@emotion/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Container, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 
-const containerCSS = css`
-	padding: 1rem 2rem;
-	@media (min-width: 768px) {
-		padding: 2rem 4rem;
-	}
-`
 const shareableCSS = css`
 	border: 0.5rem solid #ffffff;
 `
 
 export const Shareables = () => {
 	return (
-		<Container id="graphic" css={containerCSS}>
+		<Container id="graphic">
 			<Heading as="h2" m="1rem 0">
 				Sharables
 			</Heading>
