@@ -3,7 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { HslColorPicker } from 'react-colorful'
 import { css } from '@emotion/react'
 
-import { NSPWTheme } from '../theme/NSPWTheme'
+import { theme } from '../theme/theme'
 import GraphicBuilder from '../components/GraphicBuilder/GraphicBuilder-2'
 
 const Home = () => {
@@ -32,7 +32,7 @@ const Home = () => {
 		setSvgBaseColor({ ...svgBaseColor, h })
 	}
 	return (
-		<ChakraProvider theme={NSPWTheme}>
+		<ChakraProvider theme={theme}>
 			<HslColorPicker
 				color={svgBaseColor}
 				css={colorPickerCSS}

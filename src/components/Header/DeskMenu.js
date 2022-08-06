@@ -22,7 +22,7 @@ const menuCSS = css`
 
 const Menu = ({ menuItems }) => {
 	return (
-		<Container maxW="100vw" css={menuCSS}>
+		<Container css={menuCSS}>
 			<Flex
 				direction="row"
 				justifyContent="end"

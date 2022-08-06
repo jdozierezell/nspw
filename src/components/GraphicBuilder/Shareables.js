@@ -15,7 +15,7 @@ const shareableCSS = css`
 
 const Shareables = () => {
 	return (
-		<Container id="graphic" maxW="100vw" css={containerCSS}>
+		<Container id="graphic" css={containerCSS}>
 			<Heading as="h2" m="1rem 0">
 				Sharables
 			</Heading>

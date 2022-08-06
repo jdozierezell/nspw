@@ -58,7 +58,7 @@ const linkOverlayCSS = css`
 
 const RealStories = () => {
 	return (
-		<Container id="real-stories" css={containerCSS} maxW="100vw">
+		<Container id="real-stories" css={containerCSS}>
 			<Heading as="h2" m="2rem 0">
 				Real Stories
 			</Heading>

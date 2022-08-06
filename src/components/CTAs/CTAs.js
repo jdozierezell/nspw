@@ -1,7 +1,8 @@
 import React from 'react'
+import { Container } from '@chakra-ui/react'
 
 const CTAs = () => {
-	return <div>CTAs</div>
+	return <Container>CTAs</Container>
 }
 
 export default CTAs

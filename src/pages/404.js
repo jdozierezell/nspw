@@ -8,12 +8,12 @@ import {
 	Link,
 } from '@chakra-ui/react'
 
-import { NSPWTheme } from '../theme/NSPWTheme'
+import { theme } from '../theme/theme'
 
 const FourOhFour = () => {
 	return (
-		<ChakraProvider resetCSS theme={NSPWTheme}>
-			<Container maxW="100vw" bg="blue.c400">
+		<ChakraProvider resetCSS theme={theme}>
+			<Container bg="blue.c400">
 				<Flex justifyContent="center" alignItems="center">
 					<div></div>
 					<Heading as="h1" color="purple.c700" p="50vh">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 
-import { NSPWTheme } from '../theme/NSPWTheme'
+import { theme } from '../theme/theme'
 import SEO from '../components/SEO/SEO'
 import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
@@ -30,7 +30,7 @@ const Home = () => {
 
 	return (
 		<>
-			<ChakraProvider resetCSS theme={NSPWTheme}>
+			<ChakraProvider resetCSS theme={theme}>
 				{/* Header complete */}
 				<Header innerHeight={innerHeight} />
 				{/* Hero complete */}

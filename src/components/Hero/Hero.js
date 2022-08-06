@@ -28,7 +28,7 @@ const Hero = ({ innerHeight }) => {
 		}
 	`
 	return (
-		<Container maxW="100vw" bg="purple.c700" m={0} p={0}>
+		<Container bg="purple.c700" m={0} p={0}>
 			<Flex
 				direction="row"
 				justifyContent="space-around"

@@ -13,14 +13,14 @@ import {
 
 import MobileMenuButton from './MobileMenuButton'
 
-import { NSPWTheme } from '../../theme/NSPWTheme'
+import { theme } from '../../theme/theme'
 
 const MobileMenu = ({ innerHeight, menuItems }) => {
 	const { isOpen, onToggle } = useDisclosure()
 
 	const mobileMenuCSS = css`
 		width: 100vw;
-		background-color: ${NSPWTheme.colors.blue.c400};
+		background-color: ${theme.colors.blue.c400};
 		height: calc(${innerHeight}px - 5rem);
 		font-family: hoss-round, sans-serif;
 		font-weight: 600;

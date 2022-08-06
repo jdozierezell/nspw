@@ -1,9 +1,9 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { Container, Heading, Link, Text } from '@chakra-ui/react'
+import { Container, Link, Text } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
-import { NSPWTheme } from '../../theme/NSPWTheme'
+import { theme } from '../../theme/theme'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -11,8 +11,8 @@ import 'swiper/css/navigation'
 
 const swiperCSS = css`
 	.swiper-slide {
-		background: ${NSPWTheme.colors.white};
-		color: ${NSPWTheme.colors.purple.c700};
+		background: ${theme.colors.white};
+		color: ${theme.colors.purple.c700};
 		min-height: 20rem;
 		padding-bottom: 2rem;
 	}
@@ -40,10 +40,9 @@ const linkCSS = css`
 	font-style: normal;
 `
 
-const EventSwiper = ({ events }) => {
-	const { title, results } = events
+const EventSwiper = ({ events: { results } }) => {
 	return (
-		<Container maxW="100vw" p={0}>
+		<Container p={0}>
 			{results.length > 0 && (
 				<Swiper
 					pagination={{

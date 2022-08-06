@@ -22,7 +22,7 @@ const Anthem = () => {
 	`
 
 	return (
-		<Container css={anthemCSS} maxW="100vw" bg="purple.c700">
+		<Container css={anthemCSS} bg="purple.c700">
 			<VStack
 				gap="1.4em"
 				align="flex-start"
