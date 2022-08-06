@@ -8,7 +8,7 @@ export const CustomGraphic = () => {
 	return (
 		<>
 			<Shareables />
-			<GraphicBuilder />
+			{/* <GraphicBuilder /> */}
 		</>
 	)
 }
