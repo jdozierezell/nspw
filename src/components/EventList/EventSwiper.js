@@ -18,7 +18,6 @@ const swiperCSS = css`
 	}
 `
 const dateCSS = css`
-	font-family: quasimoda, sans-serif;
 	font-weight: 500;
 	font-style: normal;
 `

@@ -1,10 +1,9 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { Container, Heading, VStack } from '@chakra-ui/react'
+import { Container, Heading, Text, VStack } from '@chakra-ui/react'
 
 const AboutNSPW = () => {
 	const aboutCSS = css`
-		font-family: quasimoda, sans-serif;
 		font-weight: 500;
 		font-style: normal;
 		color: #ffffff;
@@ -21,7 +20,7 @@ const AboutNSPW = () => {
 				<Heading as="h2" m="0 0 1rem">
 					About National Suicide Prevention Week
 				</Heading>
-				<p>
+				<Text>
 					The American Foundation for Suicide Prevention (AFSP)
 					recognizes the month of September as National Suicide
 					Prevention Month: a moment in time in which we rally the
@@ -37,14 +36,14 @@ const AboutNSPW = () => {
 					designed to help people know what they can do if they or
 					someone they know is struggling, and how to have authentic,
 					caring conversations about suicide and mental health.
-				</p>
-				<p>
+				</Text>
+				<Text>
 					Suicide prevention is important every day of the year.
 					National Suicide Prevention Month gives us an opportunity to
 					shine a special, encouraging light on this topic that
 					affects us all, and send a clear, hopeful message that help
 					is available, and suicide can be prevented.
-				</p>
+				</Text>
 			</VStack>
 		</Container>
 	)

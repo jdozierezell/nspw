@@ -36,7 +36,6 @@ const hitTitleCSS = css`
 	font-size: 1.4rem;
 `
 const hitDetailsCSS = css`
-	font-family: quasimoda, sans-serif;
 	font-weight: 500;
 	font-style: normal;
 	margin: 0 0 1.5rem;
@@ -69,9 +68,9 @@ const Hit = ({ hit }) => {
 				{hit.title}{' '}
 				<ExternalLinkIcon ml="0.5rem" verticalAlign="text-top" />
 			</LinkOverlay>
-			<p css={hitDetailsCSS}>
+			<Text css={hitDetailsCSS}>
 				{hit.date} • {hit.venue}, {hit.city}, {hit.state}
-			</p>
+			</Text>
 		</LinkBox>
 	)
 }
@@ -131,7 +130,6 @@ const WalkSearch = () => {
 					m={['1rem 2rem', '1rem 4rem 1rem 2rem']}
 				>
 					<Text
-						fontFamily="quasimoda, sans-serif"
 						fontWeight="500"
 						color="purple.c700"
 						fontSize="1.2rem"

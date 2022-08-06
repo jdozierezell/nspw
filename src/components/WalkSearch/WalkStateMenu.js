@@ -14,7 +14,6 @@ const StateMenu = ({ items, currentRefinement, refine, setHasQuery }) => {
 				setHasQuery(true)
 				refine(event.currentTarget.value)
 			}}
-			fontFamily="quasimoda, sans-serif"
 			fontWeight="500"
 			color="purple.c700"
 			fontSize="1.2rem"

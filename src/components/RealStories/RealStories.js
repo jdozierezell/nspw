@@ -32,7 +32,6 @@ const imgCSS = css`
 const authorCSS = css`
 	color: #ffffff;
 	font-size: 1rem;
-	font-family: quasimoda, sans-serif;
 	font-weight: 500;
 	font-style: normal;
 	background-color: rgba(20, 20, 20, 0.7);
