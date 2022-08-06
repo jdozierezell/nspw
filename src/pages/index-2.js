@@ -4,7 +4,7 @@ import { HslColorPicker } from 'react-colorful'
 import { css } from '@emotion/react'
 
 import { theme } from '../theme/theme'
-import GraphicBuilder from '../components/CustomGraphic/GraphicBuilder-2'
+import { GraphicBuilder } from '../components/CustomGraphic/GraphicBuilder-2'
 
 const Home = () => {
 	const [svgBaseColor, setSvgBaseColor] = useState({ h: 252, s: 43, l: 31 })
