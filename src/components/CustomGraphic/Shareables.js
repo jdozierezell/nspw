@@ -29,7 +29,7 @@ export const Shareables = () => {
 					/>
 				</a>
 				<a
-					href="https://nspw.afsp.org/images/NationalSuicidePreventionWeek_Purple-01.png"
+					href="https://nspw.afsp.org/images/SemanaNacionalDeLaPrevencionDelSuicidio_Purple-01.png"
 					download="NationalSuicidePreventionWeek.png"
 				>
 					<StaticImage
@@ -39,22 +39,22 @@ export const Shareables = () => {
 					/>
 				</a>
 				<a
-					href="https://nspw.afsp.org/images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png"
+					href="https://nspw.afsp.org/images/SuicidePreventionBeginsWithAllOfUs_Blue-01_v2.png"
 					download="SuicidePreventionBeginsWithAllOfUs.png"
 				>
 					<StaticImage
 						css={shareableCSS}
-						src="https://nspw.afsp.org/images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png"
+						src="https://nspw.afsp.org/images/SuicidePreventionBeginsWithAllOfUs_Blue-01_v2.png"
 						alt="Suicide Prevention Begins With All Of Us"
 					/>
 				</a>
 				<a
-					href="https://nspw.afsp.org/images/NationalSuicidePreventionWeek_Purple-01.png"
+					href="https://nspw.afsp.org/images/TogetherLetsWalk_Walkers_with_Text-01_v2.png"
 					download="NationalSuicidePreventionWeek.png"
 				>
 					<StaticImage
 						css={shareableCSS}
-						src="https://nspw.afsp.org/images/TogetherLetsWalk_Walkers_with_Text-01.png"
+						src="https://nspw.afsp.org/images/TogetherLetsWalk_Walkers_with_Text-01_v2.png"
 						alt="Together Let's Walk"
 					/>
 				</a>

@@ -7,8 +7,8 @@ import { Header } from '../components/Header/Header'
 import { Hero } from '../components/Hero/Hero'
 import { Anthem } from '../components/Anthem/Anthem'
 import { WalkSearch } from '../components/WalkSearch/WalkSearch'
-import { CustomGraphic } from '../components/CustomGraphic/CustomGraphic'
-import { CTAs } from '../components/CTAs/CTAs'
+// import { CustomGraphic } from '../components/CustomGraphic/CustomGraphic'
+// import { CTAs } from '../components/CTAs/CTAs'
 import { RealStories } from '../components/RealStories/RealStories'
 import { EventList } from '../components/EventList/EventList'
 import { AboutNSPW } from '../components/AboutNSPW/AboutNSPW'
@@ -40,9 +40,9 @@ const Home = () => {
 				{/* WalkSearch complete */}
 				<WalkSearch />
 				{/* CustomGraphic in progress */}
-				<CustomGraphic />
+				{/* <CustomGraphic /> */}
 				{/* CTAs in progress */}
-				<CTAs />
+				{/* <CTAs /> */}
 				{/* RealStories complete */}
 				<RealStories />
 				{/* EventList complete */}
