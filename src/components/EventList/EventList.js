@@ -5,7 +5,7 @@ import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
 import { Container, Heading } from '@chakra-ui/react'
 
-import EventSwiper from './EventSwiper'
+import { EventSwiper } from './EventSwiper'
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -20,7 +20,7 @@ const containerCSS = css`
 	}
 `
 
-const EventList = () => {
+export const EventList = () => {
 	const [addEvent, setAddEvent] = useState({
 		title: 'AFSP national events',
 		results: [],
@@ -76,5 +76,3 @@ const EventList = () => {
 		</Container>
 	)
 }
-
-export default EventList

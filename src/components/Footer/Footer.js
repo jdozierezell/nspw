@@ -23,7 +23,7 @@ const crisisCSS = css`
 	}
 `
 
-const Footer = () => {
+export const Footer = () => {
 	return (
 		<>
 			<Grid
@@ -97,5 +97,3 @@ const Footer = () => {
 		</>
 	)
 }
-
-export default Footer

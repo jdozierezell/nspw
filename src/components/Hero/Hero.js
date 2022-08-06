@@ -4,7 +4,7 @@ import { useMediaQuery, Box, Container, Flex, Heading } from '@chakra-ui/react'
 
 import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/suicidePreventionBeginsWithAllOfUs.svg'
 
-const Hero = ({ innerHeight }) => {
+export const Hero = ({ innerHeight }) => {
 	const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
 
 	const heroHSL = {
@@ -64,5 +64,3 @@ const Hero = ({ innerHeight }) => {
 		</Container>
 	)
 }
-
-export default Hero

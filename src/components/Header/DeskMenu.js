@@ -20,7 +20,7 @@ const menuCSS = css`
 	}
 `
 
-const Menu = ({ menuItems }) => {
+export const DeskMenu = ({ menuItems }) => {
 	return (
 		<Container css={menuCSS}>
 			<Flex
@@ -42,5 +42,3 @@ const Menu = ({ menuItems }) => {
 		</Container>
 	)
 }
-
-export default Menu

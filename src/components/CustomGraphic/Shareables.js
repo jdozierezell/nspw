@@ -13,7 +13,7 @@ const shareableCSS = css`
 	border: 0.5rem solid #ffffff;
 `
 
-const Shareables = () => {
+export const Shareables = () => {
 	return (
 		<Container id="graphic" css={containerCSS}>
 			<Heading as="h2" m="1rem 0">
@@ -68,5 +68,3 @@ const Shareables = () => {
 		</Container>
 	)
 }
-
-export default Shareables

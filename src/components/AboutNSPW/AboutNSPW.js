@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from '@emotion/react'
 import { Container, Heading, Text, VStack } from '@chakra-ui/react'
 
-const AboutNSPW = () => {
+export const AboutNSPW = () => {
 	const aboutCSS = css`
 		font-weight: 500;
 		font-style: normal;
@@ -48,5 +48,3 @@ const AboutNSPW = () => {
 		</Container>
 	)
 }
-
-export default AboutNSPW

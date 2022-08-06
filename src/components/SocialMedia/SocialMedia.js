@@ -3,7 +3,7 @@ import { Script } from 'gatsby'
 import { css } from '@emotion/react'
 import { Box, Container, Heading } from '@chakra-ui/react'
 
-import SocialAccounts from './SocialAccounts'
+import { SocialAccounts } from './SocialAccounts'
 
 const socialMediaCSS = css`
 	#curator-feed-default-feed-layout {
@@ -12,7 +12,7 @@ const socialMediaCSS = css`
 	}
 `
 
-const SocialMedia = () => {
+export const SocialMedia = () => {
 	return (
 		<Container
 			css={socialMediaCSS}
@@ -31,5 +31,3 @@ const SocialMedia = () => {
 		</Container>
 	)
 }
-
-export default SocialMedia

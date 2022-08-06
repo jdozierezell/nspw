@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Box, Container, SimpleGrid } from '@chakra-ui/react'
 
-const CTAs = () => {
+export const CTAs = () => {
 	return (
 		<Container m={['2rem', '4rem']}>
 			<SimpleGrid columns={[1, 3]} gap="1rem">
@@ -12,5 +12,3 @@ const CTAs = () => {
 		</Container>
 	)
 }
-
-export default CTAs

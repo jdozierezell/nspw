@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from '@emotion/react'
 import { Container, VStack } from '@chakra-ui/react'
 
-const Anthem = () => {
+export const Anthem = () => {
 	const anthemCSS = css`
 		font-family: quasimoda, sans-serif;
 		font-weight: 500;
@@ -52,5 +52,3 @@ const Anthem = () => {
 		</Container>
 	)
 }
-
-export default Anthem

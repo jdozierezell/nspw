@@ -1,6 +1,6 @@
 import React from 'react'
 import { connectMenu } from 'react-instantsearch-dom'
-import { Select, Text } from '@chakra-ui/react'
+import { Select } from '@chakra-ui/react'
 
 import states from '../../utils/states.json'
 
@@ -40,6 +40,4 @@ const StateMenu = ({ items, currentRefinement, refine, setHasQuery }) => {
 	)
 }
 
-const WalkStateMenu = connectMenu(StateMenu)
-
-export default WalkStateMenu
+export const WalkStateMenu = connectMenu(StateMenu)

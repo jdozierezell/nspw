@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Lottie from 'lottie-react'
-import { Box, Button } from '@chakra-ui/react'
 
 import svg from '../../../static/icons/320-menu-7-morph-lineal-edited.json'
 
-const MobileMenuButton = ({ isOpen }) => {
+export const MobileMenuButton = ({ isOpen }) => {
 	const lottieRef = useRef()
 
 	useEffect(() => {
@@ -26,5 +25,3 @@ const MobileMenuButton = ({ isOpen }) => {
 		></Lottie>
 	)
 }
-
-export default MobileMenuButton

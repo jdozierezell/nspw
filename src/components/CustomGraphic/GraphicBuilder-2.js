@@ -10,12 +10,12 @@ import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/suicidePrev
 // stars: '#fefe5e',
 
 // default hsl values
-// cloud: 'hsl(198, 50%, 96%)',
+// cloud: 'hsl(198, 50%, 96%)e',
 // textAccent: 'hsl(254, 21%, 48%)',
 // textMain: 'hsl(252, 43%, 31%)',
 // stars: 'hsl(60, 99%, 68%)',
 
-const GraphicBuilder = ({ svgBaseColor }) => {
+export const GraphicBuilder = ({ svgBaseColor }) => {
 	const hue = svgBaseColor.h
 	const saturation = svgBaseColor.s
 	const lightness = svgBaseColor.l
@@ -37,5 +37,3 @@ const GraphicBuilder = ({ svgBaseColor }) => {
 
 	return <SuicidePreventionBeginsWithAllOfUs css={svgCSS} />
 }
-
-export default GraphicBuilder

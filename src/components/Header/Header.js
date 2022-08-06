@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { Box, Flex, useMediaQuery } from '@chakra-ui/react'
-import { css } from '@emotion/react'
+import React from 'react'
+import { useMediaQuery } from '@chakra-ui/react'
 
-import MobileMenu from './MobileMenu'
-import DeskMenu from './DeskMenu'
+import { MobileMenu } from './MobileMenu'
+import { DeskMenu } from './DeskMenu'
 
-const Header = ({ innerHeight }) => {
+export const Header = ({ innerHeight }) => {
 	const [isLargerThan1104] = useMediaQuery('(min-width: 1104px)')
 
 	const menuItems = [
@@ -45,5 +44,3 @@ const Header = ({ innerHeight }) => {
 		</>
 	)
 }
-
-export default Header

@@ -39,7 +39,7 @@ const linkCSS = css`
 	font-style: normal;
 `
 
-const EventSwiper = ({ events: { results } }) => {
+export const EventSwiper = ({ events: { results } }) => {
 	return (
 		<Container p={0}>
 			{results.length > 0 && (
@@ -83,5 +83,3 @@ const EventSwiper = ({ events: { results } }) => {
 		</Container>
 	)
 }
-
-export default EventSwiper

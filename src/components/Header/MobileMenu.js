@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { css } from '@emotion/react'
 import {
 	Box,
-	Button,
 	Collapse,
 	Link,
-	Lorem,
 	Spacer,
 	useDisclosure,
 	VStack,
 } from '@chakra-ui/react'
 
-import MobileMenuButton from './MobileMenuButton'
+import { MobileMenuButton } from './MobileMenuButton'
 
 import { theme } from '../../theme/theme'
 
-const MobileMenu = ({ innerHeight, menuItems }) => {
+export const MobileMenu = ({ innerHeight, menuItems }) => {
 	const { isOpen, onToggle } = useDisclosure()
 
 	const mobileMenuCSS = css`
@@ -56,5 +54,3 @@ const MobileMenu = ({ innerHeight, menuItems }) => {
 		</>
 	)
 }
-
-export default MobileMenu

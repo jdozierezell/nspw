@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
-import WalkStateMenu from './WalkStateMenu'
+import { WalkStateMenu } from './WalkStateMenu'
 
 const searchClient = algoliasearch(
 	'BONWJFMMRS',
@@ -74,7 +74,7 @@ const Hit = ({ hit }) => {
 		</LinkBox>
 	)
 }
-const WalkSearch = () => {
+export const WalkSearch = () => {
 	const [hasQuery, setHasQuery] = useState(false)
 	return (
 		<InstantSearch
@@ -162,5 +162,3 @@ const WalkSearch = () => {
 		</InstantSearch>
 	)
 }
-
-export default WalkSearch

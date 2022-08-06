@@ -27,7 +27,7 @@ const flexCSS = css`
 	}
 `
 
-const SocialAccounts = () => {
+export const SocialAccounts = () => {
 	return (
 		<Container css={socialAccountCSS} maxW="auto" m="1rem auto 2rem">
 			<Flex
@@ -96,5 +96,3 @@ const SocialAccounts = () => {
 		</Container>
 	)
 }
-
-export default SocialAccounts

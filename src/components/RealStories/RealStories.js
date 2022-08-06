@@ -55,7 +55,7 @@ const linkOverlayCSS = css`
 	}
 `
 
-const RealStories = () => {
+export const RealStories = () => {
 	return (
 		<Container id="real-stories" css={containerCSS}>
 			<Heading as="h2" m="2rem 0">
@@ -177,5 +177,3 @@ const RealStories = () => {
 		</Container>
 	)
 }
-
-export default RealStories
