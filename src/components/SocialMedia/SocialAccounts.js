@@ -4,13 +4,13 @@ import { Container, Flex } from '@chakra-ui/react'
 
 import { theme } from '../../theme/theme'
 
-import Facebook from '../../../static/svgs/facebook.svg'
-import Instagram from '../../../static/svgs/instagram.svg'
-import TikTok from '../../../static/svgs/tikTok.svg'
-import Twitter from '../../../static/svgs/twitter.svg'
-import LinkedIn from '../../../static/svgs/linkedIn.svg'
-import YouTube from '../../../static/svgs/youTube.svg'
-import TheMighty from '../../../static/svgs/theMighty.svg'
+import Facebook from '../../../static/svgs/socialPlatforms/facebook.svg'
+import Instagram from '../../../static/svgs/socialPlatforms/instagram.svg'
+import TikTok from '../../../static/svgs/socialPlatforms/tikTok.svg'
+import Twitter from '../../../static/svgs/socialPlatforms/twitter.svg'
+import LinkedIn from '../../../static/svgs/socialPlatforms/linkedIn.svg'
+import YouTube from '../../../static/svgs/socialPlatforms/youTube.svg'
+import TheMighty from '../../../static/svgs/socialPlatforms/theMighty.svg'
 
 const socialAccountCSS = css`
 	svg {
