@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { GraphicOptions } from './GraphicOptions'
+
 export const GraphicForm = () => {
-	return <div>GraphicForm</div>
+	return <GraphicOptions />
 }

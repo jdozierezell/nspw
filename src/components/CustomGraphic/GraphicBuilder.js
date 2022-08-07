@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container } from '@chakra-ui/react'
 
-import { Graphic } from './Graphic'
+// import { Graphic } from './Graphic'
 import { GraphicForm } from './GraphicForm'
 
 import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/staticSVGs/suicidePreventionBeginsWithAllOfUs.svg'
@@ -9,7 +9,7 @@ import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/staticSVGs/
 export const GraphicBuilder = () => {
 	return (
 		<Container>
-			<Graphic SVG={SuicidePreventionBeginsWithAllOfUs} />
+			{/* <Graphic SVG={SuicidePreventionBeginsWithAllOfUs} /> */}
 			<GraphicForm />
 		</Container>
 	)
