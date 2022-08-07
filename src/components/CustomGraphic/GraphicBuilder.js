@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container } from '@chakra-ui/react'
+import { Grid, GridItem } from '@chakra-ui/react'
 
 // import { Graphic } from './Graphic'
 import { GraphicForm } from './GraphicForm'
@@ -8,9 +8,13 @@ import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/staticSVGs/
 
 export const GraphicBuilder = () => {
 	return (
-		<Container>
-			{/* <Graphic SVG={SuicidePreventionBeginsWithAllOfUs} /> */}
-			<GraphicForm />
-		</Container>
+		<Grid columns={{ sm: '1fr', md: '1fr 1fr' }}>
+			<GridItem colStart={1} colSpan={1}>
+				{/* <Graphic SVG={SuicidePreventionBeginsWithAllOfUs} /> */}
+			</GridItem>
+			<GridItem>
+				<GraphicForm colStart={[1, 2]} colSpan={1} />
+			</GridItem>
+		</Grid>
 	)
 }
