@@ -11,7 +11,7 @@ import {
 	VStack,
 } from '@chakra-ui/react'
 
-import Logo from '../../../static/svgs/logo.svg'
+import Logo from '../../../static/svgs/staticSVGs/logo.svg'
 
 const crisisCSS = css`
 	text-align: center;

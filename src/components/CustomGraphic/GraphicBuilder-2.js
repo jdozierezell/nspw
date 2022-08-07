@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 
-import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/suicidePreventionBeginsWithAllOfUs.svg'
+import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/staticSVGs/suicidePreventionBeginsWithAllOfUs.svg'
 
 // default hex values
 // cloud: '#f0f7fa',

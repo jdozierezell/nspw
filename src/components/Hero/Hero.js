@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from '@emotion/react'
 import { useMediaQuery, Box, Container, Flex, Heading } from '@chakra-ui/react'
 
-import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/suicidePreventionBeginsWithAllOfUs.svg'
+import SuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/staticSVGs/suicidePreventionBeginsWithAllOfUs.svg'
 
 export const Hero = ({ innerHeight }) => {
 	const [isLargerThan768] = useMediaQuery('(min-width: 768px)')

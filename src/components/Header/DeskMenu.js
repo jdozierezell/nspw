@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import { Box, Button, Container, Flex, Spacer } from '@chakra-ui/react'
 import { css } from '@emotion/react'
 
-import Logo from '../../../static/svgs/logo.svg'
+import Logo from '../../../static/svgs/staticSVGs/logo.svg'
 
 const menuCSS = css`
 	margin-top: 2rem;
