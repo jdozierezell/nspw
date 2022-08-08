@@ -28,39 +28,35 @@ export const Hero = ({ innerHeight }) => {
 		}
 	`
 	return (
-		<Container bg="purple.c700" m={0} p={0}>
-			<Flex
-				direction="row"
-				justifyContent="space-around"
-				alignItems="center"
-				bg="linear-gradient(
+		<Flex
+			justifyContent="space-around"
+			alignItems="center"
+			bg="linear-gradient(
 					180deg,
 					rgba(42, 170, 245, 1) 0%,
 					rgba(47, 37, 92, 1) 100%
 				)"
-				h={`calc(${innerHeight}px - 5rem)`}
-				minH="700px"
-				wrap={{ base: 'wrap', md: 'nowrap' }}
-				p={{ base: '0 0 4rem 0', md: '1rem 4rem' }}
+			h={`calc(${innerHeight}px - 5rem)`}
+			minH="700px"
+			wrap={{ base: 'wrap', md: 'nowrap' }}
+		>
+			<Box w={{ base: '40vh', md: '40vw' }} css={svgCSS}>
+				<SuicidePreventionBeginsWithAllOfUs />
+			</Box>
+			<Heading
+				color="white"
+				fontFamily="hoss-round, sans-serif"
+				fontWeight="600"
+				lineHeight="1.4em"
+				fontSize={{ base: '5vh', md: '4vw' }}
+				letterSpacing="-1px"
+				w={{ md: '40vw' }}
+				m="2rem 1rem"
+				textAlign="center"
 			>
-				<Box w={{ base: '40vh', md: '40vw' }} css={svgCSS}>
-					<SuicidePreventionBeginsWithAllOfUs />
-				</Box>
-				<Heading
-					color="white"
-					fontFamily="hoss-round, sans-serif"
-					fontWeight="600"
-					lineHeight="1.4em"
-					fontSize={{ base: '5vh', md: '5vw' }}
-					letterSpacing="-1px"
-					w="66vw"
-					m="2rem 1rem"
-					textAlign="center"
-				>
-					National Suicide Prevention Week {isLargerThan768 && <br />}
-					is September {!isLargerThan768 && <br />}4&ndash;10
-				</Heading>
-			</Flex>
-		</Container>
+				National Suicide Prevention Week {isLargerThan768 && <br />}
+				is September {!isLargerThan768 && <br />}4&ndash;10
+			</Heading>
+		</Flex>
 	)
 }
