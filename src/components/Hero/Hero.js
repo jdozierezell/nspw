@@ -40,10 +40,10 @@ export const Hero = ({ innerHeight }) => {
 				)"
 				h={`calc(${innerHeight}px - 5rem)`}
 				minH="700px"
-				wrap={['wrap', 'nowrap']}
-				p={['0 0 4rem 0', '1rem 4rem']}
+				wrap={{ base: 'wrap', md: 'nowrap' }}
+				p={{ base: '0 0 4rem 0', md: '1rem 4rem' }}
 			>
-				<Box w={['80vw', '40vw']} css={svgCSS}>
+				<Box w={{ base: '40vh', md: '40vw' }} css={svgCSS}>
 					<SuicidePreventionBeginsWithAllOfUs />
 				</Box>
 				<Heading
@@ -51,7 +51,7 @@ export const Hero = ({ innerHeight }) => {
 					fontFamily="hoss-round, sans-serif"
 					fontWeight="600"
 					lineHeight="1.4em"
-					fontSize={['10vw', '5vw']}
+					fontSize={{ base: '5vh', md: '5vw' }}
 					letterSpacing="-1px"
 					w="66vw"
 					m="2rem 1rem"

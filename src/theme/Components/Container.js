@@ -4,6 +4,6 @@ export const Container = {
 	baseStyle: {
 		maxW: '100vw',
 		m: 0,
-		p: ['1rem 2rem', '2rem 4rem'],
+		p: { base: '1rem 2rem', md: '2rem 4rem' },
 	},
 }

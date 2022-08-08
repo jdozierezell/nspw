@@ -98,7 +98,7 @@ export const WalkSearch = () => {
 					colStart={1}
 					colSpan={1}
 					w={{ sm: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}
-					m={['1rem 2rem', '2rem 4rem']}
+					m={{ base: '1rem 2rem', md: '2rem 4rem' }}
 				>
 					<div
 						style={{
@@ -126,8 +126,8 @@ export const WalkSearch = () => {
 				<GridItem
 					colStart={{ sm: 1, md: 2 }}
 					colSpan={1}
-					w={{ sm: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}
-					m={['1rem 2rem', '1rem 4rem 1rem 2rem']}
+					w={{ base: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}
+					m={{ base: '1rem 2rem', md: '1rem 4rem 1rem 2rem' }}
 				>
 					<Text
 						fontWeight="500"
@@ -152,8 +152,8 @@ export const WalkSearch = () => {
 						colStart={1}
 						colSpan={{ sm: 1, md: 2 }}
 						bg="blue.100"
-						m={['2rem 0', '2rem 0 0']}
-						p={['3rem 2rem 2rem', '4rem 2rem 3rem']}
+						m={{ base: '2rem 0', md: '2rem 0 0' }}
+						p={{ base: '3rem 2rem 2rem', md: '4rem 2rem 3rem' }}
 					>
 						<Hits css={hitsCSS} hitComponent={Hit} />
 					</GridItem>

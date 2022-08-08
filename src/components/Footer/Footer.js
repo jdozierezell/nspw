@@ -29,11 +29,11 @@ export const Footer = () => {
 			<Grid
 				bg="purple.c700"
 				templateColumns={{
-					sm: '1fr',
+					base: '1fr',
 					md: 'minmax(auto, 12rem) 1fr minmax(auto, 20rem)',
 				}}
 				gap="4em"
-				p="4rem 2rem"
+				p={{ base: '4rem 2rem', md: '4rem' }}
 				color="white"
 			>
 				<GridItem alignSelf="end">
@@ -42,8 +42,8 @@ export const Footer = () => {
 					</Box>
 				</GridItem>
 				<GridItem
-					textAlign={{ sm: 'center', md: 'left' }}
-					colStart={{ sm: 1, md: 3 }}
+					textAlign={{ base: 'center', md: 'left' }}
+					colStart={{ base: 1, md: 3 }}
 				>
 					<VStack spacing="1rem">
 						<Text w="100%" lineHeight="2rem" css={crisisCSS}>

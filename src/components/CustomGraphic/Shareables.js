@@ -17,7 +17,7 @@ export const Shareables = () => {
 				Click to download and share the graphics below to spread
 				awareness and support for National Suicide Prevention Week.
 			</Text>
-			<SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={10}>
+			<SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
 				<a
 					href="https://nspw.afsp.org/images/NationalSuicidePreventionWeek_Purple-01.png"
 					download="NationalSuicidePreventionWeek.png"

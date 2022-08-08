@@ -31,6 +31,7 @@ const Home = () => {
 	return (
 		<>
 			<ChakraProvider resetCSS theme={theme}>
+				{console.log(theme)}
 				{/* Header complete */}
 				<Header innerHeight={innerHeight} />
 				{/* Hero complete */}
