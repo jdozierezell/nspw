@@ -4,6 +4,7 @@ import { Box, Button, Flex } from '@chakra-ui/react'
 
 import { GraphicBackgroundSwiper } from './GraphicBackgroundSwiper'
 import { GraphicStatementSwiper } from './GraphicStatementSwiper'
+import { GraphicIllustrationSwiper } from './GraphicIllustrationSwiper'
 
 import { theme } from '../../theme/theme'
 
@@ -17,11 +18,17 @@ export const GraphicOptions = () => {
 	const statement = {
 		label: 'Select a Statement',
 		swiper: 'statement',
-		next: '',
+		next: 'illustration',
 		prev: 'background',
 	}
+	const illustration = {
+		label: 'Select an Illustration',
+		swiper: 'illustration',
+		next: '',
+		prev: 'statement',
+	}
 
-	const [activeSwiper, setActiveSwiper] = useState(statement)
+	const [activeSwiper, setActiveSwiper] = useState(background)
 	const [prevButton, setPrevButton] = useState(background)
 	const [nextButton, setNextButton] = useState(statement)
 
@@ -29,12 +36,23 @@ export const GraphicOptions = () => {
 		switch (swiper) {
 			case 'background':
 				setActiveSwiper(background)
+				setPrevButton(background)
+				setNextButton(statement)
 				break
 			case 'statement':
 				setActiveSwiper(statement)
+				setPrevButton(background)
+				setNextButton(illustration)
+				break
+			case 'illustration':
+				setActiveSwiper(illustration)
+				setPrevButton(statement)
+				setActiveSwiper(illustration)
 				break
 			default:
 				setActiveSwiper(background)
+				setPrevButton(background)
+				setNextButton(statement)
 		}
 	}
 
@@ -47,9 +65,12 @@ export const GraphicOptions = () => {
 				{activeSwiper.swiper === 'statement' && (
 					<GraphicStatementSwiper />
 				)}
+				{activeSwiper.swiper === 'illustration' && (
+					<GraphicIllustrationSwiper />
+				)}
 			</Box>
 			<Flex justifyContent="space-evenly" p="2rem 0">
-				{prevButton.swiper !== '' && (
+				{activeSwiper.prev !== '' && (
 					<Button
 						w="33%"
 						display="inline-block"
@@ -65,11 +86,12 @@ export const GraphicOptions = () => {
 							changeSwiper(activeSwiper.prev)
 						}}
 					>
+						{console.log(prevButton.prev)}
 						{prevButton.label}
 					</Button>
 				)}
-				{console.log(activeSwiper)}
-				{nextButton.swiper !== '' && (
+				{console.log(nextButton.next)}
+				{activeSwiper.next !== '' && (
 					<Button
 						w="33%"
 						display="inline-block"
