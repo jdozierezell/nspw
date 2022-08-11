@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { css } from '@emotion/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
@@ -11,8 +11,20 @@ import BackgroundClouds from '../../../static/svgs/customSVGs/BackgroundClouds.s
 import BackgroundGreen from '../../../static/svgs/customSVGs/BackgroundGreen.svg'
 import BackgroundRed from '../../../static/svgs/customSVGs/BackgroundRed.svg'
 import BackgroundYellow from '../../../static/svgs/customSVGs/BackgroundYellow.svg'
+import LogoNSPWBlackURL from '../../../static/svgs/customSVGs/LogoNSPWBlackURL.svg'
+import LogoNSPWWhiteURL from '../../../static/svgs/customSVGs/LogoNSPWWhiteURL.svg'
+import LogoWalkBlackURL from '../../../static/svgs/customSVGs/LogoWalkBlackURL.svg'
+import LogoWalkWhiteURL from '../../../static/svgs/customSVGs/LogoWalkWhiteURL.svg'
 
 export const GraphicBackgroundSwiper = () => {
+	const [isWalk, setIsWalk] = useState(false)
+	const brandingCSS = css`
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	`
 	return (
 		<Swiper
 			pagination={{
@@ -26,6 +38,10 @@ export const GraphicBackgroundSwiper = () => {
 					spaceBetween: 20,
 				},
 				1080: {
+					slidesPerView: 2,
+					spaceBetween: 25,
+				},
+				1920: {
 					slidesPerView: 3,
 					spaceBetween: 30,
 				},
@@ -33,15 +49,35 @@ export const GraphicBackgroundSwiper = () => {
 		>
 			<SwiperSlide>
 				<BackgroundClouds />
+				{isWalk ? (
+					<LogoWalkWhiteURL css={brandingCSS} />
+				) : (
+					<LogoNSPWWhiteURL css={brandingCSS} />
+				)}
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundGreen />
+				{isWalk ? (
+					<LogoWalkWhiteURL css={brandingCSS} />
+				) : (
+					<LogoNSPWWhiteURL css={brandingCSS} />
+				)}
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundRed />
+				{isWalk ? (
+					<LogoWalkWhiteURL css={brandingCSS} />
+				) : (
+					<LogoNSPWWhiteURL css={brandingCSS} />
+				)}
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundYellow />
+				{isWalk ? (
+					<LogoWalkBlackURL css={brandingCSS} />
+				) : (
+					<LogoNSPWBlackURL css={brandingCSS} />
+				)}
 			</SwiperSlide>
 		</Swiper>
 	)
