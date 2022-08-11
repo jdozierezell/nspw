@@ -13,11 +13,8 @@ import BackgroundRed from '../../../static/svgs/customSVGs/BackgroundRed.svg'
 import BackgroundYellow from '../../../static/svgs/customSVGs/BackgroundYellow.svg'
 import LogoNSPWBlackURL from '../../../static/svgs/customSVGs/LogoNSPWBlackURL.svg'
 import LogoNSPWWhiteURL from '../../../static/svgs/customSVGs/LogoNSPWWhiteURL.svg'
-import LogoWalkBlackURL from '../../../static/svgs/customSVGs/LogoWalkBlackURL.svg'
-import LogoWalkWhiteURL from '../../../static/svgs/customSVGs/LogoWalkWhiteURL.svg'
 
 export const GraphicBackgroundSwiper = () => {
-	const [isWalk, setIsWalk] = useState(false)
 	const brandingCSS = css`
 		position: absolute;
 		top: 0;
@@ -49,35 +46,19 @@ export const GraphicBackgroundSwiper = () => {
 		>
 			<SwiperSlide>
 				<BackgroundClouds />
-				{isWalk ? (
-					<LogoWalkWhiteURL css={brandingCSS} />
-				) : (
-					<LogoNSPWWhiteURL css={brandingCSS} />
-				)}
+				<LogoNSPWWhiteURL css={brandingCSS} />
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundGreen />
-				{isWalk ? (
-					<LogoWalkWhiteURL css={brandingCSS} />
-				) : (
-					<LogoNSPWWhiteURL css={brandingCSS} />
-				)}
+				<LogoNSPWWhiteURL css={brandingCSS} />
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundRed />
-				{isWalk ? (
-					<LogoWalkWhiteURL css={brandingCSS} />
-				) : (
-					<LogoNSPWWhiteURL css={brandingCSS} />
-				)}
+				<LogoNSPWWhiteURL css={brandingCSS} />
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundYellow />
-				{isWalk ? (
-					<LogoWalkBlackURL css={brandingCSS} />
-				) : (
-					<LogoNSPWBlackURL css={brandingCSS} />
-				)}
+				<LogoNSPWBlackURL css={brandingCSS} />
 			</SwiperSlide>
 		</Swiper>
 	)

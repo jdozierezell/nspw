@@ -19,10 +19,7 @@ export const GraphicBuilder = ({ innerHeight }) => {
 			>
 				Foo
 			</Box>
-			<Box
-				h="200px"
-				w={{ base: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}
-			>
+			<Box w={{ base: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}>
 				<GraphicForm />
 			</Box>
 		</Flex>

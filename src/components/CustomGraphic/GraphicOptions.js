@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 import { Box, Button, Flex } from '@chakra-ui/react'
 
 import { GraphicBackgroundSwiper } from './GraphicBackgroundSwiper'
+import { GraphicStatementSwiper } from './GraphicStatementSwiper'
 
 import { theme } from '../../theme/theme'
 
@@ -20,7 +21,7 @@ export const GraphicOptions = () => {
 		prev: 'background',
 	}
 
-	const [activeSwiper, setActiveSwiper] = useState(background)
+	const [activeSwiper, setActiveSwiper] = useState(statement)
 	const [prevButton, setPrevButton] = useState(background)
 	const [nextButton, setNextButton] = useState(statement)
 
@@ -39,9 +40,14 @@ export const GraphicOptions = () => {
 
 	return (
 		<Box>
-			{activeSwiper.swiper === 'background' && (
-				<GraphicBackgroundSwiper />
-			)}
+			<Box>
+				{activeSwiper.swiper === 'background' && (
+					<GraphicBackgroundSwiper />
+				)}
+				{activeSwiper.swiper === 'statement' && (
+					<GraphicStatementSwiper />
+				)}
+			</Box>
 			<Flex justifyContent="space-evenly" p="2rem 0">
 				{prevButton.swiper !== '' && (
 					<Button
