@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { css } from '@emotion/react'
 import { Box, Button, Flex } from '@chakra-ui/react'
+import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
 
 import { GraphicBackgroundSwiper } from './GraphicBackgroundSwiper'
 import { GraphicStatementSwiper } from './GraphicStatementSwiper'
@@ -73,6 +74,7 @@ export const GraphicOptions = () => {
 				{activeSwiper.prev !== '' && (
 					<Button
 						w="33%"
+						leftIcon={<ArrowLeftIcon h={4} />}
 						display="inline-block"
 						bg="transparent"
 						color="purple.c700"
@@ -86,7 +88,6 @@ export const GraphicOptions = () => {
 							changeSwiper(activeSwiper.prev)
 						}}
 					>
-						{console.log(prevButton.prev)}
 						{prevButton.label}
 					</Button>
 				)}
@@ -94,6 +95,7 @@ export const GraphicOptions = () => {
 				{activeSwiper.next !== '' && (
 					<Button
 						w="33%"
+						rightIcon={<ArrowRightIcon h={4} />}
 						display="inline-block"
 						bg="transparent"
 						color="purple.c700"
