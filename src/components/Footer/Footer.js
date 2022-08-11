@@ -51,7 +51,6 @@ export const Footer = () => {
 							<br />
 							<Link href="tel:988">
 								<Highlight
-									key="1"
 									query="Call or text 988"
 									styles={{
 										px: '2',
@@ -68,7 +67,6 @@ export const Footer = () => {
 							</Link>{' '}
 							<Link href="sms:741741&body=TALK">
 								<Highlight
-									key={2}
 									query="text TALK to 741741"
 									styles={{
 										px: '2',
