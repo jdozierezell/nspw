@@ -59,7 +59,6 @@ export const GraphicBuilder = () => {
 		}
 	}
 	const updateSVG = (swiper, id) => {
-		console.log(swiper)
 		if (swiper === 'background') {
 			setSVG(prevState => ({ ...prevState, background: id }))
 		} else if (swiper === 'statement') {

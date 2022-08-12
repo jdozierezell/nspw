@@ -11,6 +11,9 @@ import BackgroundTransparent from '../../../static/svgs/customSVGs/BackgroundTra
 import IllustrationFacesSquare from '../../../static/svgs/customSVGs/IllustrationFacesSquare.svg'
 import IllustrationHandsSquare from '../../../static/svgs/customSVGs/IllustrationHandsSquare.svg'
 import IllustrationWalkersSquare from '../../../static/svgs/customSVGs/IllustrationWalkersSquare.svg'
+import IllustrationFacesSquareStars from '../../../static/svgs/customSVGs/IllustrationFacesSquareStars.svg'
+import IllustrationHandsSquareStars from '../../../static/svgs/customSVGs/IllustrationHandsSquareStars.svg'
+import IllustrationWalkersSquareStars from '../../../static/svgs/customSVGs/IllustrationWalkersSquareStars.svg'
 
 export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
@@ -43,7 +46,8 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 			}}
 		>
 			<SwiperSlide>
-				<BackgroundTransparent />
+				{/* <BackgroundTransparent /> */}
+				<IllustrationWalkersSquareStars css={brandingCSS} />
 				<IllustrationWalkersSquare
 					css={brandingCSS}
 					id="IllustrationWalkersSquare"
@@ -58,6 +62,7 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
+				<IllustrationFacesSquareStars css={brandingCSS} />
 				<IllustrationFacesSquare
 					css={brandingCSS}
 					id="IllustrationFacesSquare"
@@ -72,6 +77,7 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
+				<IllustrationHandsSquareStars css={brandingCSS} />
 				<IllustrationHandsSquare
 					css={brandingCSS}
 					id="IllustrationHandsSquare"
