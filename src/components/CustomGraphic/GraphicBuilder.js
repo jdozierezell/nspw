@@ -69,11 +69,14 @@ export const GraphicBuilder = () => {
 	}
 	return (
 		<Grid
-			templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
+			templateColumns={{
+				base: '1fr',
+				md: 'repeat(2, 1fr)',
+				md: 'repeat(3, 1fr)',
+			}}
 			p={{ base: '1rem 2rem', md: '2rem 4rem' }}
-			minH="700px"
 			justifyItems="center"
-			gap={{ base: '1rem', md: '1rem  6rem' }}
+			gap={{ base: '1rem', md: '1rem  3rem', lg: '1rem  6rem' }}
 		>
 			<GridItem
 				colStart={1}
@@ -81,17 +84,25 @@ export const GraphicBuilder = () => {
 				rowStart={1}
 				rowSpan={1}
 				pos="relative"
-				w={{ base: 'calc(100vw - 4rem)', md: 'calc(34vw - 6rem)' }}
+				w={{
+					base: 'calc(100vw - 4rem)',
+					md: 'calc(51vw - 6rem)',
+					lg: 'calc(34vw - 6rem)',
+				}}
 			>
 				<Graphic svg={svg} />
 			</GridItem>
 			<GridItem
 				colStart={{ base: 1, md: 2 }}
-				colSpan={{ base: 1, md: 2 }}
+				colSpan={{ base: 1, lg: 2 }}
 				rowStart={{ base: 2, md: 1 }}
 				rowSpan={1}
 				pos="relative"
-				w={{ base: 'calc(100vw - 4rem)', md: 'calc(66vw - 8rem)' }}
+				w={{
+					base: 'calc(100vw - 4rem)',
+					md: 'calc(51vw - 6rem)',
+					lg: 'calc(64vw - 8rem)',
+				}}
 			>
 				<GraphicSlider
 					activeSwiper={activeSwiper}
@@ -100,7 +111,7 @@ export const GraphicBuilder = () => {
 			</GridItem>
 			<GridItem
 				colStart={{ base: 1, md: 2 }}
-				colSpan={{ base: 1, md: 2 }}
+				colSpan={{ base: 1, lg: 2 }}
 				rowStart={{ base: 3, md: 2 }}
 				rowSpan={1}
 			>
