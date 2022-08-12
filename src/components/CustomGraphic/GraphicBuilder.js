@@ -65,6 +65,13 @@ export const GraphicBuilder = () => {
 			setSVG(prevState => ({ ...prevState, statement: id }))
 		} else if (swiper === 'illustration') {
 			setSVG(prevState => ({ ...prevState, illustration: id }))
+		} else {
+			console.log('broken')
+			setSVG({
+				background: 'transparent',
+				statement: '',
+				illustration: '',
+			})
 		}
 	}
 	return (
@@ -128,7 +135,7 @@ export const GraphicBuilder = () => {
 				rowStart={{ base: 4, md: 2 }}
 				rowSpan={1}
 			>
-				<GraphicDownload />
+				<GraphicDownload updateSVG={updateSVG} />
 			</GridItem>
 		</Grid>
 	)
