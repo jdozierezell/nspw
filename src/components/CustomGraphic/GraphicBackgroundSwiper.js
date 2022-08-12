@@ -12,7 +12,7 @@ import BackgroundGreen from '../../../static/svgs/customSVGs/BackgroundGreen.svg
 import BackgroundRed from '../../../static/svgs/customSVGs/BackgroundRed.svg'
 import BackgroundYellow from '../../../static/svgs/customSVGs/BackgroundYellow.svg'
 
-export const GraphicBackgroundSwiper = () => {
+export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
 		position: absolute;
 		top: 0;
@@ -44,18 +44,51 @@ export const GraphicBackgroundSwiper = () => {
 		>
 			<SwiperSlide>
 				<BackgroundClouds
-					id="backgroundClouds"
-					onClick={e => console.log(e.target.closest('svg').id)}
+					id="BackgroundClouds"
+					data-swiper="background"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundGreen />
+				<BackgroundGreen
+					id="BackgroundGreen"
+					data-swiper="background"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundRed />
+				<BackgroundRed
+					id="BackgroundRed"
+					data-swiper="background"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundYellow />
+				<BackgroundYellow
+					id="BackgroundYellow"
+					data-swiper="background"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 		</Swiper>
 	)

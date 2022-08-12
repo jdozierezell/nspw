@@ -12,7 +12,7 @@ import IllustrationFacesSquare from '../../../static/svgs/customSVGs/Illustratio
 import IllustrationHandsSquare from '../../../static/svgs/customSVGs/IllustrationHandsSquare.svg'
 import IllustrationWalkersSquare from '../../../static/svgs/customSVGs/IllustrationWalkersSquare.svg'
 
-export const GraphicIllustrationSwiper = () => {
+export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
 		position: absolute;
 		top: 0;
@@ -44,15 +44,45 @@ export const GraphicIllustrationSwiper = () => {
 		>
 			<SwiperSlide>
 				<BackgroundTransparent />
-				<IllustrationWalkersSquare css={brandingCSS} />
+				<IllustrationWalkersSquare
+					css={brandingCSS}
+					id="IllustrationWalkersSquare"
+					data-swiper="illustration"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
-				<IllustrationFacesSquare css={brandingCSS} />
+				<IllustrationFacesSquare
+					css={brandingCSS}
+					id="IllustrationFacesSquare"
+					data-swiper="illustration"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
-				<IllustrationHandsSquare css={brandingCSS} />
+				<IllustrationHandsSquare
+					css={brandingCSS}
+					id="IllustrationHandsSquare"
+					data-swiper="illustration"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 		</Swiper>
 	)

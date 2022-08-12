@@ -5,16 +5,17 @@ import { GraphicBackgroundSwiper } from './GraphicBackgroundSwiper'
 import { GraphicStatementSwiper } from './GraphicStatementSwiper'
 import { GraphicIllustrationSwiper } from './GraphicIllustrationSwiper'
 
-export const GraphicSlider = ({ activeSwiper }) => {
-	console.log(activeSwiper)
+export const GraphicSlider = ({ activeSwiper, updateSVG }) => {
 	return (
-		<Box>
+		<Box cursor="pointer">
 			{activeSwiper.swiper === 'background' && (
-				<GraphicBackgroundSwiper />
+				<GraphicBackgroundSwiper updateSVG={updateSVG} />
 			)}
-			{activeSwiper.swiper === 'statement' && <GraphicStatementSwiper />}
+			{activeSwiper.swiper === 'statement' && (
+				<GraphicStatementSwiper updateSVG={updateSVG} />
+			)}
 			{activeSwiper.swiper === 'illustration' && (
-				<GraphicIllustrationSwiper />
+				<GraphicIllustrationSwiper updateSVG={updateSVG} />
 			)}
 		</Box>
 	)

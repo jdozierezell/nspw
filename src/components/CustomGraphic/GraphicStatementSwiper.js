@@ -18,7 +18,7 @@ import StatementTogetherLetsTalk from '../../../static/svgs/customSVGs/Statement
 import StatementWalkWithUs from '../../../static/svgs/customSVGs/StatementWalkWithUs.svg'
 import StatementWorldSuicidePreventionDay from '../../../static/svgs/customSVGs/StatementWorldSuicidePreventionDay.svg'
 
-export const GraphicStatementSwiper = () => {
+export const GraphicStatementSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
 		position: absolute;
 		top: 0;
@@ -50,46 +50,128 @@ export const GraphicStatementSwiper = () => {
 		>
 			<SwiperSlide>
 				<BackgroundTransparent />
-				<StatementNationalSuicidePreventionWeek css={brandingCSS} />
+				<StatementNationalSuicidePreventionWeek
+					css={brandingCSS}
+					id="StatementNationalSuicidePreventionWeek"
+					data-swiper="statement"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
 				<StatementSuicidePreventionBeginsWithAllOfUs
 					css={brandingCSS}
+					id="StatementSuicidePreventionBeginsWithAllOfUs"
+					data-swiper="statement"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
-				<StatementTogetherLetsTalk css={brandingCSS} />
+				<StatementTogetherLetsTalk
+					css={brandingCSS}
+					id="StatementTogetherLetsTalk"
+					data-swiper="statement"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
-				<StatementWalkWithUs css={brandingCSS} />
+				<StatementWalkWithUs
+					css={brandingCSS}
+					id="StatementWalkWithUs"
+					data-swiper="illustration"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
-				<StatementWorldSuicidePreventionDay css={brandingCSS} />
+				<StatementWorldSuicidePreventionDay
+					css={brandingCSS}
+					id="StatementWorldSuicidePreventionDay"
+					data-swiper="statement"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
-				<StatementOutOfTheDarkness css={brandingCSS} />
+				<StatementOutOfTheDarkness
+					css={brandingCSS}
+					id="StatementOutOfTheDarkness"
+					data-swiper="statement"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
 				<StatementSemanaNacionalDePrevencionDelSuicidio
 					css={brandingCSS}
+					id="StatementSemanaNacionalDePrevencionDelSuicidio"
+					data-swiper="statement"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
 				<StatementLaPrevencionDelSuicidioComienzaConNosotros
 					css={brandingCSS}
+					id="StatementLaPrevencionDelSuicidioComienzaConNosotros"
+					data-swiper="statement"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundTransparent />
 				<StatementDiaMundailDeLaPrevencionDelSuicidio
 					css={brandingCSS}
+					id="StatementDiaMundailDeLaPrevencionDelSuicidio"
+					data-swiper="statement"
+					onClick={e =>
+						updateSVG(
+							e.target.closest('svg').dataset.swiper,
+							e.target.closest('svg').id
+						)
+					}
 				/>
 			</SwiperSlide>
 		</Swiper>

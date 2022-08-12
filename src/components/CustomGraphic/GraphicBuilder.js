@@ -29,6 +29,11 @@ export const GraphicBuilder = () => {
 	const [activeSwiper, setActiveSwiper] = useState(background)
 	const [prevButton, setPrevButton] = useState(background)
 	const [nextButton, setNextButton] = useState(statement)
+	const [svg, setSVG] = useState({
+		background: 'transparent',
+		statement: '',
+		illustration: '',
+	})
 
 	const changeSwiper = swiper => {
 		switch (swiper) {
@@ -53,6 +58,16 @@ export const GraphicBuilder = () => {
 				setNextButton(statement)
 		}
 	}
+	const updateSVG = (swiper, id) => {
+		console.log(swiper)
+		if (swiper === 'background') {
+			setSVG(prevState => ({ ...prevState, background: id }))
+		} else if (swiper === 'statement') {
+			setSVG(prevState => ({ ...prevState, statement: id }))
+		} else if (swiper === 'illustration') {
+			setSVG(prevState => ({ ...prevState, illustration: id }))
+		}
+	}
 	return (
 		<Grid
 			templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
@@ -69,7 +84,7 @@ export const GraphicBuilder = () => {
 				pos="relative"
 				w={{ base: 'calc(100vw - 4rem)', md: 'calc(34vw - 6rem)' }}
 			>
-				<Graphic />
+				<Graphic svg={svg} />
 			</GridItem>
 			<GridItem
 				colStart={{ base: 1, md: 2 }}
@@ -79,7 +94,10 @@ export const GraphicBuilder = () => {
 				pos="relative"
 				w={{ base: 'calc(100vw - 4rem)', md: 'calc(66vw - 8rem)' }}
 			>
-				<GraphicSlider activeSwiper={activeSwiper} />
+				<GraphicSlider
+					activeSwiper={activeSwiper}
+					updateSVG={updateSVG}
+				/>
 			</GridItem>
 			<GridItem
 				colStart={{ base: 1, md: 2 }}
