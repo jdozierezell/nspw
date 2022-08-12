@@ -49,129 +49,174 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 			}}
 		>
 			<SwiperSlide>
-				<BackgroundTransparent />
 				<StatementNationalSuicidePreventionWeek
 					css={brandingCSS}
 					id="StatementNationalSuicidePreventionWeek"
 					data-swiper="statement"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					onClick={e => {
+						const statementSVG = e.target.closest('svg')
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
+				/>
+				<BackgroundTransparent
+					onClick={e => {
+						const statementSVG =
+							e.target.closest('svg').previousElementSibling
+						console.log(e)
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundTransparent />
 				<StatementSuicidePreventionBeginsWithAllOfUs
 					css={brandingCSS}
 					id="StatementSuicidePreventionBeginsWithAllOfUs"
 					data-swiper="statement"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					onClick={e => {
+						const statementSVG = e.target.closest('svg')
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
+				/>
+				<BackgroundTransparent
+					onClick={e => {
+						const statementSVG =
+							e.target.closest('svg').previousElementSibling
+						console.log(e)
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundTransparent />
 				<StatementTogetherLetsTalk
 					css={brandingCSS}
 					id="StatementTogetherLetsTalk"
 					data-swiper="statement"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					onClick={e => {
+						const statementSVG = e.target.closest('svg')
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
+				/>
+				<BackgroundTransparent
+					onClick={e => {
+						const statementSVG =
+							e.target.closest('svg').previousElementSibling
+						console.log(e)
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundTransparent />
 				<StatementWalkWithUs
 					css={brandingCSS}
 					id="StatementWalkWithUs"
-					data-swiper="illustration"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					data-swiper="statement"
+					onClick={e => {
+						const statementSVG = e.target.closest('svg')
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
+				/>
+				<BackgroundTransparent
+					onClick={e => {
+						const statementSVG =
+							e.target.closest('svg').previousElementSibling
+						console.log(e)
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundTransparent />
 				<StatementWorldSuicidePreventionDay
 					css={brandingCSS}
 					id="StatementWorldSuicidePreventionDay"
 					data-swiper="statement"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					onClick={e => {
+						const statementSVG = e.target.closest('svg')
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
+				/>
+				<BackgroundTransparent
+					onClick={e => {
+						const statementSVG =
+							e.target.closest('svg').previousElementSibling
+						console.log(e)
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundTransparent />
 				<StatementOutOfTheDarkness
 					css={brandingCSS}
 					id="StatementOutOfTheDarkness"
 					data-swiper="statement"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					onClick={e => {
+						const statementSVG = e.target.closest('svg')
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
+				/>
+				<BackgroundTransparent
+					onClick={e => {
+						const statementSVG =
+							e.target.closest('svg').previousElementSibling
+						console.log(e)
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundTransparent />
 				<StatementSemanaNacionalDePrevencionDelSuicidio
 					css={brandingCSS}
 					id="StatementSemanaNacionalDePrevencionDelSuicidio"
 					data-swiper="statement"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					onClick={e => {
+						const statementSVG = e.target.closest('svg')
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
+				/>
+				<BackgroundTransparent
+					onClick={e => {
+						const statementSVG =
+							e.target.closest('svg').previousElementSibling
+						console.log(e)
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundTransparent />
 				<StatementLaPrevencionDelSuicidioComienzaConNosotros
 					css={brandingCSS}
 					id="StatementLaPrevencionDelSuicidioComienzaConNosotros"
 					data-swiper="statement"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					onClick={e => {
+						const statementSVG = e.target.closest('svg')
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
+				/>
+				<BackgroundTransparent
+					onClick={e => {
+						const statementSVG =
+							e.target.closest('svg').previousElementSibling
+						console.log(e)
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundTransparent />
 				<StatementDiaMundailDeLaPrevencionDelSuicidio
 					css={brandingCSS}
 					id="StatementDiaMundailDeLaPrevencionDelSuicidio"
 					data-swiper="statement"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					onClick={e => {
+						const statementSVG = e.target.closest('svg')
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
+				/>
+				<BackgroundTransparent
+					onClick={e => {
+						const statementSVG =
+							e.target.closest('svg').previousElementSibling
+						console.log(e)
+						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
+					}}
 				/>
 			</SwiperSlide>
 		</Swiper>
