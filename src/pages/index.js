@@ -40,7 +40,7 @@ const Home = () => {
 				{/* WalkSearch complete */}
 				<WalkSearch />
 				{/* CustomGraphic in progress */}
-				<CustomGraphic innerHeight={innerHeight} />
+				<CustomGraphic />
 				{/* CTAs in progress */}
 				{/* <CTAs /> */}
 				{/* RealStories complete */}

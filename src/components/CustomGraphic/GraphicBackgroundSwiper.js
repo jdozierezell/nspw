@@ -11,8 +11,6 @@ import BackgroundClouds from '../../../static/svgs/customSVGs/BackgroundClouds.s
 import BackgroundGreen from '../../../static/svgs/customSVGs/BackgroundGreen.svg'
 import BackgroundRed from '../../../static/svgs/customSVGs/BackgroundRed.svg'
 import BackgroundYellow from '../../../static/svgs/customSVGs/BackgroundYellow.svg'
-import LogoNSPWBlackURL from '../../../static/svgs/customSVGs/LogoNSPWBlackURL.svg'
-import LogoNSPWWhiteURL from '../../../static/svgs/customSVGs/LogoNSPWWhiteURL.svg'
 
 export const GraphicBackgroundSwiper = () => {
 	const brandingCSS = css`
@@ -45,20 +43,19 @@ export const GraphicBackgroundSwiper = () => {
 			}}
 		>
 			<SwiperSlide>
-				<BackgroundClouds />
-				<LogoNSPWWhiteURL css={brandingCSS} />
+				<BackgroundClouds
+					id="backgroundClouds"
+					onClick={e => console.log(e.target.closest('svg').id)}
+				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundGreen />
-				<LogoNSPWWhiteURL css={brandingCSS} />
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundRed />
-				<LogoNSPWWhiteURL css={brandingCSS} />
 			</SwiperSlide>
 			<SwiperSlide>
 				<BackgroundYellow />
-				<LogoNSPWBlackURL css={brandingCSS} />
 			</SwiperSlide>
 		</Swiper>
 	)

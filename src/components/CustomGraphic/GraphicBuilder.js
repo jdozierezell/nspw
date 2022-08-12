@@ -6,8 +6,7 @@ import { GraphicDownload } from './GraphicDownload'
 import { GraphicOptions } from './GraphicOptions'
 import { GraphicSlider } from './GraphicSlider'
 
-export const GraphicBuilder = ({ innerHeight }) => {
-	const height = `calc(${innerHeight}px - 5rem)`
+export const GraphicBuilder = () => {
 	const background = {
 		label: 'Select a Background',
 		swiper: 'background',
@@ -26,9 +25,11 @@ export const GraphicBuilder = ({ innerHeight }) => {
 		next: '',
 		prev: 'statement',
 	}
+
 	const [activeSwiper, setActiveSwiper] = useState(background)
 	const [prevButton, setPrevButton] = useState(background)
 	const [nextButton, setNextButton] = useState(statement)
+
 	const changeSwiper = swiper => {
 		switch (swiper) {
 			case 'background':
