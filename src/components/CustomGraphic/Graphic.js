@@ -71,7 +71,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 		if (illustration === 'IllustrationFacesSquare') {
 			sizeCSS = css`
 				width: 50%;
-				top: 4;
+				top: 24%;
 				left: 50%;
 				transform: translateX(-50%);
 			`
@@ -98,7 +98,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 		}
 		if (illustration === 'IllustrationHandsSquare') {
 			sizeCSS = css`
-				width: 93%;
+				width: 90%;
 				top: 47%;
 				left: 50%;
 				transform: translateX(-50%);
