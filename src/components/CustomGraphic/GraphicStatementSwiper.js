@@ -14,7 +14,7 @@ import StatementNationalSuicidePreventionWeek from '../../../static/svgs/customS
 import StatementOutOfTheDarkness from '../../../static/svgs/customSVGs/StatementOutOfTheDarkness.svg'
 import StatementSemanaNacionalDePrevencionDelSuicidio from '../../../static/svgs/customSVGs/StatementSemanaNacionalDePrevencionDelSuicidio.svg'
 import StatementSuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/customSVGs/StatementSuicidePreventionBeginsWithAllOfUs.svg'
-import StatementTogetherLetsTalk from '../../../static/svgs/customSVGs/StatementTogetherLetsTalk.svg'
+import StatementTogetherLetsWalk from '../../../static/svgs/customSVGs/StatementTogetherLetsWalk.svg'
 import StatementWalkWithUs from '../../../static/svgs/customSVGs/StatementWalkWithUs.svg'
 import StatementWorldSuicidePreventionDay from '../../../static/svgs/customSVGs/StatementWorldSuicidePreventionDay.svg'
 
@@ -87,9 +87,9 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<StatementTogetherLetsTalk
+				<StatementTogetherLetsWalk
 					css={brandingCSS}
-					id="StatementTogetherLetsTalk"
+					id="StatementTogetherLetsWalk"
 					data-swiper="statement"
 					onClick={e => {
 						const statementSVG = e.target.closest('svg')

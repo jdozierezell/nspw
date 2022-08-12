@@ -19,7 +19,7 @@ import StatementNationalSuicidePreventionWeek from '../../../static/svgs/customS
 import StatementOutOfTheDarkness from '../../../static/svgs/customSVGs/StatementOutOfTheDarkness.svg'
 import StatementSemanaNacionalDePrevencionDelSuicidio from '../../../static/svgs/customSVGs/StatementSemanaNacionalDePrevencionDelSuicidio.svg'
 import StatementSuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/customSVGs/StatementSuicidePreventionBeginsWithAllOfUs.svg'
-import StatementTogetherLetsTalk from '../../../static/svgs/customSVGs/StatementTogetherLetsTalk.svg'
+import StatementTogetherLetsWalk from '../../../static/svgs/customSVGs/StatementTogetherLetsWalk.svg'
 import StatementWalkWithUs from '../../../static/svgs/customSVGs/StatementWalkWithUs.svg'
 import StatementWorldSuicidePreventionDay from '../../../static/svgs/customSVGs/StatementWorldSuicidePreventionDay.svg'
 
@@ -28,6 +28,9 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 		position: absolute;
 		top: 0;
 	`
+	console.log(background)
+	console.log(statement)
+	console.log(illustration)
 	let sizeCSS = css``
 	if (statement === 'StatementNationalSuicidePreventionWeek') {
 		if (illustration === 'IllustrationWalkersSquare') {
@@ -67,16 +70,188 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 		}
 		if (illustration === 'IllustrationFacesSquare') {
 			sizeCSS = css`
-				width: 100%;
-				top: 21%;
+				width: 50%;
+				top: 4;
 				left: 50%;
 				transform: translateX(-50%);
 			`
 		}
 		if (illustration === 'IllustrationHandsSquare') {
 			sizeCSS = css`
-				width: 100%;
-				top: 44%;
+				width: 50%;
+				top: 48%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+	} else if (statement === 'StatementTogetherLetsWalk') {
+		if (illustration === 'IllustrationWalkersSquare') {
+			sizeCSS = css``
+		}
+		if (illustration === 'IllustrationFacesSquare') {
+			sizeCSS = css`
+				width: 80%;
+				top: 24%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationHandsSquare') {
+			sizeCSS = css`
+				width: 93%;
+				top: 47%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+	} else if (statement === 'StatementWalkWithUs') {
+		if (illustration === 'IllustrationWalkersSquare') {
+			sizeCSS = css`
+				width: 110%;
+				top: 2%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationFacesSquare') {
+			sizeCSS = css`
+				width: 110%;
+				top: 28%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationHandsSquare') {
+			sizeCSS = css`
+				width: 110%;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+	} else if (statement === 'StatementWorldSuicidePreventionDay') {
+		if (illustration === 'IllustrationWalkersSquare') {
+			sizeCSS = css`
+				width: 105%;
+				top: 0%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationFacesSquare') {
+			sizeCSS = css`
+				width: 105%;
+				top: 24%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationHandsSquare') {
+			sizeCSS = css`
+				width: 105%;
+				top: 45%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+	} else if (statement === 'StatementOutOfTheDarkness') {
+		if (illustration === 'IllustrationWalkersSquare') {
+			sizeCSS = css`
+				width: 78%;
+				top: 0%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationFacesSquare') {
+			sizeCSS = css`
+				width: 80%;
+				top: 24%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationHandsSquare') {
+			sizeCSS = css`
+				width: 80%;
+				top: 45%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+	} else if (statement === 'StatementSemanaNacionalDePrevencionDelSuicidio') {
+		if (illustration === 'IllustrationWalkersSquare') {
+			sizeCSS = css`
+				width: 105%;
+				top: 2%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationFacesSquare') {
+			sizeCSS = css`
+				width: 105%;
+				top: 26%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationHandsSquare') {
+			sizeCSS = css`
+				width: 105%;
+				top: 47%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+	} else if (
+		statement === 'StatementLaPrevencionDelSuicidioComienzaConNosotros'
+	) {
+		if (illustration === 'IllustrationWalkersSquare') {
+			sizeCSS = css`
+				width: 84%;
+				top: 0%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationFacesSquare') {
+			sizeCSS = css`
+				width: 73%;
+				top: 25%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationHandsSquare') {
+			sizeCSS = css`
+				width: 80%;
+				top: 47%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+	} else if (statement === 'StatementDiaMundailDeLaPrevencionDelSuicidio') {
+		if (illustration === 'IllustrationWalkersSquare') {
+			sizeCSS = css`
+				width: 105%;
+				top: 0%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationFacesSquare') {
+			sizeCSS = css`
+				width: 105%;
+				top: 24%;
+				left: 50%;
+				transform: translateX(-50%);
+			`
+		}
+		if (illustration === 'IllustrationHandsSquare') {
+			sizeCSS = css`
+				width: 105%;
+				top: 47%;
 				left: 50%;
 				transform: translateX(-50%);
 			`
@@ -159,8 +334,8 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 						`}
 					/>
 				)}
-				{statement === 'StatementTogetherLetsTalk' && (
-					<StatementTogetherLetsTalk
+				{statement === 'StatementTogetherLetsWalk' && (
+					<StatementTogetherLetsWalk
 						css={css`
 							${positionCSS};
 							${sizeCSS};
