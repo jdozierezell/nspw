@@ -58,6 +58,7 @@ export const GraphicBuilder = ({ innerHeight }) => {
 			p={{ base: '1rem 2rem', md: '2rem 4rem' }}
 			minH="700px"
 			justifyItems="center"
+			gap={{ base: '1rem', md: '1rem  6rem' }}
 		>
 			<GridItem
 				colStart={1}
@@ -65,23 +66,23 @@ export const GraphicBuilder = ({ innerHeight }) => {
 				rowStart={1}
 				rowSpan={1}
 				pos="relative"
-				w={{ base: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}
+				w={{ base: 'calc(100vw - 4rem)', md: 'calc(34vw - 6rem)' }}
 			>
 				<Graphic />
 			</GridItem>
 			<GridItem
 				colStart={{ base: 1, md: 2 }}
-				colSpan={2}
+				colSpan={{ base: 1, md: 2 }}
 				rowStart={{ base: 2, md: 1 }}
 				rowSpan={1}
 				pos="relative"
-				w={{ base: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}
+				w={{ base: 'calc(100vw - 4rem)', md: 'calc(66vw - 8rem)' }}
 			>
 				<GraphicSlider activeSwiper={activeSwiper} />
 			</GridItem>
 			<GridItem
-				colStart={1}
-				colSpan={1}
+				colStart={{ base: 1, md: 2 }}
+				colSpan={{ base: 1, md: 2 }}
 				rowStart={{ base: 3, md: 2 }}
 				rowSpan={1}
 			>

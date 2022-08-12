@@ -13,7 +13,7 @@ export const GraphicOptions = ({
 }) => {
 	return (
 		<Box>
-			<Flex justifyContent="space-evenly" wrap="wrap">
+			<Flex justifyContent="space-evenly" wrap="wrap" gap="1rem">
 				{activeSwiper.prev !== '' && (
 					<Button
 						minW="33%"
