@@ -31,8 +31,15 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `icons`,
+				name: `images`,
 				path: `${__dirname}/static/images/`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `svgs`,
+				path: `${__dirname}/static/svgs/`,
 			},
 		},
 		{
