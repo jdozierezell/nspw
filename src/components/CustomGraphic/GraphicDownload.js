@@ -3,7 +3,23 @@ import { Button, Flex } from '@chakra-ui/react'
 
 import { theme } from '../../theme/theme'
 
-export const GraphicDownload = ({ updateSVG }) => {
+export const GraphicDownload = ({ updateSVG, downloadSVG }) => {
+	const download = () => {
+		let svgToDownload
+		for (const [index, svg] of downloadSVG.entries()) {
+			if (index === 0) {
+				svgToDownload = svg
+			} else {
+				for (const [index, child] of svg.childNodes.entries()) {
+					console.log(child)
+					if (index <= 1) {
+						svgToDownload.appendChild(child)
+					}
+				}
+			}
+		}
+		console.log(svgToDownload)
+	}
 	return (
 		<Flex justifyContent="space-evenly" wrap="wrap" gap="1rem">
 			<Button
@@ -18,6 +34,7 @@ export const GraphicDownload = ({ updateSVG }) => {
 					bg: 'purple.c700',
 					color: 'white',
 				}}
+				onClick={download}
 			>
 				Download
 			</Button>

@@ -7,7 +7,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import BackgroundTransparent from '../../../static/svgs/customSVGs/BackgroundTransparent.svg'
+import BackgroundBlueFill from '../../../static/svgs/customSVGs/BackgroundBlueFill.svg'
 import StatementDiaMundailDeLaPrevencionDelSuicidio from '../../../static/svgs/customSVGs/StatementDiaMundailDeLaPrevencionDelSuicidio.svg'
 import StatementLaPrevencionDelSuicidioComienzaConNosotros from '../../../static/svgs/customSVGs/StatementLaPrevencionDelSuicidioComienzaConNosotros.svg'
 import StatementNationalSuicidePreventionWeek from '../../../static/svgs/customSVGs/StatementNationalSuicidePreventionWeek.svg'
@@ -58,11 +58,10 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundTransparent
+				<BackgroundBlueFill
 					onClick={e => {
 						const statementSVG =
 							e.target.closest('svg').previousElementSibling
-						console.log(e)
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
@@ -77,7 +76,7 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundTransparent
+				<BackgroundBlueFill
 					onClick={e => {
 						const statementSVG =
 							e.target.closest('svg').previousElementSibling
@@ -96,7 +95,7 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundTransparent
+				<BackgroundBlueFill
 					onClick={e => {
 						const statementSVG =
 							e.target.closest('svg').previousElementSibling
@@ -115,7 +114,7 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundTransparent
+				<BackgroundBlueFill
 					onClick={e => {
 						const statementSVG =
 							e.target.closest('svg').previousElementSibling
@@ -134,7 +133,7 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundTransparent
+				<BackgroundBlueFill
 					onClick={e => {
 						const statementSVG =
 							e.target.closest('svg').previousElementSibling
@@ -153,7 +152,7 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundTransparent
+				<BackgroundBlueFill
 					onClick={e => {
 						const statementSVG =
 							e.target.closest('svg').previousElementSibling
@@ -172,7 +171,7 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundTransparent
+				<BackgroundBlueFill
 					onClick={e => {
 						const statementSVG =
 							e.target.closest('svg').previousElementSibling
@@ -191,7 +190,7 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundTransparent
+				<BackgroundBlueFill
 					onClick={e => {
 						const statementSVG =
 							e.target.closest('svg').previousElementSibling
@@ -210,7 +209,7 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundTransparent
+				<BackgroundBlueFill
 					onClick={e => {
 						const statementSVG =
 							e.target.closest('svg').previousElementSibling

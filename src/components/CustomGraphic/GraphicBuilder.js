@@ -6,7 +6,7 @@ import { GraphicDownload } from './GraphicDownload'
 import { GraphicOptions } from './GraphicOptions'
 import { GraphicSlider } from './GraphicSlider'
 
-export const GraphicBuilder = () => {
+export const GraphicBuilder = ({ downloadSVG }) => {
 	const background = {
 		label: 'Select a Background',
 		swiper: 'background',
@@ -135,7 +135,10 @@ export const GraphicBuilder = () => {
 				rowStart={{ base: 4, md: 2 }}
 				rowSpan={1}
 			>
-				<GraphicDownload updateSVG={updateSVG} />
+				<GraphicDownload
+					updateSVG={updateSVG}
+					downloadSVG={downloadSVG}
+				/>
 			</GridItem>
 		</Grid>
 	)

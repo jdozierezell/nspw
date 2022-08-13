@@ -17,6 +17,7 @@ import { Footer } from '../components/Footer/Footer'
 
 const Home = () => {
 	const [innerHeight, setInnerHeight] = useState(0)
+	const [downloadSVG, setDownloadSVG] = useState()
 
 	const setHeight = () => {
 		setInnerHeight(window.innerHeight)
@@ -24,6 +25,7 @@ const Home = () => {
 
 	useEffect(() => {
 		setInnerHeight(window.innerHeight)
+		setDownloadSVG(document.getElementById('graphicSVG').childNodes)
 		window.addEventListener('resize', setHeight)
 		return () => window.removeEventListener('resize', setHeight)
 	}, [innerHeight])
@@ -40,7 +42,7 @@ const Home = () => {
 				{/* WalkSearch complete */}
 				<WalkSearch />
 				{/* CustomGraphic in progress */}
-				<CustomGraphic />
+				<CustomGraphic downloadSVG={downloadSVG} />
 				{/* CTAs in progress */}
 				{/* <CTAs /> */}
 				{/* RealStories complete */}

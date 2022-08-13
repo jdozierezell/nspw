@@ -28,9 +28,6 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 		position: absolute;
 		top: 0;
 	`
-	console.log(background)
-	console.log(statement)
-	console.log(illustration)
 	let sizeCSS = css``
 	if (statement === 'StatementNationalSuicidePreventionWeek') {
 		if (illustration === 'IllustrationWalkersSquare') {
@@ -258,116 +255,111 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 		}
 	}
 	return (
-		<Box textAlign="center">
-			<Box position="relative">
-				<BackgroundTransparent />
-				{background === 'BackgroundClouds' && (
-					<BackgroundClouds css={positionCSS} />
-				)}
-				{background === 'BackgroundGreen' && (
-					<BackgroundGreen css={positionCSS} />
-				)}
-				{background === 'BackgroundRed' && (
-					<BackgroundRed css={positionCSS} />
-				)}
-				{background === 'BackgroundYellow' && (
-					<BackgroundYellow css={positionCSS} />
-				)}
-				{illustration === 'IllustrationFacesSquare' && (
-					<IllustrationFacesSquareStars css={positionCSS} />
-				)}
-				{illustration === 'IllustrationHandsSquare' && (
-					<IllustrationHandsSquareStars css={positionCSS} />
-				)}
-				{illustration === 'IllustrationWalkersSquare' && (
-					<IllustrationWalkersSquareStars css={positionCSS} />
-				)}
-				{statement ===
-					'StatementDiaMundailDeLaPrevencionDelSuicidio' && (
-					<StatementDiaMundailDeLaPrevencionDelSuicidio
-						css={css`
-							${positionCSS};
-							${sizeCSS};
-						`}
-					/>
-				)}
-				{statement ===
-					'StatementLaPrevencionDelSuicidioComienzaConNosotros' && (
-					<StatementLaPrevencionDelSuicidioComienzaConNosotros
-						css={css`
-							${positionCSS};
-							${sizeCSS};
-						`}
-					/>
-				)}
-				{statement === 'StatementNationalSuicidePreventionWeek' && (
-					<StatementNationalSuicidePreventionWeek
-						css={css`
-							${positionCSS};
-							${sizeCSS};
-						`}
-					/>
-				)}
-				{statement === 'StatementOutOfTheDarkness' && (
-					<StatementOutOfTheDarkness
-						css={css`
-							${positionCSS};
-							${sizeCSS};
-						`}
-					/>
-				)}
-				{statement ===
-					'StatementSemanaNacionalDePrevencionDelSuicidio' && (
-					<StatementSemanaNacionalDePrevencionDelSuicidio
-						css={css`
-							${positionCSS};
-							${sizeCSS};
-						`}
-					/>
-				)}
-				{statement ===
-					'StatementSuicidePreventionBeginsWithAllOfUs' && (
-					<StatementSuicidePreventionBeginsWithAllOfUs
-						css={css`
-							${positionCSS};
-							${sizeCSS};
-						`}
-					/>
-				)}
-				{statement === 'StatementTogetherLetsWalk' && (
-					<StatementTogetherLetsWalk
-						css={css`
-							${positionCSS};
-							${sizeCSS};
-						`}
-					/>
-				)}
-				{statement === 'StatementWalkWithUs' && (
-					<StatementWalkWithUs
-						css={css`
-							${positionCSS};
-							${sizeCSS};
-						`}
-					/>
-				)}
-				{statement === 'StatementWorldSuicidePreventionDay' && (
-					<StatementWorldSuicidePreventionDay
-						css={css`
-							${positionCSS};
-							${sizeCSS};
-						`}
-					/>
-				)}
-				{illustration === 'IllustrationFacesSquare' && (
-					<IllustrationFacesSquare css={positionCSS} />
-				)}
-				{illustration === 'IllustrationHandsSquare' && (
-					<IllustrationHandsSquare css={positionCSS} />
-				)}
-				{illustration === 'IllustrationWalkersSquare' && (
-					<IllustrationWalkersSquare css={positionCSS} />
-				)}
-			</Box>
+		<Box textAlign="center" position="relative" id="graphicSVG">
+			<BackgroundTransparent />
+			{background === 'BackgroundClouds' && (
+				<BackgroundClouds css={positionCSS} />
+			)}
+			{background === 'BackgroundGreen' && (
+				<BackgroundGreen css={positionCSS} />
+			)}
+			{background === 'BackgroundRed' && (
+				<BackgroundRed css={positionCSS} />
+			)}
+			{background === 'BackgroundYellow' && (
+				<BackgroundYellow css={positionCSS} />
+			)}
+			{illustration === 'IllustrationFacesSquare' && (
+				<IllustrationFacesSquareStars css={positionCSS} />
+			)}
+			{illustration === 'IllustrationHandsSquare' && (
+				<IllustrationHandsSquareStars css={positionCSS} />
+			)}
+			{illustration === 'IllustrationWalkersSquare' && (
+				<IllustrationWalkersSquareStars css={positionCSS} />
+			)}
+			{statement === 'StatementDiaMundailDeLaPrevencionDelSuicidio' && (
+				<StatementDiaMundailDeLaPrevencionDelSuicidio
+					css={css`
+						${positionCSS};
+						${sizeCSS};
+					`}
+				/>
+			)}
+			{statement ===
+				'StatementLaPrevencionDelSuicidioComienzaConNosotros' && (
+				<StatementLaPrevencionDelSuicidioComienzaConNosotros
+					css={css`
+						${positionCSS};
+						${sizeCSS};
+					`}
+				/>
+			)}
+			{statement === 'StatementNationalSuicidePreventionWeek' && (
+				<StatementNationalSuicidePreventionWeek
+					css={css`
+						${positionCSS};
+						${sizeCSS};
+					`}
+				/>
+			)}
+			{statement === 'StatementOutOfTheDarkness' && (
+				<StatementOutOfTheDarkness
+					css={css`
+						${positionCSS};
+						${sizeCSS};
+					`}
+				/>
+			)}
+			{statement === 'StatementSemanaNacionalDePrevencionDelSuicidio' && (
+				<StatementSemanaNacionalDePrevencionDelSuicidio
+					css={css`
+						${positionCSS};
+						${sizeCSS};
+					`}
+				/>
+			)}
+			{statement === 'StatementSuicidePreventionBeginsWithAllOfUs' && (
+				<StatementSuicidePreventionBeginsWithAllOfUs
+					css={css`
+						${positionCSS};
+						${sizeCSS};
+					`}
+				/>
+			)}
+			{statement === 'StatementTogetherLetsWalk' && (
+				<StatementTogetherLetsWalk
+					css={css`
+						${positionCSS};
+						${sizeCSS};
+					`}
+				/>
+			)}
+			{statement === 'StatementWalkWithUs' && (
+				<StatementWalkWithUs
+					css={css`
+						${positionCSS};
+						${sizeCSS};
+					`}
+				/>
+			)}
+			{statement === 'StatementWorldSuicidePreventionDay' && (
+				<StatementWorldSuicidePreventionDay
+					css={css`
+						${positionCSS};
+						${sizeCSS};
+					`}
+				/>
+			)}
+			{illustration === 'IllustrationFacesSquare' && (
+				<IllustrationFacesSquare css={positionCSS} />
+			)}
+			{illustration === 'IllustrationHandsSquare' && (
+				<IllustrationHandsSquare css={positionCSS} />
+			)}
+			{illustration === 'IllustrationWalkersSquare' && (
+				<IllustrationWalkersSquare css={positionCSS} />
+			)}
 		</Box>
 	)
 }
