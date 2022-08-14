@@ -25,7 +25,6 @@ const Home = () => {
 
 	useEffect(() => {
 		setInnerHeight(window.innerHeight)
-		setDownloadSVG(document.getElementById('graphicSVG').childNodes)
 		window.addEventListener('resize', setHeight)
 		return () => window.removeEventListener('resize', setHeight)
 	}, [innerHeight])
