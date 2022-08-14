@@ -110,9 +110,9 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
-								faces: { x: 0, y: 0, scale: 1 },
-								hands: { x: 0, y: 0, scale: 1 },
-								walkers: { x: 0, y: 0, scale: 1 },
+								faces: { x: 0, y: 302, scale: 1 },
+								hands: { x: 0, y: 540, scale: 1 },
+								walkers: { x: 0, y: 22, scale: 1 },
 							},
 						}))
 					}
@@ -128,9 +128,9 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
-								faces: { x: 0, y: 0, scale: 1 },
-								hands: { x: 0, y: 0, scale: 1 },
-								walkers: { x: 0, y: 0, scale: 1 },
+								faces: { x: 0, y: 260, scale: 1 },
+								hands: { x: 0, y: 510, scale: 1 },
+								walkers: { x: 0, y: 22, scale: 1 },
 							},
 						}))
 					}
@@ -146,9 +146,9 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
-								faces: { x: 0, y: 0, scale: 1 },
-								hands: { x: 0, y: 0, scale: 1 },
-								walkers: { x: 0, y: 0, scale: 1 },
+								faces: { x: 130, y: 245, scale: 0.76 },
+								hands: { x: 130, y: 480, scale: 0.76 },
+								walkers: { x: 151, y: 0, scale: 0.72 },
 							},
 						}))
 					}
@@ -164,9 +164,9 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
-								faces: { x: 0, y: 0, scale: 1 },
-								hands: { x: 0, y: 0, scale: 1 },
-								walkers: { x: 0, y: 0, scale: 1 },
+								faces: { x: 0, y: 290, scale: 1 },
+								hands: { x: 0, y: 540, scale: 1 },
+								walkers: { x: 0, y: 22, scale: 1 },
 							},
 						}))
 					}
@@ -182,9 +182,9 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
-								faces: { x: 0, y: 0, scale: 1 },
-								hands: { x: 0, y: 0, scale: 1 },
-								walkers: { x: 0, y: 0, scale: 1 },
+								faces: { x: 162, y: 260, scale: 0.7 },
+								hands: { x: 119, y: 480, scale: 0.78 },
+								walkers: { x: 108, y: 0, scale: 0.8 },
 							},
 						}))
 					}
@@ -200,9 +200,9 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
-								faces: { x: 0, y: 0, scale: 1 },
-								hands: { x: 0, y: 0, scale: 1 },
-								walkers: { x: 0, y: 0, scale: 1 },
+								faces: { x: 0, y: 260, scale: 1 },
+								hands: { x: 0, y: 510, scale: 1 },
+								walkers: { x: 0, y: 16, scale: 1 },
 							},
 						}))
 					}
