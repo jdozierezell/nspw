@@ -50,7 +50,7 @@ export const GraphicBackgroundSwiper = ({ setImageDownload }) => {
 					onClick={e =>
 						setImageDownload(prevState => ({
 							...prevState,
-							background: e.target.src,
+							background: { src: e.target.src, id: e.target.id },
 						}))
 					}
 				/>
@@ -62,7 +62,7 @@ export const GraphicBackgroundSwiper = ({ setImageDownload }) => {
 					onClick={e =>
 						setImageDownload(prevState => ({
 							...prevState,
-							background: e.target.src,
+							background: { src: e.target.src, id: e.target.id },
 						}))
 					}
 				/>
@@ -74,7 +74,7 @@ export const GraphicBackgroundSwiper = ({ setImageDownload }) => {
 					onClick={e =>
 						setImageDownload(prevState => ({
 							...prevState,
-							background: e.target.src,
+							background: { src: e.target.src, id: e.target.id },
 						}))
 					}
 				/>
@@ -86,7 +86,7 @@ export const GraphicBackgroundSwiper = ({ setImageDownload }) => {
 					onClick={e =>
 						setImageDownload(prevState => ({
 							...prevState,
-							background: e.target.src,
+							background: { src: e.target.src, id: e.target.id },
 						}))
 					}
 				/>

@@ -56,8 +56,11 @@ export const GraphicIllustrationSwiper = ({ setImageDownload }) => {
 					onClick={e => {
 						setImageDownload(prevState => ({
 							...prevState,
-							illustration: e.target.previousSibling.src,
-							stars: e.target.src,
+							illustration: {
+								src: e.target.previousSibling.src,
+								id: e.target.previousSibling.id,
+							},
+							stars: { src: e.target.src, id: e.target.id },
 						}))
 					}}
 				/>
@@ -70,8 +73,11 @@ export const GraphicIllustrationSwiper = ({ setImageDownload }) => {
 					onClick={e => {
 						setImageDownload(prevState => ({
 							...prevState,
-							illustration: e.target.previousSibling.src,
-							stars: e.target.src,
+							illustration: {
+								src: e.target.previousSibling.src,
+								id: e.target.previousSibling.id,
+							},
+							stars: { src: e.target.src, id: e.target.id },
 						}))
 					}}
 				/>
@@ -84,8 +90,11 @@ export const GraphicIllustrationSwiper = ({ setImageDownload }) => {
 					onClick={e => {
 						setImageDownload(prevState => ({
 							...prevState,
-							illustration: e.target.previousSibling.src,
-							stars: e.target.src,
+							illustration: {
+								src: e.target.previousSibling.src,
+								id: e.target.previousSibling.id,
+							},
+							stars: { src: e.target.src, id: e.target.id },
 						}))
 					}}
 				/>

@@ -20,7 +20,7 @@ import statementWorldSuicidePreventionDay from '../../../static/images/builderIm
 
 import { borders } from '../../theme/variables/borders'
 
-export const GraphicStatementSwiper = ({ updateSVG }) => {
+export const GraphicStatementSwiper = ({ setImageDownload }) => {
 	const brandingCSS = css`
 		border: ${borders.purple1px};
 	`
@@ -51,11 +51,17 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					src={statementNationalSuicidePreventionWeek}
 					css={brandingCSS}
 					id="statementNationalSuicidePreventionWeek"
-					data-swiper="statement"
-					onClick={e => {
-						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
+					onClick={e =>
+						setImageDownload(prevState => ({
+							...prevState,
+							statement: {
+								src: e.target.src,
+								faces: { x: 54, y: 225, scale: 0.9 },
+								hands: { x: 54, y: 475, scale: 0.9 },
+								walkers: { x: 54, y: 0, scale: 0.9 },
+							},
+						}))
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
@@ -63,11 +69,17 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					src={statementSuicidePreventionBeginsWithAllOfUs}
 					css={brandingCSS}
 					id="statementSuicidePreventionBeginsWithAllOfUs"
-					data-swiper="statement"
-					onClick={e => {
-						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
+					onClick={e =>
+						setImageDownload(prevState => ({
+							...prevState,
+							statement: {
+								src: e.target.src,
+								faces: { x: 0, y: 0, scale: 1 },
+								hands: { x: 0, y: 0, scale: 1 },
+								walkers: { x: 0, y: 0, scale: 1 },
+							},
+						}))
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
@@ -75,11 +87,17 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					src={statementTogetherLetsWalk}
 					css={brandingCSS}
 					id="statementTogetherLetsWalk"
-					data-swiper="statement"
-					onClick={e => {
-						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
+					onClick={e =>
+						setImageDownload(prevState => ({
+							...prevState,
+							statement: {
+								src: e.target.src,
+								faces: { x: 0, y: 0, scale: 1 },
+								hands: { x: 0, y: 0, scale: 1 },
+								walkers: { x: 0, y: 0, scale: 1 },
+							},
+						}))
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
@@ -87,11 +105,17 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					src={statementWalkWithUs}
 					css={brandingCSS}
 					id="statementWalkWithUs"
-					data-swiper="statement"
-					onClick={e => {
-						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
+					onClick={e =>
+						setImageDownload(prevState => ({
+							...prevState,
+							statement: {
+								src: e.target.src,
+								faces: { x: 0, y: 0, scale: 1 },
+								hands: { x: 0, y: 0, scale: 1 },
+								walkers: { x: 0, y: 0, scale: 1 },
+							},
+						}))
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
@@ -99,11 +123,17 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					src={statementWorldSuicidePreventionDay}
 					css={brandingCSS}
 					id="statementWorldSuicidePreventionDay"
-					data-swiper="statement"
-					onClick={e => {
-						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
+					onClick={e =>
+						setImageDownload(prevState => ({
+							...prevState,
+							statement: {
+								src: e.target.src,
+								faces: { x: 0, y: 0, scale: 1 },
+								hands: { x: 0, y: 0, scale: 1 },
+								walkers: { x: 0, y: 0, scale: 1 },
+							},
+						}))
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
@@ -111,11 +141,17 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					src={statementOutOfTheDarkness}
 					css={brandingCSS}
 					id="statementOutOfTheDarkness"
-					data-swiper="statement"
-					onClick={e => {
-						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
+					onClick={e =>
+						setImageDownload(prevState => ({
+							...prevState,
+							statement: {
+								src: e.target.src,
+								faces: { x: 0, y: 0, scale: 1 },
+								hands: { x: 0, y: 0, scale: 1 },
+								walkers: { x: 0, y: 0, scale: 1 },
+							},
+						}))
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
@@ -123,11 +159,17 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					src={statementSemanaNacionalDePrevencionDelSuicidio}
 					css={brandingCSS}
 					id="statementSemanaNacionalDePrevencionDelSuicidio"
-					data-swiper="statement"
-					onClick={e => {
-						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
+					onClick={e =>
+						setImageDownload(prevState => ({
+							...prevState,
+							statement: {
+								src: e.target.src,
+								faces: { x: 0, y: 0, scale: 1 },
+								hands: { x: 0, y: 0, scale: 1 },
+								walkers: { x: 0, y: 0, scale: 1 },
+							},
+						}))
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
@@ -135,11 +177,17 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					src={statementLaPrevencionDelSuicidioComienzaConNosotros}
 					css={brandingCSS}
 					id="statementLaPrevencionDelSuicidioComienzaConNosotros"
-					data-swiper="statement"
-					onClick={e => {
-						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
+					onClick={e =>
+						setImageDownload(prevState => ({
+							...prevState,
+							statement: {
+								src: e.target.src,
+								faces: { x: 0, y: 0, scale: 1 },
+								hands: { x: 0, y: 0, scale: 1 },
+								walkers: { x: 0, y: 0, scale: 1 },
+							},
+						}))
+					}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
@@ -147,11 +195,17 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					src={statementDiaMundialDeLaPrevencionDelSuicidio}
 					css={brandingCSS}
 					id="statementDiaMundialDeLaPrevencionDelSuicidio"
-					data-swiper="statement"
-					onClick={e => {
-						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
+					onClick={e =>
+						setImageDownload(prevState => ({
+							...prevState,
+							statement: {
+								src: e.target.src,
+								faces: { x: 0, y: 0, scale: 1 },
+								hands: { x: 0, y: 0, scale: 1 },
+								walkers: { x: 0, y: 0, scale: 1 },
+							},
+						}))
+					}
 				/>
 			</SwiperSlide>
 		</Swiper>

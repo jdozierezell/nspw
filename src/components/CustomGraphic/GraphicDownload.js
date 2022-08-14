@@ -4,7 +4,15 @@ import { Button, Flex } from '@chakra-ui/react'
 import { theme } from '../../theme/theme'
 
 export const GraphicDownload = ({ updateSVG, downloadSVG }) => {
-	const download = () => {}
+	const download = () => {
+		const canvasURL = document.querySelector('canvas').toDataURL()
+		const link = document.createElement('a')
+		link.download = 'NSPW Social Image'
+		link.href = canvasURL
+		document.body.appendChild(link)
+		link.click()
+		document.body.removeChild(link)
+	}
 	return (
 		<Flex justifyContent="space-evenly" wrap="wrap" gap="1rem">
 			<Button
