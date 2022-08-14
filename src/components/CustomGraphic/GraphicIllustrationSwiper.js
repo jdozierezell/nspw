@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { css } from '@emotion/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
+import { Image } from '@chakra-ui/react'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -14,6 +15,8 @@ import starsFaces from '../../../static/images/builderImages/starsFaces.png'
 import starsHands from '../../../static/images/builderImages/starsHands.png'
 import starsWalkers from '../../../static/images/builderImages/starsWalkers.png'
 
+import { borders } from '../../theme/variables/borders'
+
 export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
 		position: absolute;
@@ -21,6 +24,7 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 		bottom: 0;
 		left: 0;
 		right: 0;
+		border: ${borders.purple1px};
 	`
 	return (
 		<Swiper
@@ -46,9 +50,9 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 		>
 			<SwiperSlide>
 				{/*  */}
-				<starsWalkers css={brandingCSS} />
-				<illustrationWalkers
-					css={brandingCSS}
+				<Image src={starsWalkers} css={brandingCSS} />
+				<Image
+					src={illustrationWalkers}
 					id="illustrationWalkers"
 					data-swiper="illustration"
 					onClick={e =>
@@ -60,9 +64,9 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<starsFaces css={brandingCSS} />
-				<illustrationFaces
-					css={brandingCSS}
+				<Image src={starsFaces} css={brandingCSS} />
+				<Image
+					src={illustrationFaces}
 					id="illustrationFaces"
 					data-swiper="illustration"
 					onClick={e =>
@@ -74,9 +78,9 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<starsHands css={brandingCSS} />
-				<illustrationHands
-					css={brandingCSS}
+				<Image src={starsHands} css={brandingCSS} />
+				<Image
+					src={illustrationHands}
 					id="illustrationHands"
 					data-swiper="illustration"
 					onClick={e =>

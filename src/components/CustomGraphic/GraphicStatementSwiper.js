@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { css } from '@emotion/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
+import { Image } from '@chakra-ui/react'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -17,13 +18,11 @@ import statementTogetherLetsWalk from '../../../static/images/builderImages/stat
 import statementWalkWithUs from '../../../static/images/builderImages/statementWalkWithUs.png'
 import statementWorldSuicidePreventionDay from '../../../static/images/builderImages/statementWorldSuicidePreventionDay.png'
 
-export const GraphicstatementSwiper = ({ updateSVG }) => {
+import { borders } from '../../theme/variables/borders'
+
+export const GraphicStatementSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
+		border: ${borders.purple1px};
 	`
 	return (
 		<Swiper
@@ -48,7 +47,8 @@ export const GraphicstatementSwiper = ({ updateSVG }) => {
 			}}
 		>
 			<SwiperSlide>
-				<statementNationalSuicidePreventionWeek
+				<Image
+					src={statementNationalSuicidePreventionWeek}
 					css={brandingCSS}
 					id="statementNationalSuicidePreventionWeek"
 					data-swiper="statement"
@@ -59,7 +59,8 @@ export const GraphicstatementSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<statementSuicidePreventionBeginsWithAllOfUs
+				<Image
+					src={statementSuicidePreventionBeginsWithAllOfUs}
 					css={brandingCSS}
 					id="statementSuicidePreventionBeginsWithAllOfUs"
 					data-swiper="statement"
@@ -70,7 +71,8 @@ export const GraphicstatementSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<statementTogetherLetsWalk
+				<Image
+					src={statementTogetherLetsWalk}
 					css={brandingCSS}
 					id="statementTogetherLetsWalk"
 					data-swiper="statement"
@@ -81,7 +83,8 @@ export const GraphicstatementSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<statementWalkWithUs
+				<Image
+					src={statementWalkWithUs}
 					css={brandingCSS}
 					id="statementWalkWithUs"
 					data-swiper="statement"
@@ -92,7 +95,8 @@ export const GraphicstatementSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<statementWorldSuicidePreventionDay
+				<Image
+					src={statementWorldSuicidePreventionDay}
 					css={brandingCSS}
 					id="statementWorldSuicidePreventionDay"
 					data-swiper="statement"
@@ -103,7 +107,8 @@ export const GraphicstatementSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<statementOutOfTheDarkness
+				<Image
+					src={statementOutOfTheDarkness}
 					css={brandingCSS}
 					id="statementOutOfTheDarkness"
 					data-swiper="statement"
@@ -114,7 +119,8 @@ export const GraphicstatementSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<statementSemanaNacionalDePrevencionDelSuicidio
+				<Image
+					src={statementSemanaNacionalDePrevencionDelSuicidio}
 					css={brandingCSS}
 					id="statementSemanaNacionalDePrevencionDelSuicidio"
 					data-swiper="statement"
@@ -125,7 +131,8 @@ export const GraphicstatementSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<statementLaPrevencionDelSuicidioComienzaConNosotros
+				<Image
+					src={statementLaPrevencionDelSuicidioComienzaConNosotros}
 					css={brandingCSS}
 					id="statementLaPrevencionDelSuicidioComienzaConNosotros"
 					data-swiper="statement"
@@ -136,7 +143,8 @@ export const GraphicstatementSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<statementDiaMundialDeLaPrevencionDelSuicidio
+				<Image
+					src={statementDiaMundialDeLaPrevencionDelSuicidio}
 					css={brandingCSS}
 					id="statementDiaMundialDeLaPrevencionDelSuicidio"
 					data-swiper="statement"

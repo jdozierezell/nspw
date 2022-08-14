@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { css } from '@emotion/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
+import { Image } from '@chakra-ui/react'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -43,7 +44,8 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 			}}
 		>
 			<SwiperSlide>
-				<backgroundClouds
+				<Image
+					src={backgroundClouds}
 					id="backgroundClouds"
 					data-swiper="background"
 					onClick={e =>
@@ -55,7 +57,8 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<backgroundGreen
+				<Image
+					src={backgroundGreen}
 					id="backgroundGreen"
 					data-swiper="background"
 					onClick={e =>
@@ -67,7 +70,8 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<backgroundRed
+				<Image
+					src={backgroundRed}
 					id="backgroundRed"
 					data-swiper="background"
 					onClick={e =>
@@ -79,7 +83,8 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<backgroundYellow
+				<Image
+					src={backgroundYellow}
 					id="backgroundYellow"
 					data-swiper="background"
 					onClick={e =>
