@@ -13,12 +13,11 @@ export const Graphic = ({ width, imageDownload }) => {
 	const [background] = useImage(imageDownload.background.src)
 	const [stars] = useImage(imageDownload.stars.src)
 	const [illustration] = useImage(imageDownload.illustration.src)
-	// statement is passed as an option to allow for positioning
 	const [statement] = useImage(imageDownload.statement.src)
 	let statementX = 0
 	let statementY = 0
 	let statementScale = 1
-	if (illustration && statement) {
+	if (statement && illustration) {
 		console.log(imageDownload.illustration)
 		switch (imageDownload.illustration.id) {
 			case 'illustrationFaces':
@@ -37,6 +36,10 @@ export const Graphic = ({ width, imageDownload }) => {
 				statementScale = imageDownload.statement.walkers.scale
 				break
 		}
+	} else if (statement && !illustration) {
+		statementX = imageDownload.statement.default.x
+		statementY = imageDownload.statement.default.y
+		statementScale = imageDownload.statement.default.scale
 	}
 	console.log(statementX)
 	console.log(statementY)

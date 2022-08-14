@@ -35,13 +35,6 @@ module.exports = {
 				path: `${__dirname}/static/images/`,
 			},
 		},
-		// {
-		// 	resolve: `gatsby-source-filesystem`,
-		// 	options: {
-		// 		name: `svgs`,
-		// 		path: `${__dirname}/static/svgs/`,
-		// 	},
-		// },
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {

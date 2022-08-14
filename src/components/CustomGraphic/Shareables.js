@@ -11,9 +11,9 @@ export const Shareables = () => {
 	return (
 		<Container id="graphic">
 			<Heading as="h2" m="1rem 0">
-				Sharables
+				AFSP Sharables
 			</Heading>
-			<Text m="0 0 2em" fontSize="1.2rem">
+			<Text m="0 0 2em" fontSize="1.2rem" maxW="40rem">
 				Click to download and share the graphics below to spread
 				awareness and support for National Suicide Prevention Week.
 			</Text>

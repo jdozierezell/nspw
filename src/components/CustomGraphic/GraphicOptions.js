@@ -1,16 +1,9 @@
-import React, { useState } from 'react'
-import { css } from '@emotion/react'
+import React from 'react'
 import { Box, Button, Flex } from '@chakra-ui/react'
-import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
 
 import { theme } from '../../theme/theme'
 
-export const GraphicOptions = ({
-	activeSwiper,
-	changeSwiper,
-	prevButton,
-	nextButton,
-}) => {
+export const GraphicOptions = ({ activeSwiper, changeSwiper }) => {
 	return (
 		<Box>
 			<Flex justifyContent="space-evenly" wrap="wrap" gap="1rem">

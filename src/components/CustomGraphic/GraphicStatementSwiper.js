@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { css } from '@emotion/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
@@ -56,6 +56,7 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
+								default: { x: 0, y: 225, scale: 1 },
 								faces: { x: 54, y: 225, scale: 0.9 },
 								hands: { x: 54, y: 475, scale: 0.9 },
 								walkers: { x: 54, y: 0, scale: 0.9 },
@@ -74,6 +75,7 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
+								default: { x: 0, y: 0, scale: 1 },
 								faces: { x: 270, y: 240, scale: 0.48 },
 								hands: { x: 270, y: 518, scale: 0.48 },
 								walkers: { x: 270, y: 0, scale: 0.48 },
@@ -92,6 +94,7 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
+								default: { x: 0, y: 225, scale: 1 },
 								faces: { x: 108, y: 265, scale: 0.8 },
 								hands: { x: 108, y: 510, scale: 0.8 },
 								walkers: { x: 108, y: 0, scale: 0.8 },
@@ -110,6 +113,7 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
+								default: { x: 0, y: 380, scale: 1 },
 								faces: { x: 0, y: 302, scale: 1 },
 								hands: { x: 0, y: 540, scale: 1 },
 								walkers: { x: 0, y: 22, scale: 1 },
@@ -128,6 +132,7 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
+								default: { x: 0, y: 300, scale: 1 },
 								faces: { x: 0, y: 260, scale: 1 },
 								hands: { x: 0, y: 510, scale: 1 },
 								walkers: { x: 0, y: 22, scale: 1 },
@@ -146,6 +151,7 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
+								default: { x: 0, y: 210, scale: 1 },
 								faces: { x: 130, y: 245, scale: 0.76 },
 								hands: { x: 130, y: 480, scale: 0.76 },
 								walkers: { x: 151, y: 0, scale: 0.72 },
@@ -164,6 +170,7 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
+								default: { x: 0, y: 300, scale: 1 },
 								faces: { x: 0, y: 290, scale: 1 },
 								hands: { x: 0, y: 540, scale: 1 },
 								walkers: { x: 0, y: 22, scale: 1 },
@@ -182,6 +189,7 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
+								default: { x: 0, y: 225, scale: 1 },
 								faces: { x: 162, y: 260, scale: 0.7 },
 								hands: { x: 119, y: 480, scale: 0.78 },
 								walkers: { x: 108, y: 0, scale: 0.8 },
@@ -200,6 +208,7 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 							...prevState,
 							statement: {
 								src: e.target.src,
+								default: { x: 0, y: 280, scale: 1 },
 								faces: { x: 0, y: 260, scale: 1 },
 								hands: { x: 0, y: 510, scale: 1 },
 								walkers: { x: 0, y: 16, scale: 1 },

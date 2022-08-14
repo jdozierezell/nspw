@@ -3,7 +3,7 @@ import { Button, Flex } from '@chakra-ui/react'
 
 import { theme } from '../../theme/theme'
 
-export const GraphicDownload = ({ updateSVG, downloadSVG }) => {
+export const GraphicDownload = ({ setImageDownload }) => {
 	const download = () => {
 		const canvasURL = document.querySelector('canvas').toDataURL()
 		const link = document.createElement('a')
@@ -43,7 +43,14 @@ export const GraphicDownload = ({ updateSVG, downloadSVG }) => {
 					bg: 'purple.c700',
 					color: 'white',
 				}}
-				onClick={updateSVG}
+				onClick={e =>
+					setImageDownload({
+						background: '',
+						statement: '',
+						illustration: '',
+						stars: '',
+					})
+				}
 			>
 				Reset
 			</Button>
