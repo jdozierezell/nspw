@@ -17,7 +17,7 @@ import starsWalkers from '../../../static/images/builderImages/starsWalkers.png'
 
 import { borders } from '../../theme/variables/borders'
 
-export const GraphicIllustrationSwiper = ({ updateSVG }) => {
+export const GraphicIllustrationSwiper = ({ setImageDownload }) => {
 	const brandingCSS = css`
 		position: absolute;
 		top: 0;
@@ -49,46 +49,45 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 			}}
 		>
 			<SwiperSlide>
-				{/*  */}
-				<Image src={starsWalkers} css={brandingCSS} />
+				<Image src={illustrationWalkers} id="illustrationWalkers" />
 				<Image
-					src={illustrationWalkers}
-					id="illustrationWalkers"
-					data-swiper="illustration"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					src={starsWalkers}
+					css={brandingCSS}
+					onClick={e => {
+						setImageDownload(prevState => ({
+							...prevState,
+							illustration: e.target.previousSibling.src,
+							stars: e.target.src,
+						}))
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<Image src={starsFaces} css={brandingCSS} />
+				<Image src={illustrationFaces} id="illustrationFaces" />
 				<Image
-					src={illustrationFaces}
-					id="illustrationFaces"
-					data-swiper="illustration"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					src={starsFaces}
+					css={brandingCSS}
+					onClick={e => {
+						setImageDownload(prevState => ({
+							...prevState,
+							illustration: e.target.previousSibling.src,
+							stars: e.target.src,
+						}))
+					}}
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<Image src={starsHands} css={brandingCSS} />
+				<Image src={illustrationHands} id="illustrationHands" />
 				<Image
-					src={illustrationHands}
-					id="illustrationHands"
-					data-swiper="illustration"
-					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
-					}
+					src={starsHands}
+					css={brandingCSS}
+					onClick={e => {
+						setImageDownload(prevState => ({
+							...prevState,
+							illustration: e.target.previousSibling.src,
+							stars: e.target.src,
+						}))
+					}}
 				/>
 			</SwiperSlide>
 		</Swiper>

@@ -7,7 +7,7 @@ import { GraphicDownload } from './GraphicDownload'
 import { GraphicOptions } from './GraphicOptions'
 import { GraphicSlider } from './GraphicSlider'
 
-export const GraphicBuilder = ({ downloadSVG }) => {
+export const GraphicBuilder = () => {
 	const background = {
 		label: 'Select a Background',
 		swiper: 'background',
@@ -30,14 +30,14 @@ export const GraphicBuilder = ({ downloadSVG }) => {
 	const [activeSwiper, setActiveSwiper] = useState(background)
 	const [prevButton, setPrevButton] = useState(background)
 	const [nextButton, setNextButton] = useState(statement)
-	const [svg, setSVG] = useState({
-		background: 'transparent',
+	const [imageDownload, setImageDownload] = useState({
+		background: '',
 		statement: '',
 		illustration: '',
+		stars: '',
 	})
 
-	const [ref, { x, y, width, height, top, right, bottom, left }] =
-		useMeasure()
+	const [ref, { width, height }] = useMeasure()
 
 	const changeSwiper = swiper => {
 		switch (swiper) {
@@ -62,22 +62,22 @@ export const GraphicBuilder = ({ downloadSVG }) => {
 				setNextButton(statement)
 		}
 	}
-	const updateSVG = (swiper, id) => {
-		if (swiper === 'background') {
-			setSVG(prevState => ({ ...prevState, background: id }))
-		} else if (swiper === 'statement') {
-			setSVG(prevState => ({ ...prevState, statement: id }))
-		} else if (swiper === 'illustration') {
-			setSVG(prevState => ({ ...prevState, illustration: id }))
-		} else {
-			console.log('broken')
-			setSVG({
-				background: 'transparent',
-				statement: '',
-				illustration: '',
-			})
-		}
-	}
+	// const updateSVG = (swiper, id) => {
+	// 	if (swiper === 'background') {
+	// 		setSVG(prevState => ({ ...prevState, background: id }))
+	// 	} else if (swiper === 'statement') {
+	// 		setSVG(prevState => ({ ...prevState, statement: id }))
+	// 	} else if (swiper === 'illustration') {
+	// 		setSVG(prevState => ({ ...prevState, illustration: id }))
+	// 	} else {
+	// 		console.log('broken')
+	// 		setSVG({
+	// 			background: 'transparent',
+	// 			statement: '',
+	// 			illustration: '',
+	// 		})
+	// 	}
+	// }
 	return (
 		<Grid
 			templateColumns={{
@@ -102,7 +102,11 @@ export const GraphicBuilder = ({ downloadSVG }) => {
 				}}
 				ref={ref}
 			>
-				<Graphic svg={svg} width={width} height={height} />
+				<Graphic
+					imageDownload={imageDownload}
+					width={width}
+					height={height}
+				/>
 			</GridItem>
 			<GridItem
 				colStart={{ base: 1, md: 2 }}
@@ -113,12 +117,12 @@ export const GraphicBuilder = ({ downloadSVG }) => {
 				w={{
 					base: 'calc(100vw - 4rem)',
 					md: 'calc(51vw - 6rem)',
-					lg: 'calc(64vw - 8rem)',
+					lg: 'calc(65vw - 8rem)',
 				}}
 			>
 				<GraphicSlider
 					activeSwiper={activeSwiper}
-					updateSVG={updateSVG}
+					setImageDownload={setImageDownload}
 				/>
 			</GridItem>
 			<GridItem
@@ -140,10 +144,7 @@ export const GraphicBuilder = ({ downloadSVG }) => {
 				rowStart={{ base: 4, md: 2 }}
 				rowSpan={1}
 			>
-				<GraphicDownload
-					updateSVG={updateSVG}
-					downloadSVG={downloadSVG}
-				/>
+				<GraphicDownload imageDownload={imageDownload} />
 			</GridItem>
 		</Grid>
 	)

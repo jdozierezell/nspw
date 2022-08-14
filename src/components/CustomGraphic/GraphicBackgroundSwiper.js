@@ -13,7 +13,7 @@ import backgroundGreen from '../../../static/images/builderImages/backgroundGree
 import backgroundRed from '../../../static/images/builderImages/backgroundRed.png'
 import backgroundYellow from '../../../static/images/builderImages/backgroundYellow.png'
 
-export const GraphicBackgroundSwiper = ({ updateSVG }) => {
+export const GraphicBackgroundSwiper = ({ setImageDownload }) => {
 	const brandingCSS = css`
 		position: absolute;
 		top: 0;
@@ -47,12 +47,11 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				<Image
 					src={backgroundClouds}
 					id="backgroundClouds"
-					data-swiper="background"
 					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
+						setImageDownload(prevState => ({
+							...prevState,
+							background: e.target.src,
+						}))
 					}
 				/>
 			</SwiperSlide>
@@ -60,12 +59,11 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				<Image
 					src={backgroundGreen}
 					id="backgroundGreen"
-					data-swiper="background"
 					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
+						setImageDownload(prevState => ({
+							...prevState,
+							background: e.target.src,
+						}))
 					}
 				/>
 			</SwiperSlide>
@@ -73,12 +71,11 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				<Image
 					src={backgroundRed}
 					id="backgroundRed"
-					data-swiper="background"
 					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
+						setImageDownload(prevState => ({
+							...prevState,
+							background: e.target.src,
+						}))
 					}
 				/>
 			</SwiperSlide>
@@ -86,12 +83,11 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				<Image
 					src={backgroundYellow}
 					id="backgroundYellow"
-					data-swiper="background"
 					onClick={e =>
-						updateSVG(
-							e.target.closest('svg').dataset.swiper,
-							e.target.closest('svg').id
-						)
+						setImageDownload(prevState => ({
+							...prevState,
+							background: e.target.src,
+						}))
 					}
 				/>
 			</SwiperSlide>

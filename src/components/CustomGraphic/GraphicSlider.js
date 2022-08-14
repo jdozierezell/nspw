@@ -5,17 +5,19 @@ import { GraphicBackgroundSwiper } from './GraphicBackgroundSwiper'
 import { GraphicStatementSwiper } from './GraphicStatementSwiper'
 import { GraphicIllustrationSwiper } from './GraphicIllustrationSwiper'
 
-export const GraphicSlider = ({ activeSwiper, updateSVG }) => {
+export const GraphicSlider = ({ activeSwiper, setImageDownload }) => {
 	return (
 		<Box cursor="pointer">
 			{activeSwiper.swiper === 'background' && (
-				<GraphicBackgroundSwiper updateSVG={updateSVG} />
+				<GraphicBackgroundSwiper setImageDownload={setImageDownload} />
 			)}
 			{activeSwiper.swiper === 'statement' && (
-				<GraphicStatementSwiper updateSVG={updateSVG} />
+				<GraphicStatementSwiper setImageDownload={setImageDownload} />
 			)}
 			{activeSwiper.swiper === 'illustration' && (
-				<GraphicIllustrationSwiper updateSVG={updateSVG} />
+				<GraphicIllustrationSwiper
+					setImageDownload={setImageDownload}
+				/>
 			)}
 		</Box>
 	)

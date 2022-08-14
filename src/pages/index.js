@@ -17,7 +17,6 @@ import { Footer } from '../components/Footer/Footer'
 
 const Home = () => {
 	const [innerHeight, setInnerHeight] = useState(0)
-	const [downloadSVG, setDownloadSVG] = useState()
 
 	const setDimensions = () => {
 		setInnerHeight(window.innerHeight)
@@ -26,7 +25,6 @@ const Home = () => {
 	useEffect(() => {
 		setInnerHeight(window.innerHeight)
 		window.addEventListener('resize', setDimensions)
-		console.log(document.getElementById('konva-container').offsetWidth)
 		return () => window.removeEventListener('resize', setDimensions)
 	}, [innerHeight])
 	return (
@@ -41,7 +39,7 @@ const Home = () => {
 				{/* WalkSearch complete */}
 				<WalkSearch />
 				{/* CustomGraphic in progress */}
-				<CustomGraphic downloadSVG={downloadSVG} />
+				<CustomGraphic />
 				{/* CTAs in progress */}
 				{/* <CTAs /> */}
 				{/* RealStories complete */}
