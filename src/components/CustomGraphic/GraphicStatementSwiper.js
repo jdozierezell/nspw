@@ -7,16 +7,15 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import BackgroundBlueFill from '../../../static/svgs/customSVGs/BackgroundBlueFill.svg'
-import StatementDiaMundailDeLaPrevencionDelSuicidio from '../../../static/svgs/customSVGs/StatementDiaMundailDeLaPrevencionDelSuicidio.svg'
-import StatementLaPrevencionDelSuicidioComienzaConNosotros from '../../../static/svgs/customSVGs/StatementLaPrevencionDelSuicidioComienzaConNosotros.svg'
-import StatementNationalSuicidePreventionWeek from '../../../static/svgs/customSVGs/StatementNationalSuicidePreventionWeek.svg'
-import StatementOutOfTheDarkness from '../../../static/svgs/customSVGs/StatementOutOfTheDarkness.svg'
-import StatementSemanaNacionalDePrevencionDelSuicidio from '../../../static/svgs/customSVGs/StatementSemanaNacionalDePrevencionDelSuicidio.svg'
-import StatementSuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/customSVGs/StatementSuicidePreventionBeginsWithAllOfUs.svg'
-import StatementTogetherLetsWalk from '../../../static/svgs/customSVGs/StatementTogetherLetsWalk.svg'
-import StatementWalkWithUs from '../../../static/svgs/customSVGs/StatementWalkWithUs.svg'
-import StatementWorldSuicidePreventionDay from '../../../static/svgs/customSVGs/StatementWorldSuicidePreventionDay.svg'
+import StatementDiaMundialDeLaPrevencionDelSuicidio from '../../../static/images/builderImages/StatementDiaMundialDeLaPrevencionDelSuicidio.png'
+import StatementLaPrevencionDelSuicidioComienzaConNosotros from '../../../static/images/builderImages/StatementLaPrevencionDelSuicidioComienzaConNosotros.png'
+import StatementNationalSuicidePreventionWeek from '../../../static/images/builderImages/StatementNationalSuicidePreventionWeek.png'
+import StatementOutOfTheDarkness from '../../../static/images/builderImages/StatementOutOfTheDarkness.png'
+import StatementSemanaNacionalDePrevencionDelSuicidio from '../../../static/images/builderImages/StatementSemanaNacionalDePrevencionDelSuicidio.png'
+import StatementSuicidePreventionBeginsWithAllOfUs from '../../../static/images/builderImages/StatementSuicidePreventionBeginsWithAllOfUs.png'
+import StatementTogetherLetsWalk from '../../../static/images/builderImages/StatementTogetherLetsWalk.png'
+import StatementWalkWithUs from '../../../static/images/builderImages/StatementWalkWithUs.png'
+import StatementWorldSuicidePreventionDay from '../../../static/images/builderImages/StatementWorldSuicidePreventionDay.png'
 
 export const GraphicStatementSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
@@ -58,13 +57,6 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundBlueFill
-					onClick={e => {
-						const statementSVG =
-							e.target.closest('svg').previousElementSibling
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
-				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<StatementSuicidePreventionBeginsWithAllOfUs
@@ -73,14 +65,6 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					data-swiper="statement"
 					onClick={e => {
 						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
-				/>
-				<BackgroundBlueFill
-					onClick={e => {
-						const statementSVG =
-							e.target.closest('svg').previousElementSibling
-						console.log(e)
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
@@ -95,14 +79,6 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundBlueFill
-					onClick={e => {
-						const statementSVG =
-							e.target.closest('svg').previousElementSibling
-						console.log(e)
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
-				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<StatementWalkWithUs
@@ -111,14 +87,6 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					data-swiper="statement"
 					onClick={e => {
 						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
-				/>
-				<BackgroundBlueFill
-					onClick={e => {
-						const statementSVG =
-							e.target.closest('svg').previousElementSibling
-						console.log(e)
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
@@ -133,14 +101,6 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundBlueFill
-					onClick={e => {
-						const statementSVG =
-							e.target.closest('svg').previousElementSibling
-						console.log(e)
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
-				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<StatementOutOfTheDarkness
@@ -149,14 +109,6 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 					data-swiper="statement"
 					onClick={e => {
 						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
-				/>
-				<BackgroundBlueFill
-					onClick={e => {
-						const statementSVG =
-							e.target.closest('svg').previousElementSibling
-						console.log(e)
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
@@ -171,14 +123,6 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundBlueFill
-					onClick={e => {
-						const statementSVG =
-							e.target.closest('svg').previousElementSibling
-						console.log(e)
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
-				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<StatementLaPrevencionDelSuicidioComienzaConNosotros
@@ -190,30 +134,14 @@ export const GraphicStatementSwiper = ({ updateSVG }) => {
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>
-				<BackgroundBlueFill
-					onClick={e => {
-						const statementSVG =
-							e.target.closest('svg').previousElementSibling
-						console.log(e)
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
-				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<StatementDiaMundailDeLaPrevencionDelSuicidio
+				<StatementDiaMundialDeLaPrevencionDelSuicidio
 					css={brandingCSS}
-					id="StatementDiaMundailDeLaPrevencionDelSuicidio"
+					id="StatementDiaMundialDeLaPrevencionDelSuicidio"
 					data-swiper="statement"
 					onClick={e => {
 						const statementSVG = e.target.closest('svg')
-						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
-					}}
-				/>
-				<BackgroundBlueFill
-					onClick={e => {
-						const statementSVG =
-							e.target.closest('svg').previousElementSibling
-						console.log(e)
 						updateSVG(statementSVG.dataset.swiper, statementSVG.id)
 					}}
 				/>

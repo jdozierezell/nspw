@@ -2,26 +2,25 @@ import React, { useState } from 'react'
 import { css } from '@emotion/react'
 import { Box, Button } from '@chakra-ui/react'
 
-import BackgroundTransparent from '../../../static/svgs/customSVGs/BackgroundTransparent.svg'
-import BackgroundClouds from '../../../static/svgs/customSVGs/BackgroundClouds.svg'
-import BackgroundGreen from '../../../static/svgs/customSVGs/BackgroundGreen.svg'
-import BackgroundRed from '../../../static/svgs/customSVGs/BackgroundRed.svg'
-import BackgroundYellow from '../../../static/svgs/customSVGs/BackgroundYellow.svg'
-import IllustrationFacesSquare from '../../../static/svgs/customSVGs/IllustrationFacesSquare.svg'
-import IllustrationHandsSquare from '../../../static/svgs/customSVGs/IllustrationHandsSquare.svg'
-import IllustrationWalkersSquare from '../../../static/svgs/customSVGs/IllustrationWalkersSquare.svg'
-import IllustrationFacesSquareStars from '../../../static/svgs/customSVGs/IllustrationFacesSquareStars.svg'
-import IllustrationHandsSquareStars from '../../../static/svgs/customSVGs/IllustrationHandsSquareStars.svg'
-import IllustrationWalkersSquareStars from '../../../static/svgs/customSVGs/IllustrationWalkersSquareStars.svg'
-import StatementDiaMundailDeLaPrevencionDelSuicidio from '../../../static/svgs/customSVGs/StatementDiaMundailDeLaPrevencionDelSuicidio.svg'
-import StatementLaPrevencionDelSuicidioComienzaConNosotros from '../../../static/svgs/customSVGs/StatementLaPrevencionDelSuicidioComienzaConNosotros.svg'
-import StatementNationalSuicidePreventionWeek from '../../../static/svgs/customSVGs/StatementNationalSuicidePreventionWeek.svg'
-import StatementOutOfTheDarkness from '../../../static/svgs/customSVGs/StatementOutOfTheDarkness.svg'
-import StatementSemanaNacionalDePrevencionDelSuicidio from '../../../static/svgs/customSVGs/StatementSemanaNacionalDePrevencionDelSuicidio.svg'
-import StatementSuicidePreventionBeginsWithAllOfUs from '../../../static/svgs/customSVGs/StatementSuicidePreventionBeginsWithAllOfUs.svg'
-import StatementTogetherLetsWalk from '../../../static/svgs/customSVGs/StatementTogetherLetsWalk.svg'
-import StatementWalkWithUs from '../../../static/svgs/customSVGs/StatementWalkWithUs.svg'
-import StatementWorldSuicidePreventionDay from '../../../static/svgs/customSVGs/StatementWorldSuicidePreventionDay.svg'
+import BackgroundClouds from '../../../static/images/builderImages/BackgroundClouds.png'
+import BackgroundGreen from '../../../static/images/builderImages/BackgroundGreen.png'
+import BackgroundRed from '../../../static/images/builderImages/BackgroundRed.png'
+import BackgroundYellow from '../../../static/images/builderImages/BackgroundYellow.png'
+import IllustrationFaces from '../../../static/images/builderImages/IllustrationFaces.png'
+import IllustrationHands from '../../../static/images/builderImages/IllustrationHands.png'
+import IllustrationWalkers from '../../../static/images/builderImages/IllustrationWalkers.png'
+import StarsFaces from '../../../static/images/builderImages/StarsFaces.png'
+import StarsHands from '../../../static/images/builderImages/StarsHands.png'
+import StarsWalkers from '../../../static/images/builderImages/StarsWalkers.png'
+import StatementDiaMundialDeLaPrevencionDelSuicidio from '../../../static/images/builderImages/StatementDiaMundialDeLaPrevencionDelSuicidio.png'
+import StatementLaPrevencionDelSuicidioComienzaConNosotros from '../../../static/images/builderImages/StatementLaPrevencionDelSuicidioComienzaConNosotros.png'
+import StatementNationalSuicidePreventionWeek from '../../../static/images/builderImages/StatementNationalSuicidePreventionWeek.png'
+import StatementOutOfTheDarkness from '../../../static/images/builderImages/StatementOutOfTheDarkness.png'
+import StatementSemanaNacionalDePrevencionDelSuicidio from '../../../static/images/builderImages/StatementSemanaNacionalDePrevencionDelSuicidio.png'
+import StatementSuicidePreventionBeginsWithAllOfUs from '../../../static/images/builderImages/StatementSuicidePreventionBeginsWithAllOfUs.png'
+import StatementTogetherLetsWalk from '../../../static/images/builderImages/StatementTogetherLetsWalk.png'
+import StatementWalkWithUs from '../../../static/images/builderImages/StatementWalkWithUs.png'
+import StatementWorldSuicidePreventionDay from '../../../static/images/builderImages/StatementWorldSuicidePreventionDay.png'
 
 export const Graphic = ({ svg: { background, statement, illustration } }) => {
 	const positionCSS = css`
@@ -30,7 +29,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 	`
 	let sizeCSS = css``
 	if (statement === 'StatementNationalSuicidePreventionWeek') {
-		if (illustration === 'IllustrationWalkersSquare') {
+		if (illustration === 'IllustrationWalkers') {
 			sizeCSS = css`
 				width: 100%;
 				top: 0%;
@@ -38,7 +37,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationFacesSquare') {
+		if (illustration === 'IllustrationFaces') {
 			sizeCSS = css`
 				width: 100%;
 				top: 21%;
@@ -46,7 +45,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationHandsSquare') {
+		if (illustration === 'IllustrationHands') {
 			sizeCSS = css`
 				width: 100%;
 				top: 44%;
@@ -55,7 +54,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 			`
 		}
 	} else if (statement === 'StatementSuicidePreventionBeginsWithAllOfUs') {
-		if (illustration === 'IllustrationWalkersSquare') {
+		if (illustration === 'IllustrationWalkers') {
 			console.log(statement)
 			console.log(illustration)
 			sizeCSS = css`
@@ -65,7 +64,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationFacesSquare') {
+		if (illustration === 'IllustrationFaces') {
 			sizeCSS = css`
 				width: 50%;
 				top: 24%;
@@ -73,7 +72,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationHandsSquare') {
+		if (illustration === 'IllustrationHands') {
 			sizeCSS = css`
 				width: 50%;
 				top: 48%;
@@ -82,10 +81,10 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 			`
 		}
 	} else if (statement === 'StatementTogetherLetsWalk') {
-		if (illustration === 'IllustrationWalkersSquare') {
+		if (illustration === 'IllustrationWalkers') {
 			sizeCSS = css``
 		}
-		if (illustration === 'IllustrationFacesSquare') {
+		if (illustration === 'IllustrationFaces') {
 			sizeCSS = css`
 				width: 80%;
 				top: 24%;
@@ -93,7 +92,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationHandsSquare') {
+		if (illustration === 'IllustrationHands') {
 			sizeCSS = css`
 				width: 90%;
 				top: 47%;
@@ -102,7 +101,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 			`
 		}
 	} else if (statement === 'StatementWalkWithUs') {
-		if (illustration === 'IllustrationWalkersSquare') {
+		if (illustration === 'IllustrationWalkers') {
 			sizeCSS = css`
 				width: 110%;
 				top: 2%;
@@ -110,7 +109,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationFacesSquare') {
+		if (illustration === 'IllustrationFaces') {
 			sizeCSS = css`
 				width: 110%;
 				top: 28%;
@@ -118,7 +117,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationHandsSquare') {
+		if (illustration === 'IllustrationHands') {
 			sizeCSS = css`
 				width: 110%;
 				top: 50%;
@@ -127,7 +126,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 			`
 		}
 	} else if (statement === 'StatementWorldSuicidePreventionDay') {
-		if (illustration === 'IllustrationWalkersSquare') {
+		if (illustration === 'IllustrationWalkers') {
 			sizeCSS = css`
 				width: 105%;
 				top: 0%;
@@ -135,7 +134,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationFacesSquare') {
+		if (illustration === 'IllustrationFaces') {
 			sizeCSS = css`
 				width: 105%;
 				top: 24%;
@@ -143,7 +142,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationHandsSquare') {
+		if (illustration === 'IllustrationHands') {
 			sizeCSS = css`
 				width: 105%;
 				top: 45%;
@@ -152,7 +151,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 			`
 		}
 	} else if (statement === 'StatementOutOfTheDarkness') {
-		if (illustration === 'IllustrationWalkersSquare') {
+		if (illustration === 'IllustrationWalkers') {
 			sizeCSS = css`
 				width: 78%;
 				top: 0%;
@@ -160,7 +159,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationFacesSquare') {
+		if (illustration === 'IllustrationFaces') {
 			sizeCSS = css`
 				width: 80%;
 				top: 24%;
@@ -168,7 +167,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationHandsSquare') {
+		if (illustration === 'IllustrationHands') {
 			sizeCSS = css`
 				width: 80%;
 				top: 45%;
@@ -177,7 +176,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 			`
 		}
 	} else if (statement === 'StatementSemanaNacionalDePrevencionDelSuicidio') {
-		if (illustration === 'IllustrationWalkersSquare') {
+		if (illustration === 'IllustrationWalkers') {
 			sizeCSS = css`
 				width: 105%;
 				top: 2%;
@@ -185,7 +184,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationFacesSquare') {
+		if (illustration === 'IllustrationFaces') {
 			sizeCSS = css`
 				width: 105%;
 				top: 26%;
@@ -193,7 +192,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationHandsSquare') {
+		if (illustration === 'IllustrationHands') {
 			sizeCSS = css`
 				width: 105%;
 				top: 47%;
@@ -204,7 +203,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 	} else if (
 		statement === 'StatementLaPrevencionDelSuicidioComienzaConNosotros'
 	) {
-		if (illustration === 'IllustrationWalkersSquare') {
+		if (illustration === 'IllustrationWalkers') {
 			sizeCSS = css`
 				width: 84%;
 				top: 0%;
@@ -212,7 +211,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationFacesSquare') {
+		if (illustration === 'IllustrationFaces') {
 			sizeCSS = css`
 				width: 73%;
 				top: 25%;
@@ -220,7 +219,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationHandsSquare') {
+		if (illustration === 'IllustrationHands') {
 			sizeCSS = css`
 				width: 80%;
 				top: 47%;
@@ -228,8 +227,8 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-	} else if (statement === 'StatementDiaMundailDeLaPrevencionDelSuicidio') {
-		if (illustration === 'IllustrationWalkersSquare') {
+	} else if (statement === 'StatementDiaMundialDeLaPrevencionDelSuicidio') {
+		if (illustration === 'IllustrationWalkers') {
 			sizeCSS = css`
 				width: 105%;
 				top: 0%;
@@ -237,7 +236,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationFacesSquare') {
+		if (illustration === 'IllustrationFaces') {
 			sizeCSS = css`
 				width: 105%;
 				top: 24%;
@@ -245,7 +244,7 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-		if (illustration === 'IllustrationHandsSquare') {
+		if (illustration === 'IllustrationHands') {
 			sizeCSS = css`
 				width: 105%;
 				top: 47%;
@@ -256,7 +255,6 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 	}
 	return (
 		<Box textAlign="center" position="relative" id="graphicSVG">
-			<BackgroundTransparent />
 			{background === 'BackgroundClouds' && (
 				<BackgroundClouds css={positionCSS} />
 			)}
@@ -269,17 +267,17 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 			{background === 'BackgroundYellow' && (
 				<BackgroundYellow css={positionCSS} />
 			)}
-			{illustration === 'IllustrationFacesSquare' && (
-				<IllustrationFacesSquareStars css={positionCSS} />
+			{illustration === 'IllustrationFaces' && (
+				<StarsFaces css={positionCSS} />
 			)}
-			{illustration === 'IllustrationHandsSquare' && (
-				<IllustrationHandsSquareStars css={positionCSS} />
+			{illustration === 'IllustrationHands' && (
+				<StarsHands css={positionCSS} />
 			)}
-			{illustration === 'IllustrationWalkersSquare' && (
-				<IllustrationWalkersSquareStars css={positionCSS} />
+			{illustration === 'IllustrationWalkers' && (
+				<StarsWalkers css={positionCSS} />
 			)}
-			{statement === 'StatementDiaMundailDeLaPrevencionDelSuicidio' && (
-				<StatementDiaMundailDeLaPrevencionDelSuicidio
+			{statement === 'StatementDiaMundialDeLaPrevencionDelSuicidio' && (
+				<StatementDiaMundialDeLaPrevencionDelSuicidio
 					css={css`
 						${positionCSS};
 						${sizeCSS};
@@ -351,14 +349,14 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 					`}
 				/>
 			)}
-			{illustration === 'IllustrationFacesSquare' && (
-				<IllustrationFacesSquare css={positionCSS} />
+			{illustration === 'IllustrationFaces' && (
+				<IllustrationFaces css={positionCSS} />
 			)}
-			{illustration === 'IllustrationHandsSquare' && (
-				<IllustrationHandsSquare css={positionCSS} />
+			{illustration === 'IllustrationHands' && (
+				<IllustrationHands css={positionCSS} />
 			)}
-			{illustration === 'IllustrationWalkersSquare' && (
-				<IllustrationWalkersSquare css={positionCSS} />
+			{illustration === 'IllustrationWalkers' && (
+				<IllustrationWalkers css={positionCSS} />
 			)}
 		</Box>
 	)

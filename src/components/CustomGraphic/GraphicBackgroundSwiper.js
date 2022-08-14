@@ -7,10 +7,10 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import BackgroundClouds from '../../../static/svgs/customSVGs/BackgroundClouds.svg'
-import BackgroundGreen from '../../../static/svgs/customSVGs/BackgroundGreen.svg'
-import BackgroundRed from '../../../static/svgs/customSVGs/BackgroundRed.svg'
-import BackgroundYellow from '../../../static/svgs/customSVGs/BackgroundYellow.svg'
+import BackgroundClouds from '../../../static/images/builderImages/BackgroundClouds.png'
+import BackgroundGreen from '../../../static/images/builderImages/BackgroundGreen.png'
+import BackgroundRed from '../../../static/images/builderImages/BackgroundRed.png'
+import BackgroundYellow from '../../../static/images/builderImages/BackgroundYellow.png'
 
 export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`

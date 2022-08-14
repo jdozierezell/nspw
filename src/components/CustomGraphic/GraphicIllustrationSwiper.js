@@ -7,13 +7,12 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import BackgroundBlueFill from '../../../static/svgs/customSVGs/BackgroundBlueFill.svg'
-import IllustrationFacesSquare from '../../../static/svgs/customSVGs/IllustrationFacesSquare.svg'
-import IllustrationHandsSquare from '../../../static/svgs/customSVGs/IllustrationHandsSquare.svg'
-import IllustrationWalkersSquare from '../../../static/svgs/customSVGs/IllustrationWalkersSquare.svg'
-import IllustrationFacesSquareStars from '../../../static/svgs/customSVGs/IllustrationFacesSquareStars.svg'
-import IllustrationHandsSquareStars from '../../../static/svgs/customSVGs/IllustrationHandsSquareStars.svg'
-import IllustrationWalkersSquareStars from '../../../static/svgs/customSVGs/IllustrationWalkersSquareStars.svg'
+import IllustrationFaces from '../../../static/images/builderImages/IllustrationFaces.png'
+import IllustrationHands from '../../../static/images/builderImages/IllustrationHands.png'
+import IllustrationWalkers from '../../../static/images/builderImages/IllustrationWalkers.png'
+import StarsFaces from '../../../static/images/builderImages/StarsFaces.png'
+import StarsHands from '../../../static/images/builderImages/StarsHands.png'
+import StarsWalkers from '../../../static/images/builderImages/StarsWalkers.png'
 
 export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
@@ -46,11 +45,11 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 			}}
 		>
 			<SwiperSlide>
-				{/* <BackgroundBlueFill /> */}
-				<IllustrationWalkersSquareStars css={brandingCSS} />
-				<IllustrationWalkersSquare
+				{/*  */}
+				<StarsWalkers css={brandingCSS} />
+				<IllustrationWalkers
 					css={brandingCSS}
-					id="IllustrationWalkersSquare"
+					id="IllustrationWalkers"
 					data-swiper="illustration"
 					onClick={e =>
 						updateSVG(
@@ -61,11 +60,10 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundBlueFill />
-				<IllustrationFacesSquareStars css={brandingCSS} />
-				<IllustrationFacesSquare
+				<StarsFaces css={brandingCSS} />
+				<IllustrationFaces
 					css={brandingCSS}
-					id="IllustrationFacesSquare"
+					id="IllustrationFaces"
 					data-swiper="illustration"
 					onClick={e =>
 						updateSVG(
@@ -76,11 +74,10 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundBlueFill />
-				<IllustrationHandsSquareStars css={brandingCSS} />
-				<IllustrationHandsSquare
+				<StarsHands css={brandingCSS} />
+				<IllustrationHands
 					css={brandingCSS}
-					id="IllustrationHandsSquare"
+					id="IllustrationHands"
 					data-swiper="illustration"
 					onClick={e =>
 						updateSVG(
