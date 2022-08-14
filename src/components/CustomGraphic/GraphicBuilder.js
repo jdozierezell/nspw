@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/react'
+import { useMeasure } from 'react-use'
 
 import { Graphic } from './Graphic'
 import { GraphicDownload } from './GraphicDownload'
@@ -34,6 +35,9 @@ export const GraphicBuilder = ({ downloadSVG }) => {
 		statement: '',
 		illustration: '',
 	})
+
+	const [ref, { x, y, width, height, top, right, bottom, left }] =
+		useMeasure()
 
 	const changeSwiper = swiper => {
 		switch (swiper) {
@@ -96,8 +100,9 @@ export const GraphicBuilder = ({ downloadSVG }) => {
 					md: 'calc(51vw - 6rem)',
 					lg: 'calc(34vw - 6rem)',
 				}}
+				ref={ref}
 			>
-				<Graphic svg={svg} />
+				<Graphic svg={svg} width={width} height={height} />
 			</GridItem>
 			<GridItem
 				colStart={{ base: 1, md: 2 }}

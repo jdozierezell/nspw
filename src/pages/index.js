@@ -19,16 +19,16 @@ const Home = () => {
 	const [innerHeight, setInnerHeight] = useState(0)
 	const [downloadSVG, setDownloadSVG] = useState()
 
-	const setHeight = () => {
+	const setDimensions = () => {
 		setInnerHeight(window.innerHeight)
 	}
 
 	useEffect(() => {
 		setInnerHeight(window.innerHeight)
-		window.addEventListener('resize', setHeight)
-		return () => window.removeEventListener('resize', setHeight)
+		window.addEventListener('resize', setDimensions)
+		console.log(document.getElementById('konva-container').offsetWidth)
+		return () => window.removeEventListener('resize', setDimensions)
 	}, [innerHeight])
-
 	return (
 		<>
 			<ChakraProvider resetCSS theme={theme}>

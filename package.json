@@ -42,7 +42,9 @@
     "react-dom": "^18.1.0",
     "react-instantsearch-dom": "^6.30.3",
     "react-konva": "^18.2.1",
-    "swiper": "^8.3.2"
+    "react-use": "^17.4.0",
+    "swiper": "^8.3.2",
+    "use-image": "^1.0.12"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
