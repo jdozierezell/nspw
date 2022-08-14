@@ -7,10 +7,10 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import BackgroundClouds from '../../../static/images/builderImages/BackgroundClouds.png'
-import BackgroundGreen from '../../../static/images/builderImages/BackgroundGreen.png'
-import BackgroundRed from '../../../static/images/builderImages/BackgroundRed.png'
-import BackgroundYellow from '../../../static/images/builderImages/BackgroundYellow.png'
+import backgroundClouds from '../../../static/images/builderImages/backgroundClouds.png'
+import backgroundGreen from '../../../static/images/builderImages/backgroundGreen.png'
+import backgroundRed from '../../../static/images/builderImages/backgroundRed.png'
+import backgroundYellow from '../../../static/images/builderImages/backgroundYellow.png'
 
 export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
@@ -43,8 +43,8 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 			}}
 		>
 			<SwiperSlide>
-				<BackgroundClouds
-					id="BackgroundClouds"
+				<backgroundClouds
+					id="backgroundClouds"
 					data-swiper="background"
 					onClick={e =>
 						updateSVG(
@@ -55,8 +55,8 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundGreen
-					id="BackgroundGreen"
+				<backgroundGreen
+					id="backgroundGreen"
 					data-swiper="background"
 					onClick={e =>
 						updateSVG(
@@ -67,8 +67,8 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundRed
-					id="BackgroundRed"
+				<backgroundRed
+					id="backgroundRed"
 					data-swiper="background"
 					onClick={e =>
 						updateSVG(
@@ -79,8 +79,8 @@ export const GraphicBackgroundSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<BackgroundYellow
-					id="BackgroundYellow"
+				<backgroundYellow
+					id="backgroundYellow"
 					data-swiper="background"
 					onClick={e =>
 						updateSVG(

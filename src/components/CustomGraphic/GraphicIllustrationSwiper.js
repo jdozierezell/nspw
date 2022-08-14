@@ -7,12 +7,12 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import IllustrationFaces from '../../../static/images/builderImages/IllustrationFaces.png'
-import IllustrationHands from '../../../static/images/builderImages/IllustrationHands.png'
-import IllustrationWalkers from '../../../static/images/builderImages/IllustrationWalkers.png'
-import StarsFaces from '../../../static/images/builderImages/StarsFaces.png'
-import StarsHands from '../../../static/images/builderImages/StarsHands.png'
-import StarsWalkers from '../../../static/images/builderImages/StarsWalkers.png'
+import illustrationFaces from '../../../static/images/builderImages/illustrationFaces.png'
+import illustrationHands from '../../../static/images/builderImages/illustrationHands.png'
+import illustrationWalkers from '../../../static/images/builderImages/illustrationWalkers.png'
+import starsFaces from '../../../static/images/builderImages/starsFaces.png'
+import starsHands from '../../../static/images/builderImages/starsHands.png'
+import starsWalkers from '../../../static/images/builderImages/starsWalkers.png'
 
 export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 	const brandingCSS = css`
@@ -46,10 +46,10 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 		>
 			<SwiperSlide>
 				{/*  */}
-				<StarsWalkers css={brandingCSS} />
-				<IllustrationWalkers
+				<starsWalkers css={brandingCSS} />
+				<illustrationWalkers
 					css={brandingCSS}
-					id="IllustrationWalkers"
+					id="illustrationWalkers"
 					data-swiper="illustration"
 					onClick={e =>
 						updateSVG(
@@ -60,10 +60,10 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<StarsFaces css={brandingCSS} />
-				<IllustrationFaces
+				<starsFaces css={brandingCSS} />
+				<illustrationFaces
 					css={brandingCSS}
-					id="IllustrationFaces"
+					id="illustrationFaces"
 					data-swiper="illustration"
 					onClick={e =>
 						updateSVG(
@@ -74,10 +74,10 @@ export const GraphicIllustrationSwiper = ({ updateSVG }) => {
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
-				<StarsHands css={brandingCSS} />
-				<IllustrationHands
+				<starsHands css={brandingCSS} />
+				<illustrationHands
 					css={brandingCSS}
-					id="IllustrationHands"
+					id="illustrationHands"
 					data-swiper="illustration"
 					onClick={e =>
 						updateSVG(
