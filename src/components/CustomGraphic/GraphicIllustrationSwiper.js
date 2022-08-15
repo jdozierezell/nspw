@@ -8,12 +8,12 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import illustrationFaces from '../../../static/images/builderImages/illustrationFaces.png'
-import illustrationHands from '../../../static/images/builderImages/illustrationHands.png'
-import illustrationWalkers from '../../../static/images/builderImages/illustrationWalkers.png'
-import starsFaces from '../../../static/images/builderImages/starsFaces.png'
-import starsHands from '../../../static/images/builderImages/starsHands.png'
-import starsWalkers from '../../../static/images/builderImages/starsWalkers.png'
+import illustrationFaces from '../../../static/images/builderImages/IllustrationFaces.png'
+import illustrationHands from '../../../static/images/builderImages/IllustrationHands.png'
+import illustrationWalkers from '../../../static/images/builderImages/IllustrationWalkers.png'
+import starsFaces from '../../../static/images/builderImages/StarsFaces.png'
+import starsHands from '../../../static/images/builderImages/StarsHands.png'
+import starsWalkers from '../../../static/images/builderImages/StarsWalkers.png'
 
 import { borders } from '../../theme/variables/borders'
 

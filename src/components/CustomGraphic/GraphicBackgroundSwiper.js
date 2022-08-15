@@ -8,10 +8,10 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import backgroundClouds from '../../../static/images/builderImages/backgroundClouds.png'
-import backgroundGreen from '../../../static/images/builderImages/backgroundGreen.png'
-import backgroundRed from '../../../static/images/builderImages/backgroundRed.png'
-import backgroundYellow from '../../../static/images/builderImages/backgroundYellow.png'
+import backgroundClouds from '../../../static/images/builderImages/BackgroundClouds.png'
+import backgroundGreen from '../../../static/images/builderImages/BackgroundGreen.png'
+import backgroundRed from '../../../static/images/builderImages/BackgroundRed.png'
+import backgroundYellow from '../../../static/images/builderImages/BackgroundYellow.png'
 
 export const GraphicBackgroundSwiper = ({ setImageDownload }) => {
 	const brandingCSS = css`
