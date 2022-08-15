@@ -33,7 +33,7 @@ export const GraphicBackgroundSwiper = ({ setImageDownload }) => {
 					slidesPerView: 1,
 					spaceBetween: 20,
 				},
-				1080: {
+				992: {
 					slidesPerView: 2,
 					spaceBetween: 25,
 				},

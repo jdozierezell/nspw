@@ -98,7 +98,7 @@ export const WalkSearch = () => {
 					colStart={1}
 					colSpan={1}
 					w={{ sm: 'calc(100vw - 4rem)', md: 'calc(50vw - 8rem)' }}
-					m={{ base: '1rem 2rem', md: '2rem 4rem' }}
+					m={{ base: '1rem 2rem', md: '2rem 4rem 0' }}
 				>
 					<div
 						style={{

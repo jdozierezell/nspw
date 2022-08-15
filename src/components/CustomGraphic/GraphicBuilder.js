@@ -7,6 +7,8 @@ import { GraphicDownload } from './GraphicDownload'
 import { GraphicOptions } from './GraphicOptions'
 import { GraphicSlider } from './GraphicSlider'
 
+import { theme } from '../../theme/theme'
+
 export const GraphicBuilder = () => {
 	const background = {
 		label: 'Select a Background',
@@ -76,9 +78,10 @@ export const GraphicBuilder = () => {
 			<Grid
 				templateColumns={{
 					base: '1fr',
-					md: 'repeat(3, 1fr)',
+					md: 'repeat(2, 1fr)',
+					lg: 'repeat(3, 1fr)',
 				}}
-				p={{ base: '1rem 2rem', md: '2rem 4rem' }}
+				p={{ base: '1rem 0', md: '2rem 0 0' }}
 				justifyItems="center"
 				gap={{ base: '1rem', md: '1rem  3rem', lg: '1rem  6rem' }}
 			>
@@ -94,6 +97,7 @@ export const GraphicBuilder = () => {
 						lg: 'calc(34vw - 8rem)',
 					}}
 					ref={ref}
+					border={`1px solid ${theme.colors.purple.c700}`}
 				>
 					<Graphic
 						imageDownload={imageDownload}
