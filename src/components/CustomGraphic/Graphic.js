@@ -4,8 +4,6 @@ import { Stage, Layer, Image } from 'react-konva'
 import useImage from 'use-image'
 import { Box } from '@chakra-ui/react'
 
-import backgroundClouds from '../../../static/images/builderImages/backgroundClouds.png'
-
 export const Graphic = ({ width, imageDownload }) => {
 	const sceneWidth = 1080
 	const sceneHeight = 1080
