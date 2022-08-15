@@ -28,7 +28,7 @@ export const CTAs = () => {
 						gap={{ base: '1rem', md: '2rem' }}
 						direction={{ base: 'column', md: 'row' }}
 						alignItems="center"
-						p={{ base: '4rem 3rem', md: '2rem 3rem' }}
+						p={{ base: '3rem 4rem', md: '1rem 0 0 3rem' }}
 					>
 						<Box w={{ base: '60vw', md: '20vw' }}>
 							<Phone
@@ -62,7 +62,7 @@ export const CTAs = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									Listen Now
+									Learn More
 								</a>
 							</Button>
 						</Box>
@@ -73,7 +73,7 @@ export const CTAs = () => {
 						gap={{ base: '1rem', md: '2rem' }}
 						direction={{ base: 'column', md: 'row' }}
 						alignItems="center"
-						p={{ base: '4rem 4rem', md: '4rem 4rem 0' }}
+						p={{ base: '3rem 4rem', md: '1rem 4rem 0' }}
 					>
 						<Box w={{ base: '60vw', md: '20vw' }}>
 							<Headphones
