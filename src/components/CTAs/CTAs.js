@@ -1,119 +1,130 @@
 import React from 'react'
 import { css } from '@emotion/react'
+import { StaticImage } from 'gatsby-plugin-image'
 import {
 	Box,
 	Button,
 	Container,
 	Flex,
+	Grid,
+	GridItem,
 	Heading,
-	SimpleGrid,
 	Text,
 } from '@chakra-ui/react'
-
-import Headphones from '../../../static/svgs/staticSVGs/noun-headphones-2474243-00449F.svg'
-import Phone from '../../../static/svgs/staticSVGs/noun-phone-1212698-00449F.svg'
 
 import { theme } from '../../theme/theme'
 
 export const CTAs = () => {
 	return (
 		<Container variant="noPad" m="2rem 0">
-			<SimpleGrid
-				columns={{ base: 1, md: 2 }}
+			<Grid
 				gap="0"
+				templateColumns={{
+					base: '1fr',
+					md: '1fr 1fr',
+					lg: '34vw 66vw',
+					xl: 'repeat(4, 1fr)',
+				}}
 				alignItems="stretch"
 			>
-				<Flex bg="#00449e" justifyContent="center" alignItems="end">
-					<Flex
-						gap={{ base: '1rem', md: '2rem' }}
-						direction={{ base: 'column', md: 'row' }}
-						alignItems="center"
-						p={{ base: '3rem 4rem', md: '1rem 0 0 3rem' }}
-					>
-						<Box w={{ base: '60vw', md: '20vw' }}>
-							<Phone
-								style={css`
-									width: 80%;
-								`}
-							/>
-						</Box>
-						<Box
-							w={{
-								base: 'calc(75vw - 4rem)',
-								md: 'calc(25vw - 8rem)',
-							}}
-							maxW="623px"
-							color="blue.c100"
+				<GridItem
+					colSpan={1}
+					colStart={1}
+					rowSpan={1}
+					rowStart={1}
+					bg="#00449e"
+					justifyContent="start"
+					alignItems={{ base: 'start', lg: 'center' }}
+					direction={{ base: 'column', lg: 'row' }}
+				>
+					<StaticImage
+						src="../../../static/images/988.jpg"
+						alt="Person holding a phone displaying 988"
+					/>
+				</GridItem>
+				<Flex
+					colSpan={1}
+					colStart={{ base: 1, lg: 2 }}
+					rowSpan={1}
+					rowStart={{ base: 2, lg: 1 }}
+					bg="#00449e"
+					color="blue.c100"
+					p={{ base: '2rem 2rem 4rem', xl: '0 2rem' }}
+					alignItems="center"
+				>
+					<Box>
+						<Heading>Together, Let's Support&nbsp;988</Heading>
+						<Text p="1rem 0 2rem">
+							Anyone, anywhere in the U.S. can call, chat, or text
+							988. Find out how AFSP supports new the Suicide
+							&amp; Crisis Lifeline.
+						</Text>
+						<Button
+							border={`1px solid ${theme.colors.blue.c100}`}
+							bg="transparent"
+							borderRadius={'5px'}
+							_hover={{ bg: 'blue.c100', color: '#00449e' }}
 						>
-							<Heading>Together, Let's Support&nbsp;988</Heading>
-							<Text py="1.5rem">
-								Anyone, anywhere in the U.S. can call, chat, or
-								text 988. Find out how AFSP supports new the
-								Suicide &amp; Crisis Lifeline.
-							</Text>
-							<Button
-								border={`1px solid ${theme.colors.blue.c100}`}
-								bg="transparent"
-								borderRadius={'5px'}
-								_hover={{ bg: 'blue.c100', color: '#00449e' }}
+							<a
+								href="https://afsp.org/988-suicide-and-crisis-lifeline"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
-								<a
-									href="https://afsp.org/988-suicide-and-crisis-lifeline"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Learn More
-								</a>
-							</Button>
-						</Box>
-					</Flex>
+								Learn More
+							</a>
+						</Button>
+					</Box>
 				</Flex>
-				<Flex bg="blue.c100" justifyContent="center" alignItems="end">
-					<Flex
-						gap={{ base: '1rem', md: '2rem' }}
-						direction={{ base: 'column', md: 'row' }}
-						alignItems="center"
-						p={{ base: '3rem 4rem', md: '1rem 4rem 0' }}
-					>
-						<Box w={{ base: '60vw', md: '20vw' }}>
-							<Headphones
-								style={css`
-									width: 100%;
-								`}
-							/>
-						</Box>
-						<Box
-							w={{
-								base: 'calc(75vw - 4rem)',
-								md: 'calc(25vw - 8rem)',
-							}}
-							maxW="623px"
-							color="#00449e"
+				<GridItem
+					colSpan={1}
+					colStart={{ base: 1, md: 2, lg: 1, xl: 3 }}
+					rowSpan={1}
+					rowStart={{ base: 3, md: 1, lg: 2, xl: 1 }}
+					bg="blue.c100"
+					justifyContent="start"
+					alignItems={{ base: 'start', lg: 'center' }}
+					direction={{ base: 'column', lg: 'row' }}
+				>
+					<StaticImage
+						src="../../../static/images/Audacy.png"
+						alt="Audacy Out of the Darkness station"
+					/>
+				</GridItem>
+				<Flex
+					colSpan={1}
+					colStart={{ base: 1, md: 2, xl: 4 }}
+					rowSpan={1}
+					rowStart={{ base: 4, md: 2, xl: 1 }}
+					bg="blue.c100"
+					color="#00449e"
+					p={{ base: '2rem 2rem 4rem', xl: '0 2rem' }}
+					alignItems="center"
+				>
+					<Box>
+						<Heading>Together, Let's&nbsp;Listen</Heading>
+						<Text p="1rem 0 2rem">
+							AFSP partner Audacy invites you to listen to AFSP
+							Out of the Darkness Radio. This is what Together
+							sounds like.{' '}
+							<em>New station coming September 1.</em>
+						</Text>
+						<Button
+							border="1px solid #00449e"
+							bg="transparent"
+							borderRadius={'5px'}
+							_hover={{ bg: '#00449e', color: 'blue.c100' }}
 						>
-							<Heading>Together, Let's&nbsp;Listen</Heading>
-							<Text py="1.5rem">
-								AFSP partner Audacy invites you to listen to
-								AFSP Out of the Darkness Radio. This is what
-								Together sounds like.
-							</Text>
-							<Button
-								border="1px solid #00449e"
-								bg="transparent"
-								borderRadius={'5px'}
-								_hover={{ bg: '#00449e', color: 'blue.c100' }}
+							<a
+								href="https://www.audacy.com/afspoutofthedarknessradio/listen#discover"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
-								<a
-									href="https://www.audacy.com/afspoutofthedarknessradio/listen#discover"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Listen Now
-								</a>
-							</Button>
-						</Box>
-					</Flex>
+								Listen Now
+							</a>
+						</Button>
+					</Box>
 				</Flex>
-			</SimpleGrid>
+			</Grid>
 		</Container>
 	)
 }
