@@ -28,7 +28,7 @@ export const EventList = () => {
 
 	useEffect(() => {
 		fetch(
-			'https://www.addevent.com/api/v1/oe/events/list/?token=api1597763535vAb4iZ7xahkIFj5zRDWY95036&calendar_id=1659478767486686&upcoming=08/01/2022'
+			'https://www.addevent.com/api/v1/oe/events/list/?token=api1597763535vAb4iZ7xahkIFj5zRDWY95036&calendar_id=1659478767486686&upcoming=08/01/2022&upcoming=now'
 		)
 			.then(response => response.json())
 			.then(result => {
