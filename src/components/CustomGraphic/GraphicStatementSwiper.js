@@ -12,7 +12,7 @@ import statementDiaMundialDeLaPrevencionDelSuicidio from '../../../static/images
 import statementLaPrevencionDelSuicidioComienzaConNosotros from '../../../static/images/builderImages/StatementLaPrevencionDelSuicidioComienzaConNosotros.png'
 import statementNationalSuicidePreventionWeek from '../../../static/images/builderImages/StatementNationalSuicidePreventionWeek.png'
 import statementOutOfTheDarkness from '../../../static/images/builderImages/StatementOutOfTheDarkness.png'
-import statementSemanaNacionalDePrevencionDelSuicidio from '../../../static/images/builderImages/StatementSemanaNacionalDePrevencionDelSuicidio.png'
+import statementSemanaNacionalDeLaPrevencionDelSuicidio from '../../../static/images/builderImages/StatementSemanaNacionalDeLaPrevencionDelSuicidio.png'
 import statementSuicidePreventionBeginsWithAllOfUs from '../../../static/images/builderImages/StatementSuicidePreventionBeginsWithAllOfUs.png'
 import statementTogetherLetsWalk from '../../../static/images/builderImages/StatementTogetherLetsWalk.png'
 import statementWalkWithUs from '../../../static/images/builderImages/StatementWalkWithUs.png'
@@ -162,9 +162,9 @@ export const GraphicStatementSwiper = ({ setImageDownload }) => {
 			</SwiperSlide>
 			<SwiperSlide>
 				<Image
-					src={statementSemanaNacionalDePrevencionDelSuicidio}
+					src={statementSemanaNacionalDeLaPrevencionDelSuicidio}
 					css={brandingCSS}
-					id="statementSemanaNacionalDePrevencionDelSuicidio"
+					id="statementSemanaNacionalDeLaPrevencionDelSuicidio"
 					onClick={e =>
 						setImageDownload(prevState => ({
 							...prevState,

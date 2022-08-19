@@ -16,7 +16,7 @@ import statementDiaMundialDeLaPrevencionDelSuicidio from '../../../static/images
 import statementLaPrevencionDelSuicidioComienzaConNosotros from '../../../static/images/builderImages/statementLaPrevencionDelSuicidioComienzaConNosotros.png'
 import statementNationalSuicidePreventionWeek from '../../../static/images/builderImages/statementNationalSuicidePreventionWeek.png'
 import statementOutOfTheDarkness from '../../../static/images/builderImages/statementOutOfTheDarkness.png'
-import statementSemanaNacionalDePrevencionDelSuicidio from '../../../static/images/builderImages/statementSemanaNacionalDePrevencionDelSuicidio.png'
+import statementSemanaNacionalDeLaPrevencionDelSuicidio from '../../../static/images/builderImages/statementSemanaNacionalDeLaPrevencionDelSuicidio.png'
 import statementSuicidePreventionBeginsWithAllOfUs from '../../../static/images/builderImages/statementSuicidePreventionBeginsWithAllOfUs.png'
 import statementTogetherLetsWalk from '../../../static/images/builderImages/statementTogetherLetsWalk.png'
 import statementWalkWithUs from '../../../static/images/builderImages/statementWalkWithUs.png'
@@ -175,7 +175,9 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 				transform: translateX(-50%);
 			`
 		}
-	} else if (statement === 'statementSemanaNacionalDePrevencionDelSuicidio') {
+	} else if (
+		statement === 'statementSemanaNacionalDeLaPrevencionDelSuicidio'
+	) {
 		if (illustration === 'illustrationWalkers') {
 			sizeCSS = css`
 				width: 105%;
@@ -309,8 +311,9 @@ export const Graphic = ({ svg: { background, statement, illustration } }) => {
 					`}
 				/>
 			)}
-			{statement === 'statementSemanaNacionalDePrevencionDelSuicidio' && (
-				<statementSemanaNacionalDePrevencionDelSuicidio
+			{statement ===
+				'statementSemanaNacionalDeLaPrevencionDelSuicidio' && (
+				<statementSemanaNacionalDeLaPrevencionDelSuicidio
 					css={css`
 						${positionCSS};
 						${sizeCSS};
