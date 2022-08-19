@@ -32,7 +32,7 @@ export const AboutNSPW = () => {
 					Prevention Day (September 10), AFSP takes advantage of the
 					full month to offer understanding and guidance for the
 					public through special events, personal stories and
-					perspectives, sharable social graphics and other materials
+					perspectives, shareable social graphics and other materials
 					designed to help people know what they can do if they or
 					someone they know is struggling, and how to have authentic,
 					caring conversations about suicide and mental health.
