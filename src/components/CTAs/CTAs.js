@@ -16,14 +16,18 @@ import { theme } from '../../theme/theme'
 
 const iframeCSS = css`
 	grid-column: 1 / span 1;
+	grid-row: 3 / span 2;
 	@media (min-width: ${theme.breakpoints.md}) {
-		grid-column: 1 / span 2;
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 2;
 	}
 	@media (min-width: ${theme.breakpoints.lg}) {
 		grid-column: 1 / span 2;
+		grid-row: 2 / span 2;
 	}
 	@media (min-width: ${theme.breakpoints.xl}) {
 		grid-column: 3 / span 2;
+		grid-row: 1 / span 1;
 	}
 	iframe {
 		height: 100vw;
@@ -31,10 +35,12 @@ const iframeCSS = css`
 		border: 0;
 		overflow: 'hidden';
 		@media (min-width: ${theme.breakpoints.md}) {
-			height: 50vw;
+			height: 100vw;
+			width: 50vw;
 		}
 		@media (min-width: ${theme.breakpoints.lg}) {
 			height: 25vw;
+			width: 100vw;
 		}
 		@media (min-width: ${theme.breakpoints.xl}) {
 			height: 25vw;
@@ -120,8 +126,6 @@ export const CTAs = () => {
 					/>
 				</GridItem> */}
 				<Flex
-					rowSpan={1}
-					rowStart={{ base: 4, md: 2, xl: 1 }}
 					bg="blue.c100"
 					color="#00449e"
 					// p={{ base: '2rem 2rem 4rem', xl: '0 2rem' }}
