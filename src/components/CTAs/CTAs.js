@@ -31,6 +31,7 @@ import { theme } from '../../theme/theme'
 // iframe {}
 
 const iframeCSS = css`
+	aspect-ratio: 1 / 1;
 	height: 100vw;
 	width: 100vw;
 	border: 0;
