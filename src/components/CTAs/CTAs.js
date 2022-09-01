@@ -105,8 +105,7 @@ export const CTAs = () => {
 						<Text p="1rem 0 2rem">
 							AFSP partner Audacy invites you to listen to AFSP
 							Out of the Darkness Radio. This is what Together
-							sounds like.{' '}
-							<em>New station coming September 1.</em>
+							sounds like.
 						</Text>
 						<Button
 							border="1px solid #00449e"
