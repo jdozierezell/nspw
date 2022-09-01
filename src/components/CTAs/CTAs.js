@@ -14,42 +14,6 @@ import {
 
 import { theme } from '../../theme/theme'
 
-// grid-column: 1 / span 1;
-// grid-row: 3 / span 2;
-// @media (min-width: ${theme.breakpoints.md}) {
-// 	grid-column: 2 / span 1;
-// 	grid-row: 1 / span 2;
-// }
-// @media (min-width: ${theme.breakpoints.lg}) {
-// 	grid-column: 1 / span 2;
-// 	grid-row: 2 / span 2;
-// }
-// @media (min-width: ${theme.breakpoints.xl}) {
-// 	grid-column: 3 / span 2;
-// 	grid-row: 1 / span 1;
-// }
-// iframe {}
-
-const iframeCSS = css`
-	aspect-ratio: 1 / 1;
-	height: 100vw;
-	width: 100vw;
-	border: 0;
-	overflow: 'hidden';
-	@media (min-width: ${theme.breakpoints.md}) {
-		height: 50vw;
-		width: 50vw;
-	}
-	@media (min-width: ${theme.breakpoints.lg}) {
-		height: 34vw;
-		width: 34vw;
-	}
-	@media (min-width: ${theme.breakpoints.xl}) {
-		height: 25vw;
-		width: 25vw;
-	}
-`
-
 export const CTAs = () => {
 	return (
 		<Container variant="noPad" m="2rem 0">
@@ -121,20 +85,20 @@ export const CTAs = () => {
 					alignItems={{ base: 'start', lg: 'center' }}
 					direction={{ base: 'column', lg: 'row' }}
 				>
-					<iframe
-						title="Audacy Production"
-						src="https://embed.radio.com?callsign=afspoutofthedarknessradio&type=exclusive-station"
-						css={iframeCSS}
+					<StaticImage
+						src="../../../static/images/Audacy.png"
+						alt="Audacy Out of the Darkness station"
 					/>
 				</GridItem>
 				<Flex
+					colSpan={1}
+					colStart={{ base: 1, md: 2, xl: 4 }}
 					rowSpan={1}
 					rowStart={{ base: 4, md: 2, xl: 1 }}
 					bg="blue.c100"
 					color="#00449e"
 					p={{ base: '2rem 2rem 4rem', xl: '0 2rem' }}
 					alignItems="center"
-					// css={iframeCSS}
 				>
 					<Box>
 						<Heading>Together, Let's&nbsp;Listen</Heading>
@@ -158,7 +122,16 @@ export const CTAs = () => {
 								Listen Now
 							</a>
 						</Button>
-
+						{/* <iframe
+							title="Audacy Production"
+							src="https://embed.radio.com?callsign=afspoutofthedarknessradio&type=exclusive-station"
+							style={{
+								border: 0,
+								height: '220px',
+								width: '100%',
+								overflow: 'hidden',
+							}}
+						/> */}
 						{/* <iframe
 							title="Audacy Staging"
 							src="https://embed.radio.com?callsign=afspoutofthedarknessradio&type=exclusive-station&api=stage"
