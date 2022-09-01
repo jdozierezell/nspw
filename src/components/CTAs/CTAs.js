@@ -114,7 +114,7 @@ export const CTAs = () => {
 							_hover={{ bg: '#00449e', color: 'blue.c100' }}
 						>
 							<a
-								href="https://www.audacy.com/afspoutofthedarknessradio/listen#discover"
+								href="https://www.audacy.com/stations/afspoutofthedarknessradio"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
