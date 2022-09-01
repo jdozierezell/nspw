@@ -14,6 +14,37 @@ import {
 
 import { theme } from '../../theme/theme'
 
+console.log(theme)
+
+const iframeCSS = css`
+	grid-column: 1 / span 1;
+	@media (min-width: ${theme.breakpoints.md}) {
+		grid-column: 1 / span 2;
+	}
+	@media (min-width: ${theme.breakpoints.lg}) {
+		grid-column: 1 / span 2;
+	}
+	@media (min-width: ${theme.breakpoints.xl}) {
+		grid-column: 3 / span 2;
+	}
+	iframe {
+		height: 100vw;
+		width: 100vw;
+		border: 0;
+		overflow: 'hidden';
+		@media (min-width: ${theme.breakpoints.md}) {
+			height: 50vw;
+		}
+		@media (min-width: ${theme.breakpoints.lg}) {
+			height: 25vw;
+		}
+		@media (min-width: ${theme.breakpoints.xl}) {
+			height: 25vw;
+			width: 50vw;
+		}
+	}
+`
+
 export const CTAs = () => {
 	return (
 		<Container variant="noPad" m="2rem 0">
@@ -75,7 +106,7 @@ export const CTAs = () => {
 						</Button>
 					</Box>
 				</Flex>
-				<GridItem
+				{/* <GridItem
 					colSpan={1}
 					colStart={{ base: 1, md: 2, lg: 1, xl: 3 }}
 					rowSpan={1}
@@ -89,18 +120,17 @@ export const CTAs = () => {
 						src="../../../static/images/Audacy.png"
 						alt="Audacy Out of the Darkness station"
 					/>
-				</GridItem>
+				</GridItem> */}
 				<Flex
-					colSpan={1}
-					colStart={{ base: 1, md: 2, xl: 4 }}
 					rowSpan={1}
 					rowStart={{ base: 4, md: 2, xl: 1 }}
 					bg="blue.c100"
 					color="#00449e"
-					p={{ base: '2rem 2rem 4rem', xl: '0 2rem' }}
+					// p={{ base: '2rem 2rem 4rem', xl: '0 2rem' }}
 					alignItems="center"
+					css={iframeCSS}
 				>
-					<Box>
+					{/* <Box>
 						<Heading>Together, Let's&nbsp;Listen</Heading>
 						<Text p="1rem 0 2rem">
 							AFSP partner Audacy invites you to listen to AFSP
@@ -121,18 +151,12 @@ export const CTAs = () => {
 							>
 								Listen Now
 							</a>
-						</Button>
-						<iframe
-							title="Audacy Production"
-							src="https://embed.radio.com?callsign=afspoutofthedarknessradio&type=exclusive-station"
-							style={{
-								border: 0,
-								height: '220px',
-								width: '100%',
-								overflow: 'hidden',
-							}}
-						/>
-						{/* <iframe
+						</Button> */}
+					<iframe
+						title="Audacy Production"
+						src="https://embed.radio.com?callsign=afspoutofthedarknessradio&type=exclusive-station"
+					/>
+					{/* <iframe
 							title="Audacy Staging"
 							src="https://embed.radio.com?callsign=afspoutofthedarknessradio&type=exclusive-station&api=stage"
 							style={{
@@ -142,7 +166,7 @@ export const CTAs = () => {
 								overflow: 'hidden',
 							}}
 						/> */}
-					</Box>
+					{/* </Box> */}
 				</Flex>
 			</Grid>
 		</Container>
