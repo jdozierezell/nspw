@@ -66,6 +66,63 @@ export const RealStories = () => {
 					<Box css={boxCSS}>
 						<StaticImage
 							css={imgCSS}
+							src="https://www.datocms-assets.com/12810/1660927998-image004.jpeg?format=webp&crop=faces&fit=crop&h=503&w=960"
+							alt="Walkers in front of Out of the Darkness sign"
+						/>
+						<Text css={authorCSS}>By Ramani Rangavajhula</Text>
+					</Box>
+					<LinkOverlay
+						css={linkOverlayCSS}
+						href="https://afsp.org/story/out-of-the-darkness-walker-spotlight-interview-ramani-rangavajhula"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Out of the Darkness Walker Spotlight Interview: Ramani
+						Rangavajhula
+					</LinkOverlay>
+				</LinkBox>
+				<LinkBox css={linkBoxCSS}>
+					<Box css={boxCSS}>
+						<StaticImage
+							css={imgCSS}
+							src="https://www.datocms-assets.com/12810/1660683262-image1.jpeg?format=webp&crop=faces&fit=crop&h=503&w=960"
+							alt="Catharyn Turner"
+						/>
+						<Text css={authorCSS}>By Catharyn Turner</Text>
+					</Box>
+					<LinkOverlay
+						css={linkOverlayCSS}
+						href="https://afsp.org/story/out-of-the-darkness-walker-spotlight-interview-catharyn-turner"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Out of the Darkness Walker Spotlight Interview: Catharyn
+						Turner
+					</LinkOverlay>
+				</LinkBox>
+				<LinkBox css={linkBoxCSS}>
+					<Box css={boxCSS}>
+						<StaticImage
+							css={imgCSS}
+							src="https://www.datocms-assets.com/12810/1660590626-img-20220716-wa0007.jpg?format=webp&crop=faces&fit=crop&h=503&w=960"
+							alt="Kenny Cruz"
+						/>
+						<Text css={authorCSS}>By Kenny Cruz</Text>
+					</Box>
+					<LinkOverlay
+						css={linkOverlayCSS}
+						href="https://afsp.org/story/out-of-the-darkness-walker-spotlight-interview-kenny-cruz"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Out of the Darkness Walker Spotlight Interview: Kenny
+						Cruz
+					</LinkOverlay>
+				</LinkBox>
+				<LinkBox css={linkBoxCSS}>
+					<Box css={boxCSS}>
+						<StaticImage
+							css={imgCSS}
 							src="https://www.datocms-assets.com/12810/1653405639-erica-mcbeth.jpg?format=webp&crop=faces&fit=crop&h=503&w=960"
 							alt="Erica McBeth"
 						/>

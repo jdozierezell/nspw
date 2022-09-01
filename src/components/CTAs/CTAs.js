@@ -14,8 +14,6 @@ import {
 
 import { theme } from '../../theme/theme'
 
-console.log(theme)
-
 const iframeCSS = css`
 	grid-column: 1 / span 1;
 	@media (min-width: ${theme.breakpoints.md}) {
