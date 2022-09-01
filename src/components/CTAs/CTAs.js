@@ -14,38 +14,38 @@ import {
 
 import { theme } from '../../theme/theme'
 
+// grid-column: 1 / span 1;
+// grid-row: 3 / span 2;
+// @media (min-width: ${theme.breakpoints.md}) {
+// 	grid-column: 2 / span 1;
+// 	grid-row: 1 / span 2;
+// }
+// @media (min-width: ${theme.breakpoints.lg}) {
+// 	grid-column: 1 / span 2;
+// 	grid-row: 2 / span 2;
+// }
+// @media (min-width: ${theme.breakpoints.xl}) {
+// 	grid-column: 3 / span 2;
+// 	grid-row: 1 / span 1;
+// }
+// iframe {}
+
 const iframeCSS = css`
-	grid-column: 1 / span 1;
-	grid-row: 3 / span 2;
+	height: 100vw;
+	width: 100vw;
+	border: 0;
+	overflow: 'hidden';
 	@media (min-width: ${theme.breakpoints.md}) {
-		grid-column: 2 / span 1;
-		grid-row: 1 / span 2;
+		height: 50vw;
+		width: 50vw;
 	}
 	@media (min-width: ${theme.breakpoints.lg}) {
-		grid-column: 1 / span 2;
-		grid-row: 2 / span 2;
+		height: 34vw;
+		width: 34vw;
 	}
 	@media (min-width: ${theme.breakpoints.xl}) {
-		grid-column: 3 / span 2;
-		grid-row: 1 / span 1;
-	}
-	iframe {
-		height: 100vw;
-		width: 100vw;
-		border: 0;
-		overflow: 'hidden';
-		@media (min-width: ${theme.breakpoints.md}) {
-			height: 100vw;
-			width: 50vw;
-		}
-		@media (min-width: ${theme.breakpoints.lg}) {
-			height: 25vw;
-			width: 100vw;
-		}
-		@media (min-width: ${theme.breakpoints.xl}) {
-			height: 25vw;
-			width: 50vw;
-		}
+		height: 25vw;
+		width: 25vw;
 	}
 `
 
@@ -110,7 +110,7 @@ export const CTAs = () => {
 						</Button>
 					</Box>
 				</Flex>
-				{/* <GridItem
+				<GridItem
 					colSpan={1}
 					colStart={{ base: 1, md: 2, lg: 1, xl: 3 }}
 					rowSpan={1}
@@ -120,19 +120,22 @@ export const CTAs = () => {
 					alignItems={{ base: 'start', lg: 'center' }}
 					direction={{ base: 'column', lg: 'row' }}
 				>
-					<StaticImage
-						src="../../../static/images/Audacy.png"
-						alt="Audacy Out of the Darkness station"
+					<iframe
+						title="Audacy Production"
+						src="https://embed.radio.com?callsign=afspoutofthedarknessradio&type=exclusive-station"
+						css={iframeCSS}
 					/>
-				</GridItem> */}
+				</GridItem>
 				<Flex
+					rowSpan={1}
+					rowStart={{ base: 4, md: 2, xl: 1 }}
 					bg="blue.c100"
 					color="#00449e"
-					// p={{ base: '2rem 2rem 4rem', xl: '0 2rem' }}
+					p={{ base: '2rem 2rem 4rem', xl: '0 2rem' }}
 					alignItems="center"
-					css={iframeCSS}
+					// css={iframeCSS}
 				>
-					{/* <Box>
+					<Box>
 						<Heading>Together, Let's&nbsp;Listen</Heading>
 						<Text p="1rem 0 2rem">
 							AFSP partner Audacy invites you to listen to AFSP
@@ -153,12 +156,9 @@ export const CTAs = () => {
 							>
 								Listen Now
 							</a>
-						</Button> */}
-					<iframe
-						title="Audacy Production"
-						src="https://embed.radio.com?callsign=afspoutofthedarknessradio&type=exclusive-station"
-					/>
-					{/* <iframe
+						</Button>
+
+						{/* <iframe
 							title="Audacy Staging"
 							src="https://embed.radio.com?callsign=afspoutofthedarknessradio&type=exclusive-station&api=stage"
 							style={{
@@ -168,7 +168,7 @@ export const CTAs = () => {
 								overflow: 'hidden',
 							}}
 						/> */}
-					{/* </Box> */}
+					</Box>
 				</Flex>
 			</Grid>
 		</Container>
