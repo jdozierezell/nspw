@@ -56,7 +56,7 @@ export const CTAs = () => {
 						<Heading>Together, Let's Support&nbsp;988</Heading>
 						<Text p="1rem 0 2rem">
 							Anyone, anywhere in the U.S. can call, chat, or text
-							988. Find out how AFSP supports new the Suicide
+							988. Find out how AFSP supports the new Suicide
 							&amp; Crisis Lifeline.
 						</Text>
 						<Button
