@@ -104,6 +104,25 @@ export const RealStories = () => {
 					<Box css={boxCSS}>
 						<StaticImage
 							css={imgCSS}
+							src="https://www.datocms-assets.com/12810/1660777214-yaudes.jpg?format=webp&crop=faces&fit=crop&h=503&w=960"
+							alt="Kevin Yaudes"
+						/>
+						<Text css={authorCSS}>By Kevin Yaudes</Text>
+					</Box>
+					<LinkOverlay
+						css={linkOverlayCSS}
+						href="https://afsp.org/story/out-of-the-darkness-walker-spotlight-interview-kevin-yaudes"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Out of the Darkness Walker Spotlight Interview: Kevin
+						Yaudes
+					</LinkOverlay>
+				</LinkBox>
+				<LinkBox css={linkBoxCSS}>
+					<Box css={boxCSS}>
+						<StaticImage
+							css={imgCSS}
 							src="https://www.datocms-assets.com/12810/1660590626-img-20220716-wa0007.jpg?format=webp&crop=faces&fit=crop&h=503&w=960"
 							alt="Kenny Cruz"
 						/>
