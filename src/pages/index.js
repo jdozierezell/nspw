@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, useDisclosure } from '@chakra-ui/react'
 
 import { theme } from '../theme/theme'
 import { SEO } from '../components/SEO/SEO'
@@ -14,14 +14,18 @@ import { EventList } from '../components/EventList/EventList'
 import { AboutNSPW } from '../components/AboutNSPW/AboutNSPW'
 import { SocialMedia } from '../components/SocialMedia/SocialMedia'
 import { Footer } from '../components/Footer/Footer'
+import { Audacy } from '../components/Audacy/Audacy'
 
 const Home = () => {
 	const [innerHeight, setInnerHeight] = useState(0)
+	const { isOpen, onOpen, onClose } = useDisclosure()
 
 	const setDimensions = () => {
 		setInnerHeight(window.innerHeight)
 	}
-
+	console.log(isOpen)
+	console.log(onOpen)
+	console.log(onClose)
 	useEffect(() => {
 		setInnerHeight(window.innerHeight)
 		window.addEventListener('resize', setDimensions)
@@ -41,7 +45,7 @@ const Home = () => {
 				{/* CustomGraphic complete */}
 				<CustomGraphic />
 				{/* CTAs in progress */}
-				<CTAs />
+				<CTAs onOpen={onOpen} />
 				{/* RealStories complete */}
 				<RealStories />
 				{/* EventList complete */}
@@ -52,6 +56,8 @@ const Home = () => {
 				<SocialMedia />
 				{/* Footer complete */}
 				<Footer />
+				{/* Audacy in progress */}
+				<Audacy isOpen={isOpen} onClose={onClose} />
 			</ChakraProvider>
 		</>
 	)

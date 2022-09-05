@@ -14,7 +14,7 @@ import {
 
 import { theme } from '../../theme/theme'
 
-export const CTAs = () => {
+export const CTAs = ({ onOpen }) => {
 	return (
 		<Container variant="noPad" m="2rem 0">
 			<Grid
@@ -112,14 +112,9 @@ export const CTAs = () => {
 							bg="transparent"
 							borderRadius={'5px'}
 							_hover={{ bg: '#00449e', color: 'blue.c100' }}
+							onClick={onOpen}
 						>
-							<a
-								href="https://www.audacy.com/stations/afspoutofthedarknessradio"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Listen Now
-							</a>
+							Listen Now
 						</Button>
 						{/* <iframe
 							title="Audacy Production"
