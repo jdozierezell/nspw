@@ -25,14 +25,16 @@ export const EventList = () => {
 		title: 'AFSP national events',
 		results: [],
 	})
-
+	// 2020-11-31 17:30:00
+	const today = dayjs().format('YYYY-MM-DD')
 	useEffect(() => {
 		fetch(
-			'https://www.addevent.com/api/v1/oe/events/list/?token=api1597763535vAb4iZ7xahkIFj5zRDWY95036&calendar_id=1659478767486686&upcoming=08/01/2022&upcoming=now'
+			`https://www.addevent.com/api/v1/oe/events/list/?token=api1597763535vAb4iZ7xahkIFj5zRDWY95036&calendar_id=1659478767486686&upcoming=08/01/2022&upcoming=${today}`
 		)
 			.then(response => response.json())
 			.then(result => {
 				const events = result.events
+				console.log(result)
 				return events.map(event => {
 					const startDate = dayjs
 						.unix(event.date_start_unix)

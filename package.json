@@ -23,7 +23,7 @@
     "algoliasearch": "^4.14.2",
     "canvas": "^2.9.3",
     "canvg": "^4.0.1",
-    "dayjs": "^1.11.4",
+    "dayjs": "^1.11.5",
     "framer-motion": "^6.5.1",
     "gatsby": "^4.19.2",
     "gatsby-plugin-emotion": "^7.19.0",
