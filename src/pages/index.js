@@ -23,9 +23,6 @@ const Home = () => {
 	const setDimensions = () => {
 		setInnerHeight(window.innerHeight)
 	}
-	console.log(isOpen)
-	console.log(onOpen)
-	console.log(onClose)
 	useEffect(() => {
 		setInnerHeight(window.innerHeight)
 		window.addEventListener('resize', setDimensions)
@@ -56,7 +53,7 @@ const Home = () => {
 				<SocialMedia />
 				{/* Footer complete */}
 				<Footer />
-				{/* Audacy in progress */}
+				{/* Audacy in complete */}
 				<Audacy isOpen={isOpen} onClose={onClose} />
 			</ChakraProvider>
 		</>

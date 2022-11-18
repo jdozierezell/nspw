@@ -57,7 +57,7 @@ export const SEO = ({ title, description, pathname, children }) => {
 						"url": "https://nspw.afsp.org/"
 					},
 
-					"image": "https://nspw.afsp.org/images/NationalSuicidePreventionWeek_Purple-01.png",
+					"image": "https://nspw.afsp.org/images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png",
 					"description": "National Suicide Prevention Week is an opportunity to create awareness of this leading cause of death.",
 					"organizer": {
 						"@type": "Organization",

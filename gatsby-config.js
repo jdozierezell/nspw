@@ -5,7 +5,7 @@ module.exports = {
 		title: `National Suicide Prevention Week || AFSP`,
 		description: `National Suicide Prevention Week is an opportunity to create awareness of this leading cause of death.`,
 		author: `@jdozierezell`,
-		image: `static/images/SuicidePreventionBeginsWithAllOfUs_TEXT.png`,
+		image: `images/SuicidePreventionBeginsWithAllOfUs_Blue-01.png`,
 		siteUrl: `https://nspw.afsp.org`,
 	},
 	plugins: [
